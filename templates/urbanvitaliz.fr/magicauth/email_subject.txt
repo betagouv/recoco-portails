@@ -1,1 +1,1 @@
-{% autoescape off %}Lien de connexion pour UrbanVitaliz{% endautoescape %}
+{% autoescape off %}Connectez-vous à UrbanVitaliz ici{% endautoescape %}
