@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% load sass_tags %}
+{% load static %}
+
+{% block css %}
+<link href="{% sass_src 'home/css/dsfr/dsfr.css' %}" rel="stylesheet" type="text/css">
+<link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}" rel="stylesheet" type="text/css">
+<!-- <link href="{% sass_src 'home/css/home/home.scss' %}" rel="stylesheet" type="text/css"> -->
+<link href="{% sass_src 'sosponts.recoconseil.fr/home/css/home/home-sosponts.scss' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<div class="col-8 py-3 g-0 mx-auto">
+
+    <h2>Qui sommes-nous ?</h2>
+
+    <p>
+        SOS Ponts est un projet porté par le <a href="https://www.cerema.fr/fr" target="_new">Cerema</a>, qui bénéficie du programme <a href="https://eig.etalab.gouv.fr/" target="_new">Entrepreneurs d’Intérêt Général</a>.
+    </p>
+    <p>
+        L’objectif est de développer un outil à destination des petites collectivités pour favoriser l’entretien et la rénovation des ponts communaux en France.
+    </p>
+    <p>
+        L’équipe du Cerema dédiée à ce projet est pluridisciplinaire : expert.e.s en ouvrages d’art, designer de services centrés sur les utilisateurs et utilisatrices, développeur web et spécialiste de la donnée.
+    </p>
+
+
+    <h3>Comment travaillons-nous ?</h3>
+
+    <p>
+        L’équipe travaille avec des méthodes propices à l’innovation et centrées sur les utilisateurs et utilisatrices.
+        Nous échangeons actuellement avec les petites collectivités pour comprendre leurs besoins et leurs difficultés. Ce service est d’ailleurs une des manières d’échanger.
+    </p>
+    <p>
+        Nous développerons ensuite des solutions, en les testant régulièrement et en les améliorant pour qu’elles répondent au mieux aux besoins des petites collectivités.
+    </p>
+
+    <p>
+        Tous les retours sont les bienvenus, n’hésitez pas à nous faire part de vos commentaires ou suggestions !
+    </p>
+    <p>
+        <strong>Pour nous contacter c’est <a href="{% url 'home-contact' %}">ici</a></strong>
+    </p>
+
+    <div class="row row-cols-1 row-cols-sm-4 row-cols-md-6 g-2">
+        <div class="col">
+            <div class="card" style="width: 160px">
+                <img src="{% static 'sosponts.recoconseil.fr/home/img/home/whoweare/Cecile.jpg' 160 %}"
+                     alt="Cécile"
+                     class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text text-center">Cécile,<br/> <em>Experte en ouvrages d’art</em></p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 160px">
+                <img src="{% static 'sosponts.recoconseil.fr/home/img/home/whoweare/Lise.jpg' 160 %}"
+                     alt="Lise"
+                     class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text text-center">Lise,<br/> <em>Designer</em></p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 160px">
+                <img src="{% static 'sosponts.recoconseil.fr/home/img/home/whoweare/Vladimir.jpeg' 160 %}"
+                     alt="Vladimir"
+                     class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text text-center">Vladimir,<br/> <em>Développeur web</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
