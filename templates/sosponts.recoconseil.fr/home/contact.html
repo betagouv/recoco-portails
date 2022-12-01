@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% load sass_tags %}
+{% load static %}
+
+{% block css %}
+<link href="{% sass_src 'home/css/dsfr/dsfr.css' %}" rel="stylesheet" type="text/css">
+<link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}" rel="stylesheet" type="text/css">
+<link href="{% sass_src 'sosponts.recoconseil.fr/home/css/home/home-sosponts.scss' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+<div class="col-9 py-5 mx-auto">
+
+    <h2 class="mb-3">
+        <svg class="bi me-2" width="28" height="28">
+            <use xlink:href="{% static 'svg/bootstrap-icons.svg' %}#envelope"/>
+        </svg>
+        Contacter l'équipe SOS Ponts
+    </h2>
+
+    <div class="fr-6w p-5" style="background-color:#1B1B35; font-family: 'Marianne', arial, sans-serif;">
+        <p class="text-center text-white m-0">
+            Vous pouvez nous écrire un email à l’adresse <strong>sos-ponts@cerema.fr</strong>
+        </p>
+    </div>
+</div>
+
+{% endblock %}
