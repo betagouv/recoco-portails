@@ -1,9 +1,12 @@
+{% load account %}
+{% load i18n %}
+
 <!doctype html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Connectez-vous à Ecoquartiers ici</title>
+    <title>Confirmez votre adresse email sur SOS Ponts</title>
     <style>
       /* -------------------------------------
           GLOBAL RESETS
@@ -301,7 +304,11 @@
                     <tr>
                       <td>
                         <p>Bonjour,</p>
-                        <p>Pour accéder à Ecoquartiers, vous avez juste à cliquer sur ce bouton :</p>
+                        {% autoescape off %}
+                            {% user_display user as user_display %}
+                            <p class="mb-6 align-center">Vous recevez cet e-mail parce que l'utilistateur·rice {{ user_display }} a donné ce mail pour l'enregistrement du compte sur {{ current_site.domain }}. Pour confirmer, cliquez sur le bouton suivant.</p>
+                        {% endautoescape %}
+                        </br>
                         <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                           <tbody>
                             <tr>
@@ -309,7 +316,7 @@
                                 <table border="0" cellpadding="0" cellspacing="0">
                                   <tbody>
                                     <tr>
-                                      <td align="center"> <a href="https://{{ site.domain }}{% url 'magicauth-wait' token.key %}?next={{ next_url|urlencode }}">Connexion</a> </td>
+                                      <td align="center"> <a href="{{ activate_url }}">Confirmer mon email</a> </td>
                                     </tr>
                                   </tbody>
                                 </table>
@@ -317,7 +324,7 @@
                             </tr>
                           </tbody>
                         </table>
-                        <p>Ce lien n'est valable que 3 jours. Il est à usage unique.</p>
+                        <!-- <p>Ce lien n'est valable que 3 jours. Il est à usage unique.</p> -->
                         <hr>
                         <div>
                           <p>Des difficultés pour vous connecter ?</p>
@@ -326,7 +333,7 @@
                           </p>
                           <p class="mb-6 align-center">
                             <strong>
-                              https://{{ site.domain }}{% url 'magicauth-wait' token.key %}?next={{ next_url|urlencode }}
+                                {{ activate_url }}
                             </strong>
                           </p>
                           <p>Bonne journée,</p>
