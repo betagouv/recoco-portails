@@ -2,8 +2,8 @@
 
 {% load sass_tags %}
 {% load static %}
-
 {% load django_vite %}
+{% load cookie_consent_tags %}
 
 {% block js %}
 {% vite_asset 'js/apps/home.js' %}
@@ -69,6 +69,7 @@
         </div>
     </div>
 </div>
+{% if request|cookie_group_accepted:"tracking_media" %}
 <div class="fr-py-4w" style="background-color:#1B1B35; font-family: 'Marianne', arial, sans-serif;">
     <div class="fr-container fr-pt-2w fr-pb-6w">
         <div class="fr-m-auto">
@@ -100,6 +101,7 @@
         </div>
     </div>
 </div>
+{% endif %}
 <div class="fr-background-alt--grey fr-py-4w" style="font-family: 'Marianne', arial, sans-serif;">
     <div class="fr-container fr-pt-2w">
         <div class="fr-grid-row fr-grid-row--gutters">
