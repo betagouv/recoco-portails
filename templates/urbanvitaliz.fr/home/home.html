@@ -18,7 +18,9 @@
 {% block content %}
 
 <div x-data="ModalVideo">
-{% include "home/modal_video.html" %}
+    {% if request|cookie_group_accepted:"tracking_media" %}
+        {% include "home/modal_video.html" %}
+    {% endif %}
 <div class="fr-notice fr-notice--info" style="font-family: 'Marianne', arial, sans-serif;">
     <div class="fr-container">
         <div class="fr-notice__body">
