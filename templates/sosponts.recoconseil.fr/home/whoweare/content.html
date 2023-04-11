@@ -1,16 +1,5 @@
-{% extends "base.html" %}
-
-{% load sass_tags %}
+{% load gravatar %}
 {% load static %}
-
-{% block css %}
-<link href="{% sass_src 'home/css/dsfr/dsfr.css' %}" rel="stylesheet" type="text/css">
-<link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}" rel="stylesheet" type="text/css">
-<!-- <link href="{% sass_src 'home/css/home/home.scss' %}" rel="stylesheet" type="text/css"> -->
-<link href="{% sass_src 'sosponts.recoconseil.fr/home/css/home/home-sosponts.scss' %}" rel="stylesheet" type="text/css">
-{% endblock %}
-
-{% block content %}
 
 <div class="col-8 py-3 g-0 mx-auto">
 
@@ -97,5 +86,3 @@
         </div>
     </div>
 </div>
-
-{% endblock %}
