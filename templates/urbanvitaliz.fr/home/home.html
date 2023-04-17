@@ -20,7 +20,16 @@
 <div x-data="ModalVideo">
         {% include "home/modal_video.html" %}
 <div class="fr-container" style="font-family: 'Marianne', arial, sans-serif;">
-    <div class="custom-background-home-image">
+    <div class="custom-background-home-image position-relative">
+        <div class="custom-banner">
+            <svg class="bi align-middle me-2" width="18" height="18" fill="currentColor">
+                <use xlink:href="{% static 'svg/bootstrap-icons.svg'  %}#people" />
+            </svg>
+            <p class="me-2">Vous êtes une DDT(M) ou un acteur local (DREAL, EPF, Cerema...) ?</p>
+            <a class="button filled white small" href="{% url 'regional-actors' %}" class="fr-btn fr-btn--secondary">
+                Demandez votre accès
+            </a>
+        </div>
         <div class="fr-grid-row">
             <div class="fr-col-offset-md-1">
 
@@ -52,49 +61,64 @@
                     </p>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
-<div class="fr-py-4w" style="background-color:#1B1B35; font-family: 'Marianne', arial, sans-serif;">
+<div class="fr-py-6w" style="background-color:#1B1B35; font-family: 'Marianne', arial, sans-serif;">
     <div class="fr-container fr-pt-2w fr-pb-6w">
         <div class="fr-m-auto">
             <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Actualités</h3>
         </div>
-        <div class="fr-grid-row fr-grid-row--gutters align-items-center">
-            <div class="fr-col-12 fr-col-md-5 fr-col-sm-12" style="height:300px">
-                <div class="position-relative fr-p-2w fr-background-default--grey d-flex justify-content-center align-items-center" style="height:100%">
-                    <img class="w-100 h-100 position-absolute" src="{% static 'urbanvitaliz.fr/home/img/home/thumbnail-webinaire.png' %}" width="100%" alt="Logo de mte">
-                    {% if request|cookie_group_accepted:"tracking_media" %}
-                        <div @click="openHomeVideoModal()" data-toggle="modal" data-target="#HomeVideoModal" style="z-index:10; border:solid 4px #222" class="play-button rounded-circle d-flex justify-content-center align-items-center bg-white">
-                            <svg class="bi ms-1 p-2" width="45" height="45" fill="currentColor">
-                                <use xlink:href="{% static 'svg/bootstrap-icons.svg' %}#play" />
-                            </svg>
-                        </div>
-                    {% endif %}
+        <div class="fr-grid-row fr-grid-row--gutters">
+            <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
+                <div class="fr-background-default--grey" style="height:100%">
+                    <div class="w-100 fr-m-auto mb-4">
+                        <img src="{% static 'urbanvitaliz.fr/home/img/home/radioterritoria.png' %}" width="100%" height=""
+                            alt="Icone de recherche">
+                    </div>
+                    <article class="fr-px-2w pb-4 d-flex flex-column">
+                        <span class="text-info-custom text-grey-dark mb-2">Radio</span>
+                        <h6>
+                            <a href="https://radioterritoria.fr/broadcast/28087-UrbanVitaliz-le-service-qui-aide-les-collectivit%C3%A9s-%C3%A0-revitaliser-leurs-fonciers-%C3%A0-l%E2%80%99abandon">Émission RadioTerritoria</a>
+                        </h6>
+                        <p class="mt-2">UrbanVitaliz, le service qui aide les collectivités à revitaliser leurs fonciers à l'abandon.</p>
+                    </article>
                 </div>
             </div>
-            <div class="fr-col-12 fr-col-md-7 fr-col-sm-12 text-white">
-                <span class="fr-text--sm mb-3 d-block">Replay du webinaire UrbanVitaliz du 7/11</span>
-                <p class="fr-text--lg">Les principaux problèmes rencontrés par les collectivités pour la réhabilitation des friches et leurs solutions</p>
-                <div class="d-flex align-items-center mt-4">
-                    {% if request|cookie_group_accepted:"tracking_media" %}
-                    <a style="cursor:pointer" @click="openHomeVideoModal()" data-toggle="modal" data-target="#HomeVideoModal"  class="button white filled">
-                        Voir le replay sur youtube
-                    </a>
-                    {% else %}
-                    <a style="cursor:pointer" href="https://www.youtube.com/watch?v=HiAq3VhuMzo" rel="noreferrer noopener" target="_blank" class="button white filled">
-                        Voir le replay sur youtube
-                    </a>
-                    {% endif %}
-                    <a href="https://cerema.app.box.com/s/tmc81bsdbkjnzlg6dpc3icwyhdmw9uyg" rel="noreferrer noopener" target="_blank" class="ms-4 text-white">
-                        Voir la vidéo sur Box
-                    </a>
+            <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
+                <div class="fr-background-default--grey" style="height:100%">
+                    <div class="w-100 fr-m-auto mb-4">
+                        <img src="{% static 'urbanvitaliz.fr/home/img/home/actu-webinaire.png' %}" width="100%" height=""
+                            alt="Icone de recherche">
+                    </div>
+                    <article class="fr-px-2w pb-4 d-flex flex-column">
+                        <span class="text-info-custom text-grey-dark mb-2">Webinaire</span>
+                        <h6>
+                            <a href="https://www.youtube.com/watch?v=HiAq3VhuMzo&ab_channel=Cerema">Replay du webinaire UrbanVitaliz</a>
+                        </h6>
+                        <p class="mt-2">Les principaux problèmes rencontrés par les collectivités pour la réhabilitation des friches et leurs solutions</p>
+                    </article>
+                </div>
+            </div>
+            <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
+                <div class="fr-background-default--grey" style="height:100%">
+                    <div class="w-100 fr-m-auto mb-4">
+                            <img src="{% static 'urbanvitaliz.fr/home/img/home/webinaire.png' %}" width="100%" height=""
+                            alt="Icone de recherche">
+                    </div>
+                    <article class="fr-px-2w pb-4 d-flex flex-column">
+                        <span class="text-info-custom text-grey-dark mb-2">Webinaire</span>
+                        <h6>
+                            <a href="https://framaforms.org/webinaire-urbanvitaliz-friches-11-mai-2023-a-14h-1681226856">À venir : le 11 mai à 14h</a>
+                        </h6>
+                        <p class="mt-2">En tant que collectivité, comment faire maturer son projet et être prêt pour mobiliser des financements pour les projets de friches ? Inscription <a style="text-decoration: underline;" href="https://framaforms.org/webinaire-urbanvitaliz-friches-11-mai-2023-a-14h-1681226856" target="_blank">ici</a></p>
+                    </article>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <div class="fr-background-alt--grey fr-py-4w" style="font-family: 'Marianne', arial, sans-serif;">
     <div class="fr-container fr-pt-2w">
         <div class="fr-grid-row fr-grid-row--gutters">
