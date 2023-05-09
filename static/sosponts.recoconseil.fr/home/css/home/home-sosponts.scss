@@ -79,3 +79,10 @@ span.step {
 .user-quote>q {
     line-height: 1.7em;
 }
+
+@media (min-width: 48em) {
+    .home-images {
+        max-height: 200px;
+    }
+}
+
