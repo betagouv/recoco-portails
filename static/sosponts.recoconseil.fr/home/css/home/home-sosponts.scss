@@ -12,6 +12,12 @@
     background-image: url('../../img/home/image_sos-ponts.jpeg') !important;
 }
 
+@media (max-width: 48em) {
+    .custom-background-home-image {
+        background-position: 0 -119px;
+    }
+}
+
 @media (min-width: 48em) {
     .custom-background-home-image {
         padding-top: 250px;
