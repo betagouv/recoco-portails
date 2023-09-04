@@ -1,0 +1,12 @@
+{% extends "account/email/base_message.txt" %}
+
+{% block content %}{% autoescape off %} 
+
+Vous recevez cet e-mail parce que vous ou quelqu'un d'autre a demandé une ré-initialisation de mot de passe de votre compte.
+Cependant, aucun compte n'a été trouvé pour cette adresse email {{ email }} dans notre base de données.
+
+Vous pouvez ignorez ce message si vous n'avez pas demandé de ré-initialisation de mot de passe.
+
+Si c'était vous, vous pouvez cliquer sur le lien suivant pour vous créer un compte sur le lien suivant.
+
+{{ signup_url }}{% endautoescape %}{% endblock %}
