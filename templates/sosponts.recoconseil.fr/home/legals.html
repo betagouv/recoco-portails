@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load gravatar %}
+{% load sass_tags %}
+{% load static %}
+{% block css %}
+    <link href="{% sass_src 'home/css/home/home.scss' %}"
+          rel="stylesheet"
+          type="text/css">
+    <link href="{% sass_src 'home/css/dsfr/dsfr.css' %}"
+          rel="stylesheet"
+          type="text/css">
+    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
+          rel="stylesheet"
+          type="text/css">
+{% endblock %}
+{% block content %}
+    <div class="col-8 mt-4 py-3 g-0 mx-auto font-marianne">
+        <h2>Mentions légales de la plateforme {{ request.site.name }}</h2>
+        <p class="mt-4 mb-2">
+            <strong>Éditeur de la Plateforme</strong>
+        </p>
+        <p>
+            La Plateforme « {{ request.site.name }} » est éditée par :
+            Le Centre d’études et d’expertise sur les risques, l’environnement, la mobilité et
+            l’aménagement (CEREMA) :
+        </br>
+        Cité des mobilités – 25 avenue François Mitterrand – CS 92803
+        69674 Bron Cedex
+    </br>
+    04 72 14 30 30
+</p>
+<p class="mt-4 mb-2">
+    <strong>Directeur de la publication</strong>
+</p>
+<p>Le directeur de la publication est Pascal Berteaud, directeur général du CEREMA.</p>
+<p class="mt-4 mb-2">
+    <strong>Hébergement de la Plateforme</strong>
+</p>
+<p>
+    Ce site est hébergé en propre par :
+</br>
+Alwaysdata SARL
+</br>
+91 Rue du Faubourg Saint-Honoré
+</br>
+75008 Paris
+</p>
+<p class="mt-4 mb-2">
+    <strong>Accessibilité</strong>
+</p>
+<p>
+    La conformité aux normes d’accessibilité numérique est un objectif ultérieur mais nous
+    tâchons de rendre ce site accessible à toutes et à tous.
+</p>
+<p class="mt-4 mb-2">
+    <strong>Disponibilité du site</strong>
+</p>
+<p>
+    L’éditeur s’efforce de permettre l’accès au site 24 heures sur 24, 7 jours sur 7, sauf en cas de force majeure ou d’un événement hors du contrôle du Cerema, et sous réserve des éventuelles pannes et interventions de maintenance nécessaires au bon fonctionnement du site et des services.
+    <br/><br/>
+    Par conséquent, le Cerema ne peut garantir une disponibilité du site et/ou des services, une fiabilité des transmissions et des performances en terme de temps de réponse ou de qualité. Il n’est prévu aucune assistance technique vis-à-vis de l’utilisateur que ce soit par des moyens électronique ou téléphonique.
+    <br/><br/>
+    La responsabilité de l’éditeur ne saurait être engagée en cas d’impossibilité d’accès à ce site et/ou d’utilisation des services.
+    <br/><br/>
+    Le Cerema peut être amené à interrompre le site ou une partie des services, à tout moment sans préavis, le tout sans droit à indemnités. L’utilisateur reconnaît et accepte que le Cerema ne soit pas responsable des interruptions, et des conséquences qui peuvent en découler pour l’utilisateur ou tout tiers.
+</p>
+<p class="mt-4 mb-2">
+    <strong>Signaler un dysfonctionnement</strong>
+</p>
+<p>
+    Si vous rencontrez un défaut d’accessibilité vous empêchant d’accéder à un contenu ou une
+    fonctionnalité de la plateforme, merci de nous en faire part. <a href="mailto:sos-ponts@cerema.fr">sos-ponts@cerema.fr</a> Si vous n’obtenez pas de réponse rapide de
+    notre part, vous êtes en droit de faire parvenir vos doléances ou une demande de saisine au
+    Défenseur des droits.
+</br>
+</p>
+<p class="mt-4 mb-2">
+    <strong>Sécurité</strong>
+</p>
+<p>
+    Le site est protégé par un certificat électronique, matérialisé pour la grande majorité des
+    navigateurs par un cadenas. Cette protection participe à la confidentialité des échanges. En
+    aucun cas les services associés à la plateforme ne seront à l’origine d’envoi de courriels pour
+    demander la saisie d’informations personnelles.
+</p>
+</div>
+{% endblock %}

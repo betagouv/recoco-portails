@@ -8,6 +8,19 @@
     margin-bottom: 50px;
 }
 
+.custom-sosponts-banner {
+    background-image: url('../../img/home/image_sos-ponts.jpeg') !important;
+}
+
+@media (max-width: 48em) {
+    .custom-background-home-image {
+        background-position: 0 -119px;
+    }
+    .custom-background-home-source {
+        top: 56px !important;
+    }
+}
+
 @media (min-width: 48em) {
     .custom-background-home-image {
         padding-top: 250px;
