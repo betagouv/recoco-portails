@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load sass_tags %}
 {% load static %}
+{% load django_vite %}
 {% block css %}
     <link href="{% sass_src 'home/css/dsfr/dsfr.css' %}"
           rel="stylesheet"
@@ -11,12 +12,32 @@
     <link href="{% sass_src 'sosponts.recoconseil.fr/home/css/home/home-sosponts.scss' %}"
           rel="stylesheet"
           type="text/css">
+    {% vite_asset 'css/home.css' %}
 {% endblock %}
 {% block content %}
     <div class="fr-container"
          style="font-family: 'Marianne', arial, sans-serif">
         <div class="position-relative custom-background-home-image custom-sosponts-banner">
-            <span class="position-absolute custom-background-home-source bg-white text-dark tiny px-1" style="transform: rotate(90deg); transform-origin:center; top: 30px; right: -25px;">shutterstock</span>
+            <div class="custom-banner left-banner">
+                <div class="d-flex align-items-center">
+                    <svg class="bi align-middle me-2"
+                         width="18"
+                         height="18"
+                         fill="currentColor">
+                        <use xlink:href="{% static 'svg/bootstrap-icons.svg'  %}#people" />
+                    </svg>
+                    <p class="me-2">Retrouvez nous les 6 et 19 octobre pour un webinaire SOS PONTS destiné aux collectivités.</p>
+                </div>
+                <a class="button filled white small"
+                   target="_blank"
+                   href="https://www.cerema.fr/fr/evenements/2-webinaires-sos-ponts-2023"
+                   class="fr-btn fr-btn--secondary">Pour en savoir plus</a>
+            </div>
+            <span class="position-absolute custom-background-home-source bg-white text-dark tiny px-1"
+                  style="transform: rotate(90deg);
+                         transform-origin:center;
+                         top: 30px;
+                         right: -25px">shutterstock</span>
             <div class="fr-grid-row">
                 <div class="fr-col-offset-md-1"></div>
                 <div class="fr-col-12 fr-col-md-10 fr-background-default--grey fr-pt-4w fr-p-0w fr-p-md-4w custom-background-home">
