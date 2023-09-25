@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load sass_tags %}
 {% load static %}
-{% load django_vite %}
 {% block css %}
     <link href="{% sass_src 'home/css/dsfr/dsfr.css' %}"
           rel="stylesheet"
@@ -12,7 +11,9 @@
     <link href="{% sass_src 'sosponts.recoconseil.fr/home/css/home/home-sosponts.scss' %}"
           rel="stylesheet"
           type="text/css">
-    {% vite_asset 'css/home.css' %}
+    <link href="{% sass_src 'common/css/home/home.scss' %}"
+          rel="stylesheet"
+          type="text/css">
 {% endblock %}
 {% block content %}
     <div class="fr-container"
