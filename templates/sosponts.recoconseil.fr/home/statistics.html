@@ -3,6 +3,11 @@
 {% load l10n %}
 {% load sass_tags %}
 {% load static %}
+
+{% block title %}
+    Statistiques d'impact
+{% endblock %}
+
 {% block js %}
     {% leaflet_js %}
     <script src="{% static "/js/d3.min.js" %}"></script>
@@ -69,7 +74,6 @@
     }
     </script>
 {% endblock %}
-{% block title %}| Statistiques d'impact{% endblock %}
 {% block css %}
     {% leaflet_css %}
     <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
