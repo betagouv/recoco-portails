@@ -1,0 +1,39 @@
+{% load static %}
+<dialog aria-labelledby="onboarding-modal-title"
+        id="onboarding-modal"
+        class="fr-modal"
+        role="dialog">
+    <div class="fr-container fr-container--fluid fr-container-md">
+        <div class="fr-grid-row fr-grid-row--center">
+            <div class="fr-col-12 fr-col-md-8 fr-col-lg-6">
+                <div class="fr-modal__body">
+                    <div class="fr-modal__header">
+                        <button class="fr-btn--close fr-btn" aria-controls="onboarding-modal">Fermer</button>
+                    </div>
+                    <div class="fr-modal__content">
+                        <h1 id="onboarding-modal-title" class="fr-modal__title">
+                            <span class="fr-icon-arrow-right-line fr-icon--lg"></span>
+                            Solliciter UrbanVitaliz
+                        </h1>
+                        <p class="modal-description">
+                          UrbanVitaliz est un service public gratuit. Il répond aux questions et aux blocages des collectivités pour réhabiliter leurs friches.
+                        </p>
+
+                        <form action="">
+                          <label class="fr-label" for="text-input-text">Adresse email</label>
+                          <input class="fr-input" type="text" id="text-input-text" name="text-input-text">
+                        </form>
+                    </div>
+                    <div class="fr-modal__footer">
+                        <div class="fr-btns-group fr-btns-group--inline-lg fr-btns-group--icon-left w-100">
+                            {% comment %} TODO Store email data in JS {% endcomment %}
+                            {% comment %} TODO Navigate to the form page in JS {% endcomment %}
+                            {% comment %} <button class="fr-btn w-100 footer__button--color">Déposer votre projet</button> {% endcomment %}
+                            <a class="fr-btn w-100 footer__button--color" href="{% url 'projects-onboarding' %}">Déposer votre projet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</dialog>
