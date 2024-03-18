@@ -17,7 +17,7 @@
             <p class="modal-description">
               UrbanVitaliz est un service public gratuit. Il répond aux questions et aux blocages des collectivités pour réhabiliter leurs friches.
             </p>
-            <div x-data="DsrcFormValidator('id-email-onboarding-form', {{ form_data|safe }}, {{ action_button_form_param }}, schemaValidator)"
+            <div x-data="DsrcFormValidator('{{ form.helper.form_id }}', schemaValidator)"
                  x-init="init">{% crispy form %}</div>
           </div>
         </div>
