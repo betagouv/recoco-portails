@@ -272,8 +272,14 @@
                  style="background-color:#1B1B35;
                         height:100%">
               <h6 class="fr-mb-13v fr-text-inverted--grey">Faites-vous accompagner</h6>
-              <a href="{% url 'projects-onboarding' %}"
-                 class="fr-btn fr-btn--tertiary fr-text-inverted--grey fr-btn-custom-hover">Solliciter UrbanVitaliz</a>
+              {% if user.is_authenticated %}
+                <a href="{% url 'projects-onboarding-project' %}"
+                   class="fr-btn fr-btn--tertiary fr-text-inverted--grey fr-btn-custom-hover">Solliciter {{ request.site.name }}</a>
+              {% else %}
+                <button class="fr-btn fr-btn--tertiary fr-text-inverted--grey fr-btn-custom-hover"
+                        data-fr-opened="false"
+                        aria-controls="onboarding-modal">Solliciter {{ request.site.name }}</button>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -317,5 +323,5 @@
     </div>
     <div class="border-bottom"></div>
   </div>
-  {% include "home/fragments/onboarding-modal.html" with form=onboarding_modal_form %}
+  {% include "home/onboarding/onboarding-modal.html" with form=onboarding_modal_form %}
 {% endblock %}
