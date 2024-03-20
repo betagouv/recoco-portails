@@ -11,7 +11,7 @@
   Réhabiliter une friche
 {% endblock title %}
 {% block css %}
-  <link href="{% sass_src 'home/css/dsfr/dsfr.css' %}"
+  <link href="{% static '@gouvfr/dsfr/dist/dsfr.min.css' %}"
         rel="stylesheet"
         type="text/css">
   <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
@@ -41,8 +41,7 @@
             <use xlink:href="{% static 'svg/bootstrap-icons.svg'  %}#people" />
           </svg>
           <p class="me-2">Vous êtes une DDT(M) ou un acteur local (DREAL, EPF, Cerema...) ?</p>
-          <a class="button filled white small fr-btn fr-btn--secondary"
-             href="{% url 'regional-actors' %}">Demandez votre accès</a>
+          <a class="button filled white small" href="{% url 'regional-actors' %}">Demandez votre accès</a>
         </div>
         <div class="fr-grid-row">
           <div class="fr-col-offset-md-1"></div>
