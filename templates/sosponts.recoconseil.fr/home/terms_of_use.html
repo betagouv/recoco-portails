@@ -2,48 +2,44 @@
 {% load gravatar %}
 {% load sass_tags %}
 {% load static %}
-
-{% block title %}
-    Conditions générales d'utilisation
-{% endblock %}
-
+{% block title %}Conditions générales d'utilisation{% endblock %}
 {% block css %}
-    <link href="{% sass_src 'home/css/home/home.scss' %}"
-          rel="stylesheet"
-          type="text/css">
-    <link href="{% sass_src 'home/css/dsfr/dsfr.css' %}"
-          rel="stylesheet"
-          type="text/css">
-    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
-          rel="stylesheet"
-          type="text/css">
+  <link href="{% sass_src 'home/css/home/home.scss' %}"
+        rel="stylesheet"
+        type="text/css">
+  <link href="{% static '@gouvfr/dsfr/dist/dsfr.min.css' %}"
+        rel="stylesheet"
+        type="text/css">
+  <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
+        rel="stylesheet"
+        type="text/css">
 {% endblock %}
 {% block content %}
-    <div class="col-8 mt-4 py-3 g-0 mx-auto font-marianne">
-        <h2>Conditions générales d'utilisation {{ request.site.name }}</h2>
-        <p class="mt-4">
-            Les présentes conditions générales d’utilisation (dites « CGU ») fixent le cadre juridique de “SOS Ponts” et définissent les conditions d’accès et d’utilisation des services par les collectivités et les conseillers publics.
-        </p>
-        <p class="mt-4 mb-2">
-            <strong>Article 1 - Champ d’application</strong>
-        </p>
-        <p>
-            L'inscription est gratuite et réservée aux collectivités pour la rénovation et l’entretien des ponts communaux et aux conseillers publics qui font avancer les projets des collectivités.
-        </p>
-        <p class="mt-4 mb-2">
-            <strong>Article 2 – Objet</strong>
-        </p>
-        <p>
-            SOS Ponts souhaite créer un service public gratuit d’appui aux gestionnaires de ponts communaux, pour les guider dans le suivi, leur entretien ou leur rénovation. Les ponts constituent un sujet d’expertise pointu qui a vocation à être rendu accessible aux collectivités via SOS Ponts.
-        </p>
-        <p class="mt-4 mb-2">
-            <strong>Article 3 – Définitions</strong>
-        </p>
-        <p>
-            « Utilisateur » désigne toute collectivité ou tout conseiller public utilisant la plateforme SOS Ponts.
-        </br>
+  <div class="col-8 mt-4 py-3 g-0 mx-auto font-marianne">
+    <h2>Conditions générales d'utilisation {{ request.site.name }}</h2>
+    <p class="mt-4">
+      Les présentes conditions générales d’utilisation (dites « CGU ») fixent le cadre juridique de “SOS Ponts” et définissent les conditions d’accès et d’utilisation des services par les collectivités et les conseillers publics.
+    </p>
+    <p class="mt-4 mb-2">
+      <strong>Article 1 - Champ d’application</strong>
+    </p>
+    <p>
+      L'inscription est gratuite et réservée aux collectivités pour la rénovation et l’entretien des ponts communaux et aux conseillers publics qui font avancer les projets des collectivités.
+    </p>
+    <p class="mt-4 mb-2">
+      <strong>Article 2 – Objet</strong>
+    </p>
+    <p>
+      SOS Ponts souhaite créer un service public gratuit d’appui aux gestionnaires de ponts communaux, pour les guider dans le suivi, leur entretien ou leur rénovation. Les ponts constituent un sujet d’expertise pointu qui a vocation à être rendu accessible aux collectivités via SOS Ponts.
+    </p>
+    <p class="mt-4 mb-2">
+      <strong>Article 3 – Définitions</strong>
+    </p>
+    <p>
+      « Utilisateur » désigne toute collectivité ou tout conseiller public utilisant la plateforme SOS Ponts.
     </br>
-    « Les collectivités » désignent toute collectivité territoriale utilisant la plateforme SOS Ponts.
+  </br>
+  « Les collectivités » désignent toute collectivité territoriale utilisant la plateforme SOS Ponts.
 </br>
 </br>
 « Les conseillers publics » désignent toute personne compétente pour guider la collectivité dans la rénovation et l’entretien des ponts communaux.
@@ -52,202 +48,202 @@
 Les « Services » sont les fonctionnalités offertes par la plateforme pour répondre à ses finalités.
 </p>
 <p class="mt-4 mb-2">
-    <strong>Article 4 - Fonctionnalités</strong>
+  <strong>Article 4 - Fonctionnalités</strong>
 </p>
 <p class="mb-1">
-    <strong>4.1 Accès aux Services</strong>
+  <strong>4.1 Accès aux Services</strong>
 </p>
 <p>
-    L’accès aux Services se fait de manière différenciée selon que l’Utilisateur est une collectivité ou un conseiller public.
+  L’accès aux Services se fait de manière différenciée selon que l’Utilisateur est une collectivité ou un conseiller public.
 </p>
 <p class="mb-1">
-    <strong>4.1.1. Accès aux services par les collectivités</strong>
+  <strong>4.1.1. Accès aux services par les collectivités</strong>
 </p>
 <p>
-    Chaque collectivité peut créer un compte SOS Ponts « avec mot de passe » en fournissant les informations suivantes :
-    <br />
-    <br />
-    <ul>
-        <li>Prénom</li>
-        <li>Nom</li>
-        <li>Organisation</li>
-        <li>Fonction</li>
-        <li>Adresse e-mail</li>
-        <li>Numéro de téléphone</li>
-        <li>Mot de passe (et confirmation de mot de passe)</li>
-    </ul>
-    <p>
-        Chaque collectivité peut également créer un compte SOS Ponts « avec adresse e-mail » grâce à un lien de connexion qui lui sera envoyé sur l’adresse e-mail communiquée.
-    </p>
+  Chaque collectivité peut créer un compte SOS Ponts « avec mot de passe » en fournissant les informations suivantes :
+  <br />
+  <br />
+  <ul>
+    <li>Prénom</li>
+    <li>Nom</li>
+    <li>Organisation</li>
+    <li>Fonction</li>
+    <li>Adresse e-mail</li>
+    <li>Numéro de téléphone</li>
+    <li>Mot de passe (et confirmation de mot de passe)</li>
+  </ul>
+  <p>
+    Chaque collectivité peut également créer un compte SOS Ponts « avec adresse e-mail » grâce à un lien de connexion qui lui sera envoyé sur l’adresse e-mail communiquée.
+  </p>
 </p>
 <p class="mt-4 mb-2">
-    <strong>4.1.2. Accès aux services par les conseillers publics</strong>
+  <strong>4.1.2. Accès aux services par les conseillers publics</strong>
 </p>
 <p>
-    Chaque conseiller peut demander un accès aux Services par mail leur permettant de répondre aux questionnements des collectivités et donc d’accélérer les projets.
+  Chaque conseiller peut demander un accès aux Services par mail leur permettant de répondre aux questionnements des collectivités et donc d’accélérer les projets.
 </p>
 <p class="mt-4 mb-2">
-    <strong>4.2. Fonctionnalités ouvertes aux Utilisateurs</strong>
+  <strong>4.2. Fonctionnalités ouvertes aux Utilisateurs</strong>
 </p>
 <p>Chaque Utilisateur peut revoir les webinaires SOS Ponts sur YouTube ou sur box.</p>
 <p class="mt-4 mb-2">
-    <strong>4.3. Fonctionnalités ouvertes uniquement aux collectivités</strong>
+  <strong>4.3. Fonctionnalités ouvertes uniquement aux collectivités</strong>
 </p>
 <p class="mb-1">
-    <strong>4.3.1. Dépôt de dossier à SOS Ponts</strong>
+  <strong>4.3.1. Dépôt de dossier à SOS Ponts</strong>
 </p>
 <p>
-    Chaque collectivité peut solliciter l’équipe SOS Ponts lorsqu’un dépôt de dossier doit être effectué. La collectivité remplit les informations suivantes :
-    <br />
-    <br />
-    <ul>
-        <li>Prénom</li>
-        <li>Nom</li>
-        <li>Adresse e-mail</li>
-        <li>Numéro de téléphone (facultatif)</li>
-        <li>Nom de sa structure</li>
-        <li>Nom du projet</li>
-        <li>Adresse du projet ou nom de la commune</li>
-        <li>Code postal</li>
-        <li>Contexte</li>
-        <li>Demande initiale</li>
-    </ul>
+  Chaque collectivité peut solliciter l’équipe SOS Ponts lorsqu’un dépôt de dossier doit être effectué. La collectivité remplit les informations suivantes :
+  <br />
+  <br />
+  <ul>
+    <li>Prénom</li>
+    <li>Nom</li>
+    <li>Adresse e-mail</li>
+    <li>Numéro de téléphone (facultatif)</li>
+    <li>Nom de sa structure</li>
+    <li>Nom du projet</li>
+    <li>Adresse du projet ou nom de la commune</li>
+    <li>Code postal</li>
+    <li>Contexte</li>
+    <li>Demande initiale</li>
+  </ul>
 </p>
 <p class="mb-1">
-    <strong>4.3.2. Autres fonctionnalités</strong>
+  <strong>4.3.2. Autres fonctionnalités</strong>
 </p>
 <p>
-    Chaque collectivité dispose de membres et d’un référent ayant accès à l’espace conseillers et peuvent :
-    <br />
-    <br />
-    <ul>
-        <li>Visualiser les recommandations proposées par les conseillers</li>
-        <li>Échanger avec les membres de la collectivité et les conseillers</li>
-        <li>Partager des fichiers avec les conseillers</li>
-        <li>Bénéficier des ressources en ligne sur SOS Ponts et suivre leurs modifications</li>
-    </ul>
+  Chaque collectivité dispose de membres et d’un référent ayant accès à l’espace conseillers et peuvent :
+  <br />
+  <br />
+  <ul>
+    <li>Visualiser les recommandations proposées par les conseillers</li>
+    <li>Échanger avec les membres de la collectivité et les conseillers</li>
+    <li>Partager des fichiers avec les conseillers</li>
+    <li>Bénéficier des ressources en ligne sur SOS Ponts et suivre leurs modifications</li>
+  </ul>
 </p>
 <p class="mt-4 mb-2">
-    <strong>4.3. Dépôt de dossier à {{ request.site.name }}</strong>
+  <strong>4.3. Dépôt de dossier à {{ request.site.name }}</strong>
 </p>
 <p>
-    Chaque utilisateur peut solliciter l’équipe {{ request.site.name }} lorsqu’il souhaite déposer un dossier.
-    L’utilisateur remplit les informations suivantes :
-    <br />
-    <br />
-    <ul>
-        <li>Prénom</li>
-        <li>Nom</li>
-        <li>Adresse e-mail</li>
-        <li>Numéro de téléphone (facultatif)</li>
-        <li>Nom de sa structure</li>
-        <li>Nom du projet</li>
-        <li>Adresse du projet ou nom de la commune</li>
-        <li>Code postal</li>
-        <li>Context</li>
-        <li>Demande initiale</li>
-    </ul>
+  Chaque utilisateur peut solliciter l’équipe {{ request.site.name }} lorsqu’il souhaite déposer un dossier.
+  L’utilisateur remplit les informations suivantes :
+  <br />
+  <br />
+  <ul>
+    <li>Prénom</li>
+    <li>Nom</li>
+    <li>Adresse e-mail</li>
+    <li>Numéro de téléphone (facultatif)</li>
+    <li>Nom de sa structure</li>
+    <li>Nom du projet</li>
+    <li>Adresse du projet ou nom de la commune</li>
+    <li>Code postal</li>
+    <li>Context</li>
+    <li>Demande initiale</li>
+  </ul>
 </p>
 <p class="mt-4 mb-2">
-    <strong>4.4. Fonctionnalités ouvertes uniquement aux conseillers publics</strong>
+  <strong>4.4. Fonctionnalités ouvertes uniquement aux conseillers publics</strong>
 </p>
 <p>
-    Chaque conseiller public peut suivre les projets de son territoire et orienter les collectivités grâce à SOS Ponts.
-    <br />
-    <br />
-    Les conseillers publics peuvent répondre aux questionnements des collectivités et donc faire avancer les projets.
-    <br />
-    <br />
-    Chaque conseiller public peut :
-    <br />
-    <br />
-    <ul>
-        <li>
-            Avoir accès à un descriptif détaillé du pont ou du mur et du projet, grâce aux échanges permis sur la plateforme (partage de pièces jointes, suivi de notes et conversation)
-        </li>
-        <li>Énumérer les sujets diagnostiqués (liste visible par la collectivité)</li>
-        <li>
-            Visualiser l’état d’avancement de l’ensemble des projets du territoire (à traiter, en attente, prêt à aiguiller, recommandations en cours, demande de relecture, aiguillage terminé)
-        </li>
-        <li>Émettre des recommandations à la collectivité</li>
-        <li>Suivre chaque recommandation</li>
-        <li>Proposer des ressources à chaque recommandation</li>
-        <li>Échanger avec la collectivité grâce à un espace de conversation dédié</li>
-        <li>Avoir accès aux ressources élaborées par l’équipe de SOS Ponts</li>
-        <li>
-            Disposer d’un espace de conversation interne, entre les membres d’un dossier (visible uniquement pour les conseillers)
-        </li>
-        <li>Écrire une note interne concernant le dossier (visible uniquement pour les conseillers)</li>
-    </ul>
-    <br />
-    <br />
-    Un conseiller public peut inviter un conseiller ou un membre de la collectivité à rejoindre le projet. Il peut notamment devenir observateur ou décider de ne plus conseiller le projet.
+  Chaque conseiller public peut suivre les projets de son territoire et orienter les collectivités grâce à SOS Ponts.
+  <br />
+  <br />
+  Les conseillers publics peuvent répondre aux questionnements des collectivités et donc faire avancer les projets.
+  <br />
+  <br />
+  Chaque conseiller public peut :
+  <br />
+  <br />
+  <ul>
+    <li>
+      Avoir accès à un descriptif détaillé du pont ou du mur et du projet, grâce aux échanges permis sur la plateforme (partage de pièces jointes, suivi de notes et conversation)
+    </li>
+    <li>Énumérer les sujets diagnostiqués (liste visible par la collectivité)</li>
+    <li>
+      Visualiser l’état d’avancement de l’ensemble des projets du territoire (à traiter, en attente, prêt à aiguiller, recommandations en cours, demande de relecture, aiguillage terminé)
+    </li>
+    <li>Émettre des recommandations à la collectivité</li>
+    <li>Suivre chaque recommandation</li>
+    <li>Proposer des ressources à chaque recommandation</li>
+    <li>Échanger avec la collectivité grâce à un espace de conversation dédié</li>
+    <li>Avoir accès aux ressources élaborées par l’équipe de SOS Ponts</li>
+    <li>
+      Disposer d’un espace de conversation interne, entre les membres d’un dossier (visible uniquement pour les conseillers)
+    </li>
+    <li>Écrire une note interne concernant le dossier (visible uniquement pour les conseillers)</li>
+  </ul>
+  <br />
+  <br />
+  Un conseiller public peut inviter un conseiller ou un membre de la collectivité à rejoindre le projet. Il peut notamment devenir observateur ou décider de ne plus conseiller le projet.
 </p>
 <p class="mt-4 mb-2">
-    <strong>Article 5 – Responsabilités et droits des utilisateurs</strong>
+  <strong>Article 5 – Responsabilités et droits des utilisateurs</strong>
 </p>
 <p class="mb-1">
-    <strong>5.1 L’éditeur de « {{ request.site.name }} »</strong>
+  <strong>5.1 L’éditeur de « {{ request.site.name }} »</strong>
 </p>
 <p>
-    Les sources des informations diffusées sur le site sont réputées fiables mais le site ne garantit pas qu’il soit exempt de défauts, d’erreurs ou d’omissions.
-    <br />
-    <br />
-    L’éditeur s’engage à la sécurisation du site, notamment en prenant toutes les mesures nécessaires permettant de garantir la sécurité et la confidentialité des informations fournies. Il le réalise dans la limite des capacités techniques liées au chiffrement.
-    <br />
-    <br />
-    L’éditeur fournit les moyens nécessaires et raisonnables pour assurer un accès continu au site. Il se réserve la liberté de faire évoluer, de modifier ou de suspendre, sans préavis, le site pour des raisons de maintenance ou pour tout autre motif jugé nécessaire.
+  Les sources des informations diffusées sur le site sont réputées fiables mais le site ne garantit pas qu’il soit exempt de défauts, d’erreurs ou d’omissions.
+  <br />
+  <br />
+  L’éditeur s’engage à la sécurisation du site, notamment en prenant toutes les mesures nécessaires permettant de garantir la sécurité et la confidentialité des informations fournies. Il le réalise dans la limite des capacités techniques liées au chiffrement.
+  <br />
+  <br />
+  L’éditeur fournit les moyens nécessaires et raisonnables pour assurer un accès continu au site. Il se réserve la liberté de faire évoluer, de modifier ou de suspendre, sans préavis, le site pour des raisons de maintenance ou pour tout autre motif jugé nécessaire.
 </p>
 <p class="mb-1">
-    <strong>5.2. Le conseiller public</strong>
+  <strong>5.2. Le conseiller public</strong>
 </p>
 <p>
-    Le conseiller public s’engage à ne pas commercialiser les données reçues et à ne pas les communiquer à des tiers en dehors des cas prévus par la loi.
-    <br />
-    <br />
-    Toute information transmise par le conseiller public est de sa seule responsabilité. Il est rappelé que toute personne procédant à une fausse déclaration pour elle-même ou pour autrui s’expose, notamment, aux sanctions prévues à l’article 441-1 du code pénal, prévoyant des peines pouvant aller jusqu’à trois ans d’emprisonnement et 45 000 euros d’amende.
-    <br />
-    <br />
-    Le conseiller public s'engage à ne pas mettre en ligne de contenus ou informations contraires aux dispositions légales et réglementaires en vigueur.
-    <br />
-    <br />
-    Le conseiller public s’engage à ne pas publier, à quelque endroit que ce soit, de messages racistes, sexistes, injurieux, insultants ou contraires à l’ordre public.
-    <br />
-    <br />
-    Il s’engage à communiquer des données strictement nécessaires à sa demande. Il veille particulièrement aux données sensibles notamment les données relatives aux opinions philosophiques, syndicales et religieuses.
+  Le conseiller public s’engage à ne pas commercialiser les données reçues et à ne pas les communiquer à des tiers en dehors des cas prévus par la loi.
+  <br />
+  <br />
+  Toute information transmise par le conseiller public est de sa seule responsabilité. Il est rappelé que toute personne procédant à une fausse déclaration pour elle-même ou pour autrui s’expose, notamment, aux sanctions prévues à l’article 441-1 du code pénal, prévoyant des peines pouvant aller jusqu’à trois ans d’emprisonnement et 45 000 euros d’amende.
+  <br />
+  <br />
+  Le conseiller public s'engage à ne pas mettre en ligne de contenus ou informations contraires aux dispositions légales et réglementaires en vigueur.
+  <br />
+  <br />
+  Le conseiller public s’engage à ne pas publier, à quelque endroit que ce soit, de messages racistes, sexistes, injurieux, insultants ou contraires à l’ordre public.
+  <br />
+  <br />
+  Il s’engage à communiquer des données strictement nécessaires à sa demande. Il veille particulièrement aux données sensibles notamment les données relatives aux opinions philosophiques, syndicales et religieuses.
 </p>
 <p class="mb-1">
-    <strong>5.3. La collectivité</strong>
+  <strong>5.3. La collectivité</strong>
 </p>
 <p>
-    Les membres de la collectivité et son référent s’engagent à ne pas commercialiser les données reçues et à ne pas les communiquer à des tiers en dehors des cas prévus par la loi.
-    <br />
-    <br />
-    Toute information transmise par les membres de la collectivité et son référent sont de leur seule responsabilité. Il est rappelé que toute personne procédant à une fausse déclaration pour elle-même ou pour autrui s’expose, notamment, aux sanctions prévues à l’article 441-1 du code pénal, prévoyant des peines pouvant aller jusqu’à trois ans d’emprisonnement et 45 000 euros d’amende.
-    <br />
-    <br />
-    Ils s'engagent à ne pas mettre en ligne de contenus ou informations contraires aux dispositions légales et réglementaires en vigueur.
-    <br />
-    <br />
-    Les membres de la collectivité et son référent s’engagent à ne pas publier, à quelque endroit que ce soit, de messages racistes, sexistes, injurieux, insultants ou contraires à l’ordre public.
-    <br />
-    <br />
-    Ils s’engagent à communiquer des données strictement nécessaires à sa demande. Ils veillent particulièrement aux données sensibles notamment les données relatives aux opinions philosophiques, syndicales et religieuses.
-    <br />
-    <br />
+  Les membres de la collectivité et son référent s’engagent à ne pas commercialiser les données reçues et à ne pas les communiquer à des tiers en dehors des cas prévus par la loi.
+  <br />
+  <br />
+  Toute information transmise par les membres de la collectivité et son référent sont de leur seule responsabilité. Il est rappelé que toute personne procédant à une fausse déclaration pour elle-même ou pour autrui s’expose, notamment, aux sanctions prévues à l’article 441-1 du code pénal, prévoyant des peines pouvant aller jusqu’à trois ans d’emprisonnement et 45 000 euros d’amende.
+  <br />
+  <br />
+  Ils s'engagent à ne pas mettre en ligne de contenus ou informations contraires aux dispositions légales et réglementaires en vigueur.
+  <br />
+  <br />
+  Les membres de la collectivité et son référent s’engagent à ne pas publier, à quelque endroit que ce soit, de messages racistes, sexistes, injurieux, insultants ou contraires à l’ordre public.
+  <br />
+  <br />
+  Ils s’engagent à communiquer des données strictement nécessaires à sa demande. Ils veillent particulièrement aux données sensibles notamment les données relatives aux opinions philosophiques, syndicales et religieuses.
+  <br />
+  <br />
 </p>
 <p class="mt-4 mb-2">
-    <strong>Article 6 – Propriété intellectuelle</strong>
+  <strong>Article 6 – Propriété intellectuelle</strong>
 </p>
 <p>
-    Les contenus, les textes, les vidéos, les images, les photos qui apparaissent ou sont disponibles sur le site, sont protégés par le droit de la propriété intellectuelle et sont la propriété du Cerema, du ministère de l’Écologie et du développement durable ou de banques d'images (Fotolia, Pixabay, Shutterstock entre autres).
-    A ce titre, vous vous engagez à ne pas copier, traduire, reproduire, commercialiser, publier, exploiter et diffuser partiellement ou intégralement des contenus du site protégés par le droit de la propriété intellectuelle, sans autorisation préalable et écrite du Cerema.Les marques et les logos présents sur le site sont, sauf cas particulier, la propriété du Cerema. Sauf autorisation préalable et écrite, l’internaute s’interdit de les utiliser.Le Cerema consent toutefois à l’internaute le droit de reproduire tout ou partie du contenu du site, en un exemplaire pour copie de sauvegarde ou tirage sur papier. Ce droit est consenti dans le cadre d’un usage strictement personnel, privé et non collectif. La violation de l’un de ces droits de propriété intellectuelle est un délit de contrefaçon passible de deux ans d’emprisonnement et de 150.000 euros d’amende.
+  Les contenus, les textes, les vidéos, les images, les photos qui apparaissent ou sont disponibles sur le site, sont protégés par le droit de la propriété intellectuelle et sont la propriété du Cerema, du ministère de l’Écologie et du développement durable ou de banques d'images (Fotolia, Pixabay, Shutterstock entre autres).
+  A ce titre, vous vous engagez à ne pas copier, traduire, reproduire, commercialiser, publier, exploiter et diffuser partiellement ou intégralement des contenus du site protégés par le droit de la propriété intellectuelle, sans autorisation préalable et écrite du Cerema.Les marques et les logos présents sur le site sont, sauf cas particulier, la propriété du Cerema. Sauf autorisation préalable et écrite, l’internaute s’interdit de les utiliser.Le Cerema consent toutefois à l’internaute le droit de reproduire tout ou partie du contenu du site, en un exemplaire pour copie de sauvegarde ou tirage sur papier. Ce droit est consenti dans le cadre d’un usage strictement personnel, privé et non collectif. La violation de l’un de ces droits de propriété intellectuelle est un délit de contrefaçon passible de deux ans d’emprisonnement et de 150.000 euros d’amende.
 </p>
 <p class="mt-4 mb-2">
-    <strong>Article 7 - Mise à jour des conditions d’utilisation</strong>
+  <strong>Article 7 - Mise à jour des conditions d’utilisation</strong>
 </p>
 <p>
-    Les termes des présentes conditions d’utilisation peuvent être amendés à tout moment, en fonction des modifications apportées à la plateforme, de l’évolution de la législation ou pour tout autre motif jugé nécessaire. Chaque modification donne lieu à une nouvelle version qui est acceptée par les parties.
+  Les termes des présentes conditions d’utilisation peuvent être amendés à tout moment, en fonction des modifications apportées à la plateforme, de l’évolution de la législation ou pour tout autre motif jugé nécessaire. Chaque modification donne lieu à une nouvelle version qui est acceptée par les parties.
 </p>
 </div>
 {% endblock %}
