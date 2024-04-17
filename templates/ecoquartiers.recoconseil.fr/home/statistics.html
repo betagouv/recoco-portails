@@ -97,7 +97,7 @@
             <ul class="text-start">
               <li>Nombre de sites accompagnés : {{ collectivity_supported }}</li>
               <li>Nombre de conseillers du Cerema sur le site : 16</li>
-              <li>Nombre de ressources créées et partagées : {{ resources.count }}</li>
+              <li>Nombre de ressources créées et partagées : {{ resource_count }}</li>
             </ul>
           </p>
           {% leaflet_map "friches" callback="window.map_init" %}
