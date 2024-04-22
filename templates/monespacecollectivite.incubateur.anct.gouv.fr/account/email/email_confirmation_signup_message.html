@@ -32,10 +32,10 @@
         mso-table-lspace: 0pt;
         mso-table-rspace: 0pt;
         width: 100%; }
-        table td {
-          font-family: sans-serif;
-          font-size: 14px;
-          vertical-align: top; }
+      table td {
+        font-family: sans-serif;
+        font-size: 14px;
+        vertical-align: top; }
 
       /* -------------------------------------
           BODY & CONTAINER
@@ -84,13 +84,13 @@
         margin-top: 10px;
         text-align: center;
         width: 100%; }
-        .footer td,
-        .footer p,
-        .footer span,
-        .footer a {
-          color: #999999;
-          font-size: 12px;
-          text-align: center; }
+      .footer td,
+      .footer p,
+      .footer span,
+      .footer a {
+        color: #999999;
+        font-size: 12px;
+        text-align: center; }
 
       /* -------------------------------------
           TYPOGRAPHY
@@ -120,11 +120,11 @@
         font-weight: normal;
         margin: 0;
         margin-bottom: 15px; }
-        p li,
-        ul li,
-        ol li {
-          list-style-position: inside;
-          margin-left: 5px; }
+      p li,
+      ul li,
+      ol li {
+        list-style-position: inside;
+        margin-left: 5px; }
 
       a {
         color: #3FB04A;
@@ -136,28 +136,28 @@
       .btn {
         box-sizing: border-box;
         width: 100%; }
-        .btn > tbody > tr > td {
-          padding-bottom: 15px; }
-        .btn table {
-          width: auto; }
-        .btn table td {
-          background-color: #ffffff;
-          border-radius: 5px;
-          text-align: center; }
-        .btn a {
-          background-color: #ffffff;
-          border: solid 1px #3FB04A;
-          border-radius: 5px;
-          box-sizing: border-box;
-          color: #3FB04A;
-          cursor: pointer;
-          display: inline-block;
-          font-size: 14px;
-          font-weight: bold;
-          margin: 0;
-          padding: 12px 25px;
-          text-decoration: none;
-          text-transform: capitalize; }
+      .btn > tbody > tr > td {
+        padding-bottom: 15px; }
+      .btn table {
+        width: auto; }
+      .btn table td {
+        background-color: #ffffff;
+        border-radius: 5px;
+        text-align: center; }
+      .btn a {
+        background-color: #ffffff;
+        border: solid 1px #3FB04A;
+        border-radius: 5px;
+        box-sizing: border-box;
+        color: #3FB04A;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0;
+        padding: 12px 25px;
+        text-decoration: none;
+        text-transform: capitalize; }
 
       .btn-primary table td {
         background-color: #3FB04A; }
@@ -305,8 +305,8 @@
                       <td>
                         <p>Bonjour,</p>
                         {% autoescape off %}
-                            {% user_display user as user_display %}
-                            <p class="mb-6 align-center">Vous recevez cet e-mail parce que l'utilistateur·rice {{ user_display }} a donné ce mail pour l'enregistrement du compte sur {{ current_site.domain }}. Pour confirmer, cliquez sur le bouton suivant.</p>
+                          {% user_display user as user_display %}
+                          <p class="mb-6 align-center">Vous recevez cet e-mail parce que l'utilistateur·rice {{ user_display }} a donné ce mail pour l'enregistrement du compte sur {{ current_site.domain }}. Pour confirmer, cliquez sur le bouton suivant.</p>
                         {% endautoescape %}
                         </br>
                         <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
@@ -333,7 +333,7 @@
                           </p>
                           <p class="mb-6 align-center">
                             <strong>
-                                {{ activate_url }}
+                              {{ activate_url }}
                             </strong>
                           </p>
                           <p>Bonne journée,</p>
