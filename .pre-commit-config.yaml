@@ -1,0 +1,10 @@
+repos:
+  - repo: https://github.com/rtts/djhtml
+    rev: "3.0.6"
+    hooks:
+      - id: djhtml
+        entry: djhtml --tabwidth 2
+        files: templates/monespacecollectivite.incubateur.anct.gouv.fr/.*/.*\.html$
+      - id: djcss
+        files: static/monespacecollectivite.incubateur.anct.gouv.fr/css/.*/.*\.scss$
+        types: [scss]
