@@ -1,13 +1,8 @@
-.modal-description {
-  margin: 1rem 0;
-  border-left: 4px solid #0063CB;
-  padding-left: 1rem ;
-}
-
 .footer {
   &__button {
     &--color {
       background-color: #0063CB;
+
       &:hover {
         background-color: #0074f0;
       }
