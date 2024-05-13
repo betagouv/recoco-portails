@@ -1,0 +1,15 @@
+.theme {
+  &-icon {
+    &__size {
+      width: 2rem;
+    }
+  }
+  p {
+    padding-left: calc(var(--bs-gutter-x) * 0.5 + 2.3rem) ;
+  }
+}
+
+.nv-x text {
+  text-anchor: end !important;
+  transform: rotate(-45deg);
+}

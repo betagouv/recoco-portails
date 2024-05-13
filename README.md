@@ -1,5 +1,5 @@
 # recoco-portails
-Fichiers de customisation des portails sur recoconseil.fr (moteur UrbanVitaliz)
+Fichiers de customisation des portails sur recoconseil.fr (moteur Recommandations Collaboratives --voir https://github.com/betagouv/recommandations-collaboratives/)
 
 
 1. Ajoutez vos fichier de media (images, ...) dans le dossier `static`, toujours en indiquant le domaine complet comme dossier préfixe.
