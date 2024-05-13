@@ -1,50 +1,58 @@
+<!-- prettier-ignore -->
 {% extends "base.html" %}
 {% load sass_tags %}
 {% load static %}
-
 {% block title %}Accélérez les projets de votre territoire{% endblock %}
-
-{% block css %}
-  <link href="{% sass_src 'home/css/dsfr/dsfr.css' %}" rel="stylesheet" type="text/css">
-  <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}" rel="stylesheet" type="text/css">
-  <link href="{% sass_src 'home/css/home/home.scss' %}" rel="stylesheet" type="text/css">
-  <link
-    href="{% sass_src 'monespacecollectivite.incubateur.anct.gouv.fr/home/css/home/home-mon-espace-collectivite.scss' %}"
-    rel="stylesheet" type="text/css">
+{% load django_vite %}
+{% block js %}
+  {% vite_asset 'js/apps/home.js' %}
 {% endblock %}
-
+{% block css %}
+  <link href="{% sass_src 'home/css/dsfr/dsfr.css' %}"
+        rel="stylesheet"
+        type="text/css">
+  <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
+        rel="stylesheet"
+        type="text/css">
+  <link href="{% sass_src 'home/css/home/home.scss' %}"
+        rel="stylesheet"
+        type="text/css">
+  <link href="{% sass_src 'monespacecollectivite.incubateur.anct.gouv.fr/home/css/home/home-mon-espace-collectivite.scss' %}"
+        rel="stylesheet"
+        type="text/css">
+{% endblock %}
 {% block content %}
   <div class="fr-container-fluid">
-    <div class="fr-container" style="font-family: 'Marianne', arial, sans-serif">
+    <div class="fr-container"
+         style="font-family: 'Marianne', arial, sans-serif">
       <div class="custom-background-home-image">
         <div class="fr-grid-row fr-grid-row--gutters">
           <div class="fr-col-offset-md-1"></div>
           <div class="fr-col-12 fr-col-md-10 fr-background-default--grey fr-pt-4w fr-p-0w fr-p-md-4w custom-background-home">
-            <h1 class="fr-h1">
-              Accélérez les projets de votre territoire
-            </h1>
+            <h1 class="fr-h1">Accélérez les projets de votre territoire</h1>
             <p class="fr-text--lg fr-my-3w">
               Mon Espace Collectivité permet de concrétiser vos projets du quotidien et ceux du Contrat de relance et de
               transition écologique (CRTE).
             </p>
-            <a href="{% url 'projects-onboarding' %}"
-               class="fr-btn fr-btn--tertiary fr-text--xl fr-btn-custom-hover">
-              Démarrer un projet
-            </a>
+            {% if user.is_authenticated %}
+              <a href="{% url 'onboarding-project' %}"
+                 class="fr-btn fr-btn--tertiary fr-text--xl fr-btn-custom-hover">Démarrer un projet</a>
+            {% else %}
+              <button class="fr-btn fr-btn--tertiary fr-text--xl fr-btn-custom-hover"
+                      data-fr-opened="false"
+                      aria-controls="onboarding-modal">Démarrer un projet</button>
+            {% endif %}
           </div>
         </div>
       </div>
     </div>
-
     <div class="fr-py-8w"
-         style="background-color:#1B1B35;font-family: 'Marianne', arial, sans-serif">
-
+         style="background-color:#1B1B35;
+                font-family: 'Marianne', arial, sans-serif">
       <div class="fr-container fr-pt-2w fr-pb-6w">
-
         <div class="fr-m-auto">
           <h2 class="fr-text-inverted--grey text-center fr-pb-6w">Retrouvez sur un seul service, pour chaque projet :</h2>
         </div>
-
         <div class="fr-grid-row fr-grid-row--gutters">
           <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
             <div class="fr-p-2w fr-background-default--grey" style="height:100%">
@@ -54,12 +62,8 @@
                      height="100%"
                      alt="Icone de recherche">
               </div>
-              <span class="fr-h5 fr-text-label--blue-cumulus fr-mb-2w d-block">
-                1. Tous les interlocuteurs
-              </span>
-              <h6>
-                Echanger avec les acteurs pertinents
-              </h6>
+              <span class="fr-h5 fr-text-label--blue-cumulus fr-mb-2w d-block">1. Tous les interlocuteurs</span>
+              <h6>Echanger avec les acteurs pertinents</h6>
             </div>
           </div>
           <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
@@ -70,9 +74,7 @@
                      height="100%"
                      alt="Icone d'un fichier">
               </div>
-              <span class="fr-h5 fr-text-label--blue-cumulus fr-mb-2w d-block">
-                2. Toutes les informations
-              </span>
+              <span class="fr-h5 fr-text-label--blue-cumulus fr-mb-2w d-block">2. Toutes les informations</span>
               <h6>
                 Accéder à une fiche par projet, son état des lieux, guide, recommandations, ressources, historique des échanges, diagnostic
               </h6>
@@ -86,28 +88,19 @@
                      height="100%"
                      alt="Icone de communauté">
               </div>
-              <span class="fr-h5 fr-text-label--blue-cumulus fr-mb-2w d-block">
-                3. Toutes les recommandations
-              </span>
-              <h6>
-                Ingénierie, financement et un expert de votre thématique
-              </h6>
+              <span class="fr-h5 fr-text-label--blue-cumulus fr-mb-2w d-block">3. Toutes les recommandations</span>
+              <h6>Ingénierie, financement et un expert de votre thématique</h6>
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
     <div class="fr-background-alt--grey fr-py-8w"
          style="font-family: 'Marianne', arial, sans-serif">
-
       <div class="fr-container fr-pt-2w fr-pb-6w">
-
         <div class="fr-m-auto">
           <h2 class="text-center fr-pb-6w">Toutes les thématiques</h2>
         </div>
-
         <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center fr-text--lg">
           <div class="fr-col-6 fr-col-sm-6 fr-col-md-4">
             <ul>
@@ -118,16 +111,14 @@
           </div>
           <div class="fr-col-6 fr-col-sm-6 fr-col-md-4">
             <ul>
-              <li>Mieux produire (Développement économique</li>
+              <li>Mieux produire (Développement économique)</li>
               <li>Mieux se nourrir (Alimentation, Agriculture)</li>
               <li>Mieux consommer (Achat durable, Réemploi)</li>
             </ul>
           </div>
         </div>
       </div>
-
     </div>
-
     <div class="fr-py-6w"
          style="background-color:#1B1B35;
                 font-family: 'Marianne', arial, sans-serif">
@@ -136,15 +127,17 @@
           <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Vous souhaitez vous faire accompagner ?</h3>
         </div>
         <div class="text-center">
-          <a href="{% url 'projects-onboarding' %}"
-             class="fr-btn fr-btn--tertiary fr-text--xl fr-text-inverted--grey fr-btn-custom-hover">
-            Démarrer un projet
-          </a>
+          {% if user.is_authenticated %}
+            <a href="{% url 'onboarding-project' %}"
+               class="fr-btn fr-btn--tertiary fr-text--xl fr-text-inverted--grey fr-btn-custom-hover">Démarrer un projet</a>
+          {% else %}
+            <button class="fr-btn fr-btn--tertiary fr-text--xl fr-text-inverted--grey fr-btn-custom-hover"
+                    data-fr-opened="false"
+                    aria-controls="onboarding-modal">Démarrer un projet</button>
+          {% endif %}
         </div>
       </div>
     </div>
-
-
   </div>
-
+  {% include "home/onboarding/onboarding-modal.html" with form=onboarding_modal_form %}
 {% endblock %}
