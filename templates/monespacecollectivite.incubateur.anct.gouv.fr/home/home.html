@@ -36,9 +36,9 @@
             </p>
             {% if user.is_authenticated %}
               <a href="{% url 'onboarding-project' %}"
-                 class="fr-btn fr-btn--tertiary fr-text--xl fr-btn-custom-hover">Démarrer un projet</a>
+                 class="fr-btn fr-btn--primary fr-text--xl fr-btn-custom-hover">Démarrer un projet</a>
             {% else %}
-              <button class="fr-btn fr-btn--tertiary fr-text--xl fr-btn-custom-hover"
+              <button class="fr-btn fr-btn--primary fr-text--xl fr-btn-custom-hover"
                       data-fr-opened="false"
                       aria-controls="onboarding-modal">Démarrer un projet</button>
             {% endif %}
@@ -129,9 +129,9 @@
         <div class="text-center">
           {% if user.is_authenticated %}
             <a href="{% url 'onboarding-project' %}"
-               class="fr-btn fr-btn--tertiary fr-text--xl fr-text-inverted--grey fr-btn-custom-hover">Démarrer un projet</a>
+               class="fr-btn fr-btn--primary fr-text--xl fr-text-inverted--grey fr-btn-custom-hover">Démarrer un projet</a>
           {% else %}
-            <button class="fr-btn fr-btn--tertiary fr-text--xl fr-text-inverted--grey fr-btn-custom-hover"
+            <button class="fr-btn fr-btn--primary fr-text--xl fr-text-inverted--grey fr-btn-custom-hover"
                     data-fr-opened="false"
                     aria-controls="onboarding-modal">Démarrer un projet</button>
           {% endif %}
