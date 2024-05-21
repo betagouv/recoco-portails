@@ -2,8 +2,9 @@
 {% if user.is_authenticated %}
     <a href="{% url 'home' %}"
        class="d-flex align-middle align-items-center"
-       style="text-decoration: none;color: black">
-       <span style="font-size: 30px; font-weight: bold;">SOS Ponts</span>
+       style="text-decoration: none;
+              color: black">
+        <span style="font-size: 30px; font-weight: bold;">SOS Ponts</span>
     </a>
 {% else %}
     <a href="{% url 'home' %}"
@@ -16,6 +17,6 @@
              src="{% static 'img/partners/logo_cerema.png' %}"
              width="120px"
              alt="Logo du Cerema">
-          <span style="font-size: 30px; font-weight: bold;">SOS Ponts</span>
+        <span style="font-size: 30px; font-weight: bold;">SOS Ponts</span>
     </a>
 {% endif %}
