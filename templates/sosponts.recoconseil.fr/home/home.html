@@ -1,206 +1,267 @@
+<!-- prettier-ignore -->
 {% extends "base.html" %}
 {% load sass_tags %}
 {% load static %}
-{% block title %}
-    Entretien des ponts communaux
+{% block title %}Entretien des ponts communaux{% endblock %}
+{% load django_vite %}
+{% block js %}
+  {% vite_asset 'js/apps/home.js' %}
 {% endblock %}
 {% block css %}
-    <link href="{% sass_src 'home/css/dsfr/dsfr.css' %}"
-          rel="stylesheet"
-          type="text/css">
-    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
-          rel="stylesheet"
-          type="text/css">
-    <link href="{% sass_src 'sosponts.recoconseil.fr/home/css/home/home-sosponts.scss' %}"
-          rel="stylesheet"
-          type="text/css">
-    <link href="{% sass_src 'home/css/home/home.scss' %}"
-          rel="stylesheet"
-          type="text/css">
-{% endblock %}
-{% block content %}
-    <div class="fr-container"
-         style="font-family: 'Marianne', arial, sans-serif">
-        <div class="position-relative custom-background-home-image custom-sosponts-banner">
-            <div class="custom-banner left-banner">
-                <div class="d-flex align-items-center">
-                    <svg class="bi align-middle me-2"
-                         width="18"
-                         height="18"
-                         fill="currentColor">
-                        <use xlink:href="{% static 'svg/bootstrap-icons.svg'  %}#people" />
-                    </svg>
-                    <p class="me-2">Regardez l’enregistrement du webinaire SOS PONTS destiné aux collectivités.</p>
-                </div>
-                <a class="button filled white small"
-                   target="_blank"
-                   href="https://cerema.app.box.com/v/webinairesosponts"
-                   class="fr-btn fr-btn--secondary">Voir le webinaire</a>
-            </div>
-            <span class="position-absolute custom-background-home-source bg-white text-dark tiny px-1"
-                  style="transform: rotate(90deg);
-                         transform-origin:center;
-                         top: 30px;
-                         right: -25px">shutterstock</span>
-            <div class="fr-grid-row">
-                <div class="fr-col-offset-md-1"></div>
-                <div class="fr-col-12 fr-col-md-10 fr-background-default--grey fr-pt-4w fr-p-0w fr-p-md-4w custom-background-home">
-                    <h1 class="fr-h1">SOS Ponts vous guide dans l’entretien et la rénovation des ponts communaux</h1>
-                    <!-- <p class="fr-text--lg fr-my-3w">
+
+<link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}" rel="stylesheet" type="text/css" />
+<link
+	href="{% sass_src 'sosponts.recoconseil.fr/home/css/home/home-sosponts.scss' %}"
+	rel="stylesheet"
+	type="text/css"
+/>
+<link href="{% sass_src 'home/css/home/home.scss' %}" rel="stylesheet" type="text/css" />
+{% endblock %} {% block content %}
+<div class="fr-container" style="font-family: 'Marianne', arial, sans-serif">
+	<div class="position-relative custom-background-home-image custom-sosponts-banner">
+		<div class="custom-banner left-banner">
+			<div class="d-flex align-items-center">
+				<svg class="bi align-middle me-2" width="18" height="18" fill="currentColor">
+					<use xlink:href="{% static 'svg/bootstrap-icons.svg'  %}#people" />
+				</svg>
+				<p class="me-2">
+					Regardez l’enregistrement du webinaire SOS PONTS destiné aux collectivités.
+				</p>
+			</div>
+			<a
+				class="button filled white small"
+				target="_blank"
+				href="https://cerema.app.box.com/v/webinairesosponts"
+				class="fr-btn fr-btn--secondary"
+				>Voir le webinaire</a
+			>
+		</div>
+		<span
+			class="position-absolute custom-background-home-source bg-white text-dark tiny px-1"
+			style="transform: rotate(90deg); transform-origin: center; top: 30px; right: -25px"
+			>shutterstock</span
+		>
+		<div class="fr-grid-row">
+			<div class="fr-col-offset-md-1"></div>
+			<div
+				class="fr-col-12 fr-col-md-10 fr-background-default--grey fr-pt-4w fr-p-0w fr-p-md-4w custom-background-home"
+			>
+				<h1 class="fr-h1">
+					SOS Ponts vous guide dans l’entretien et la rénovation des ponts communaux
+				</h1>
+				<!-- <p class="fr-text--lg fr-my-3w">
                     Collectivités, recevez des conseils personnalisés des conseillers publics compétents.
                 </p> -->
-                    <ul class="fr-btns-group fr-btns-group--inline fr-my-3w">
-                        <li>
-                            <a href="{% url 'projects-onboarding' %}" class="fr-btn fr-text--xl">Nous poser une question</a>
-                        </li>
-                    </ul>
-                    <div class="fr">
-                        <p class="fr-text--lg fw-normal">
-                            Vous vous posez des questions sur l'entretien et la rénovation de vos ponts communaux ? Le Cerema met à disposition SOS Ponts, un service public gratuit pour vous guider vers la prochaine étape, les bons acteurs à contacter et les actions à mettre en place.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="fr-background-alt--grey fr-py-4w"
-         style="font-family: 'Marianne', arial, sans-serif">
-        <div class="fr-container fr-pt-2w">
-            <div class="fr-grid-row fr-grid-row--gutters">
-                <div class="fr-col-12 fr-col-sm-3 text-center">
-                    <img class="p-2"
-                         src="{% static 'sosponts.recoconseil.fr/home/img/home/target.png' %}"
-                         width="100%"
-                         style="max-width: 160px"
-                         alt="Image de coopération humaine">
-                </div>
-                <div class="fr-col-12 fr-col-sm-9 fr-text--lg d-flex align-items-center">
-                    <p class="fr-my-2w">
-                        SOS Ponts est en phase d'expérimentation. Ce service s'appuie sur une démarche exploratoire, centrée sur les utilisateurs et utilisatrices. Vos questions nous permettront de bâtir ensemble un outil pertinent, adapté à vos préoccupations.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="fr-py-6w"
-         style="background-color:#1B1B35;
-                font-family: 'Marianne', arial, sans-serif">
-        <div class="fr-container fr-pt-2w fr-pb-6w">
-            <div class="fr-m-auto">
-                <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Comment fonctionne ce service ?</h3>
-            </div>
-            <div class="fr-grid-row fr-grid-row--gutters">
-                <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                    <div class="fr-p-2w fr-background-default--grey" style="height:100%">
-                        <div class="w-100 fr-p-2w fr-m-auto" style="max-width: 160px;">
-                            <img src="{% static 'sosponts.recoconseil.fr/home/img/home/computer.png' %}"
-                                 width="100%"
-                                 height="100%"
-                                 alt="Icone de recherche">
-                        </div>
-                        <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">1</span>
-                        <h6>Vous posez vos questions en lien avec un ou plusieurs de vos ponts communaux, grâce à un formulaire court.</h6>
-                    </div>
-                </div>
-                <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                    <div class="fr-p-2w fr-background-default--grey" style="height:100%">
-                        <div class="w-100 fr-p-2w fr-m-auto" style="max-width: 160px;">
-                            <img src="{% static 'sosponts.recoconseil.fr/home/img/home/dialog.png' %}"
-                                 width="100%"
-                                 height="100%"
-                                 alt="Icone d'un fichier">
-                        </div>
-                        <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">2</span>
-                        <h6>L’équipe SOS Ponts formule des recommandations sur les actions à conduire et les acteurs à contacter.</h6>
-                    </div>
-                </div>
-                <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                    <div class="fr-p-2w fr-background-default--grey" style="height:100%">
-                        <div class="w-100 fr-p-2w fr-m-auto" style="max-width: 150px;">
-                            <img src="{% static 'sosponts.recoconseil.fr/home/img/home/light.png' %}"
-                                 width="100%"
-                                 height="100%"
-                                 alt="Icone de communauté">
-                        </div>
-                        <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">3</span>
-                        <h6>Vous pouvez ensuite suivre votre dossier dans votre espace personnel et échanger avec nous.</h6>
-                    </div>
-                </div>
-                <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                    <div class="fr-p-2w fr-background-default--grey" style="height:100%">
-                        <div class="w-100 fr-p-2w fr-m-auto" style="max-width: 150px;">
-                            <img src="{% static 'sosponts.recoconseil.fr/home/img/home/people.png' %}"
-                                 width="100%"
-                                 height="100%"
-                                 alt="Icone de progrès">
-                        </div>
-                        <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">4</span>
-                        <h6>Nous construisons ensemble un produit pertinent, en réponse à vos attentes et préoccupations.</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="fr-background-alt--grey fr-py-8w"
-         style="font-family: 'Marianne', arial, sans-serif">
-        <div class="fr-container">
-            <h3 class="fr-pb-4v">Retrouvez plus d'informations sur les ponts sur d'autres outils du Cerema</h3>
-            <div class="fr-grid-row fr-grid-row--gutters justify-content-end">
-                <div class="fr-col-12 fr-col-md-6">
-                    <div class="fr-background-default--grey fr-border-default-grey border fr-p-2w">
-                        <a href="https://www.cerema.fr/fr/programmenationalponts/communes/outils"
-                           target="_blank">
-                            <img class="mb-3 home-images"
-                                 src="{% static 'sosponts.recoconseil.fr/home/img/home/logo_programme_national_ponts.png' %}"
-                                 width="100%"
-                                 height="100%"
-                                 alt="Programme National des ponts">
-                            <h6 class="fr-mb-1v">Consultez La boîte à outils du Programme National Ponts</h6>
-                            <p class="fr-text--sm fr-mb-1v">
-                                Que vous ayez ou non bénéficié du Programme national Ponts, vous y retrouverez des ressources, documents et vidéos pour vous aider dans la gestion de vos ponts et murs communaux. Comment s'organiser, les entretenir, les réparer et les rénover ?
-                            </p>
-                            <p class="fr-text--sm fr-mb-1v">
-                                <strong>Accédez aux ressources de la boite à outils</strong> >
-                            </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="fr-col-12 fr-col-md-6">
-                    <div class="fr-background-default--grey fr-border-default-grey border fr-p-2w">
-                        <a href="https://www.expertises-territoires.fr/jcms/pl1_27463/fr/communaute-ponts"
-                           target="_blank">
-                            <img class="mb-3 home-images"
-                                 src="{% static 'sosponts.recoconseil.fr/home/img/home/logo_expertises_territoires.png' %}"
-                                 width="100%"
-                                 height="100%"
-                                 alt="Programme National des ponts">
-                            <h6 class="fr-mb-1v">Rejoignez la communauté Ponts sur la plateforme Expertises Territoires du Cerema</h6>
-                            <p class="fr-text--sm fr-mb-1v">
-                                C'est une communauté dédiée aux ponts et murs, disponible sur la plate-forme collaborative Expertises Territoires. Vous souhaitez : Suivre les acutalités ? Retrouver des documents de référence ? Partager un retour d'expérience ?
-                            </p>
-                            <p class="fr-text--sm fr-mb-1v">
-                                <strong>Rejoignez la communauté ponts et devenez membre !</strong> >
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="fr-py-6w"
-         style="background-color:#1B1B35;
-                font-family: 'Marianne', arial, sans-serif">
-        <div class="fr-container fr-pt-2w fr-pb-2w">
-            <div class="fr-m-auto">
-                <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Besoin d'un accompagnement ? Faites appel à SOS PONTS</h3>
-            </div>
-            <div class="text-center">
-                <a href="{% url 'projects-onboarding' %}"
-                   class="font-medium fr-btn fr-btn--tertiary fr-text-inverted--grey fr-btn-custom-hover">
-                    Nous poser une question
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="border-bottom"></div>
-{% endblock %}
+				<ul class="fr-btns-group fr-btns-group--inline fr-my-3w">
+					<li>
+						{% if user.is_authenticated %}
+						<a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl"
+							>Nous poser une question</a
+						>
+						{% else %}
+						<button
+							class="fr-btn fr-text--xl"
+							data-fr-opened="false"
+							aria-controls="onboarding-modal"
+						>
+							Nous poser une question
+						</button>
+						{% endif %}
+					</li>
+				</ul>
+				<div class="fr">
+					<p class="fr-text--lg fw-normal">
+						Vous vous posez des questions sur l'entretien et la rénovation de vos ponts communaux ?
+						Le Cerema met à disposition SOS Ponts, un service public gratuit pour vous guider vers
+						la prochaine étape, les bons acteurs à contacter et les actions à mettre en place.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="fr-background-alt--grey fr-py-4w" style="font-family: 'Marianne', arial, sans-serif">
+	<div class="fr-container fr-pt-2w">
+		<div class="fr-grid-row fr-grid-row--gutters">
+			<div class="fr-col-12 fr-col-sm-3 text-center">
+				<img
+					class="p-2"
+					src="{% static 'sosponts.recoconseil.fr/home/img/home/target.png' %}"
+					width="100%"
+					style="max-width: 160px"
+					alt="Image de coopération humaine"
+				/>
+			</div>
+			<div class="fr-col-12 fr-col-sm-9 fr-text--lg d-flex align-items-center">
+				<p class="fr-my-2w">
+					SOS Ponts est en phase d'expérimentation. Ce service s'appuie sur une démarche
+					exploratoire, centrée sur les utilisateurs et utilisatrices. Vos questions nous
+					permettront de bâtir ensemble un outil pertinent, adapté à vos préoccupations.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="fr-py-6w" style="background-color: #1b1b35; font-family: 'Marianne', arial, sans-serif">
+	<div class="fr-container fr-pt-2w fr-pb-6w">
+		<div class="fr-m-auto">
+			<h3 class="fr-text-inverted--grey text-center fr-pb-6w">Comment fonctionne ce service ?</h3>
+		</div>
+		<div class="fr-grid-row fr-grid-row--gutters">
+			<div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
+				<div class="fr-p-2w fr-background-default--grey" style="height: 100%">
+					<div class="w-100 fr-p-2w fr-m-auto" style="max-width: 160px">
+						<img
+							src="{% static 'sosponts.recoconseil.fr/home/img/home/computer.png' %}"
+							width="100%"
+							height="100%"
+							alt="Icone de recherche"
+						/>
+					</div>
+					<span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">1</span>
+					<h6>
+						Vous posez vos questions en lien avec un ou plusieurs de vos ponts communaux, grâce à un
+						formulaire court.
+					</h6>
+				</div>
+			</div>
+			<div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
+				<div class="fr-p-2w fr-background-default--grey" style="height: 100%">
+					<div class="w-100 fr-p-2w fr-m-auto" style="max-width: 160px">
+						<img
+							src="{% static 'sosponts.recoconseil.fr/home/img/home/dialog.png' %}"
+							width="100%"
+							height="100%"
+							alt="Icone d'un fichier"
+						/>
+					</div>
+					<span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">2</span>
+					<h6>
+						L’équipe SOS Ponts formule des recommandations sur les actions à conduire et les acteurs
+						à contacter.
+					</h6>
+				</div>
+			</div>
+			<div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
+				<div class="fr-p-2w fr-background-default--grey" style="height: 100%">
+					<div class="w-100 fr-p-2w fr-m-auto" style="max-width: 150px">
+						<img
+							src="{% static 'sosponts.recoconseil.fr/home/img/home/light.png' %}"
+							width="100%"
+							height="100%"
+							alt="Icone de communauté"
+						/>
+					</div>
+					<span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">3</span>
+					<h6>
+						Vous pouvez ensuite suivre votre dossier dans votre espace personnel et échanger avec
+						nous.
+					</h6>
+				</div>
+			</div>
+			<div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
+				<div class="fr-p-2w fr-background-default--grey" style="height: 100%">
+					<div class="w-100 fr-p-2w fr-m-auto" style="max-width: 150px">
+						<img
+							src="{% static 'sosponts.recoconseil.fr/home/img/home/people.png' %}"
+							width="100%"
+							height="100%"
+							alt="Icone de progrès"
+						/>
+					</div>
+					<span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">4</span>
+					<h6>
+						Nous construisons ensemble un produit pertinent, en réponse à vos attentes et
+						préoccupations.
+					</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="fr-background-alt--grey fr-py-8w" style="font-family: 'Marianne', arial, sans-serif">
+	<div class="fr-container">
+		<h3 class="fr-pb-4v">
+			Retrouvez plus d'informations sur les ponts sur d'autres outils du Cerema
+		</h3>
+		<div class="fr-grid-row fr-grid-row--gutters justify-content-end">
+			<div class="fr-col-12 fr-col-md-6">
+				<div class="fr-background-default--grey fr-border-default-grey border fr-p-2w">
+					<a href="https://www.cerema.fr/fr/programmenationalponts/communes/outils" target="_blank">
+						<img
+							class="mb-3 home-images"
+							src="{% static 'sosponts.recoconseil.fr/home/img/home/logo_programme_national_ponts.png' %}"
+							width="100%"
+							height="100%"
+							alt="Programme National des ponts"
+						/>
+						<h6 class="fr-mb-1v">Consultez La boîte à outils du Programme National Ponts</h6>
+						<p class="fr-text--sm fr-mb-1v">
+							Que vous ayez ou non bénéficié du Programme national Ponts, vous y retrouverez des
+							ressources, documents et vidéos pour vous aider dans la gestion de vos ponts et murs
+							communaux. Comment s'organiser, les entretenir, les réparer et les rénover ?
+						</p>
+						<p class="fr-text--sm fr-mb-1v">
+							<strong>Accédez aux ressources de la boite à outils</strong> >
+						</p>
+					</a>
+				</div>
+			</div>
+			<div class="fr-col-12 fr-col-md-6">
+				<div class="fr-background-default--grey fr-border-default-grey border fr-p-2w">
+					<a
+						href="https://www.expertises-territoires.fr/jcms/pl1_27463/fr/communaute-ponts"
+						target="_blank"
+					>
+						<img
+							class="mb-3 home-images"
+							src="{% static 'sosponts.recoconseil.fr/home/img/home/logo_expertises_territoires.png' %}"
+							width="100%"
+							height="100%"
+							alt="Programme National des ponts"
+						/>
+						<h6 class="fr-mb-1v">
+							Rejoignez la communauté Ponts sur la plateforme Expertises Territoires du Cerema
+						</h6>
+						<p class="fr-text--sm fr-mb-1v">
+							C'est une communauté dédiée aux ponts et murs, disponible sur la plate-forme
+							collaborative Expertises Territoires. Vous souhaitez : Suivre les acutalités ?
+							Retrouver des documents de référence ? Partager un retour d'expérience ?
+						</p>
+						<p class="fr-text--sm fr-mb-1v">
+							<strong>Rejoignez la communauté ponts et devenez membre !</strong> >
+						</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="fr-py-6w" style="background-color: #1b1b35; font-family: 'Marianne', arial, sans-serif">
+	<div class="fr-container fr-pt-2w fr-pb-2w">
+		<div class="fr-m-auto">
+			<h3 class="fr-text-inverted--grey text-center fr-pb-6w">
+				Besoin d'un accompagnement ? Faites appel à SOS PONTS
+			</h3>
+		</div>
+		<div class="text-center">
+			{% if user.is_authenticated %}
+			<a
+				href="{% url 'onboarding-project' %}"
+				class="font-medium fr-btn fr-btn--tertiary fr-text-inverted--grey fr-btn-custom-hover"
+				>Nous poser une question</a
+			>
+			{% else %}
+			<button
+				class="font-medium fr-btn fr-btn--tertiary fr-text-inverted--grey fr-btn-custom-hover"
+				data-fr-opened="false"
+				aria-controls="onboarding-modal"
+			>
+				Nous poser une question
+			</button>
+			{% endif %}
+		</div>
+	</div>
+</div>
+<div class="border-bottom"></div>
+{% include "home/onboarding/onboarding-modal.html" with form=onboarding_modal_form %} {% endblock %}
