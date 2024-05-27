@@ -8,7 +8,7 @@
   {% vite_asset 'js/apps/home.js' %}
 {% endblock js %}
 {% block title %}
-    Page d'accueil
+Accompagnement des communs
 {% endblock %}
 
 {% block css %}
@@ -37,7 +37,7 @@
 					<li>
 						{% if user.is_authenticated %}
 						<a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl custom-button"
-							>Solliciter {{ request.site.name }}</a
+							>Etre accompagné {{ request.site.name }}</a
 						>
 						{% else %}
 						<button
@@ -45,7 +45,7 @@
 							data-fr-opened="false"
 							aria-controls="onboarding-modal"
 						>
-							Solliciter {{ request.site.name }}
+							Etre accompagné {{ request.site.name }}
 						</button>
 						{% endif %}
 					</li>
