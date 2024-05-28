@@ -1,15 +1,26 @@
 {% load static %}
 {% load cookie_consent_tags %}
-
-<div style="z-index:100000000" class="modal fade" id="home-video-modal" tabindex="-1" aria-labelledby="home-video-modal-label"
-  aria-hidden="true" x-init="initHomeVideoModal()">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-body" style="60vw">
-        {% if request|cookie_group_accepted:"tracking_media" %}
-          <iframe width="100%" height="500" x-ref="video" src="https://www.youtube.com/embed/HiAq3VhuMzo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        {% endif %}
-      </div>
+<div style="z-index:100000000"
+     class="modal fade"
+     id="home-video-modal"
+     tabindex="-1"
+     aria-labelledby="home-video-modal-label"
+     aria-hidden="true"
+     x-init="initHomeVideoModal()">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-body" style="60vw">
+                {% if request|cookie_group_accepted:"tracking_media" %}
+                    <iframe width="100%"
+                            height="500"
+                            x-ref="video"
+                            src="https://www.youtube.com/embed/HiAq3VhuMzo"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                {% endif %}
+            </div>
+        </div>
     </div>
-  </div>
 </div>
