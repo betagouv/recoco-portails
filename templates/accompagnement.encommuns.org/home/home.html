@@ -37,7 +37,7 @@ Accompagnement des communs
 					<li>
 						{% if user.is_authenticated %}
 						<a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl custom-button"
-							>Etre accompagné {{ request.site.name }}</a
+							>Etre accompagné</a
 						>
 						{% else %}
 						<button
@@ -45,7 +45,7 @@ Accompagnement des communs
 							data-fr-opened="false"
 							aria-controls="onboarding-modal"
 						>
-							Etre accompagné {{ request.site.name }}
+							Etre accompagné
 						</button>
 						{% endif %}
 					</li>
