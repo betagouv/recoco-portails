@@ -1,17 +1,18 @@
 {% load static %} {% if user.is_authenticated %}
-<a
-	href="{% url 'home' %}"
-	class="d-flex align-middle align-items-center"
-	style="text-decoration: none; color: black"
->
-	<span style="font-size: 30px; font-weight: bold">Accompagnement EnCommuns</span>
+<a href="{% url 'home' %}" class="d-flex align-middle p-3 align-items-center">
+	<img
+		src="{% static 'accompagnement.encommuns.org/home/img/home/logo-encommuns.png' %}"
+		width="60px"
+		alt="Accompagnement EnCommuns"
+		style="margin-right: 1vw"
+	/>
 </a>
 {% else %}
 <a href="{% url 'home' %}" class="d-flex align-middle p-3 align-items-center">
 	<img
 		src="{% static 'accompagnement.encommuns.org/home/img/home/logo-encommuns.png' %}"
 		width="60px"
-		alt="Logo En Communs"
+		alt=""
 		style="margin-right: 1vw"
 	/>
 	<span style="font-size: 30px; font-weight: bold">Accompagnement EnCommuns</span>
