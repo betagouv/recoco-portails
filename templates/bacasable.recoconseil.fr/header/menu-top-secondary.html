@@ -1,4 +1,8 @@
 {% load static %}
+{% load django_vite %}
+{% block js %}
+    {% vite_asset 'js/apps/menuNotification.js' %}
+{% endblock js %}
 {% with request.resolver_match.url_name as url_name %}
     <ul class="list-unstyled mb-0 d-flex justify-content-center align-items-center"
         style="padding-left: 15px">
