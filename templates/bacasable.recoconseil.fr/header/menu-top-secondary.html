@@ -1,4 +1,8 @@
 {% load static %}
+{% load django_vite %}
+{% block js %}
+    {% vite_asset 'js/apps/menuNotification.js' %}
+{% endblock js %}
 {% with request.resolver_match.url_name as url_name %}
     <ul class="list-unstyled mb-0 d-flex justify-content-center align-items-center"
         style="padding-left: 15px">
@@ -135,7 +139,7 @@
         </li>
         <!-- Address Book -->
         {% if request.user.is_staff %}
-            <li style="margin-right: 35px;
+            <li style="margin-right: 15px;
                        padding-bottom:20px;
                        border-bottom:solid 2px transparent;
                        {% if 'addressbook' in url_name %}border-bottom:solid 2px #0063CB;{% endif %}">
@@ -143,6 +147,26 @@
                    class="nav-link link-dark {% if url_name == 'addressbook-organization-list' %}active{% endif %}">
                     <span class="ms-1 me-2 align-middle">Carnet d'adresses</span>
                 </a>
+            </li>
+        {% endif %}
+        <!-- Notifications -->
+        {% if user.is_authenticated %}
+            <li class="dropdown"
+                x-data="MenuNotifications({{ unread_notifications_count }})">
+                <a class="nav-link link-dark"
+                   href="#"
+                   role="button"
+                   data-bs-toggle="dropdown"
+                   data-bs-auto-close="outside"
+                   aria-expanded="false"
+                   data-test-id="notification-menu-open">
+                    <span class="ms-1 me-2 align-middle">Notifications</span>
+                    <span class="badge text-bg-danger"
+                          x-show="notificationNumber > 0"
+                          x-text="notificationNumber"
+                          data-test-id="notification-badge"></span>
+                </a>
+                {% include "header/dropdown-menu-notifications.html" %}
             </li>
         {% endif %}
     </ul>
