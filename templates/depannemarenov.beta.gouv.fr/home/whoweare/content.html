@@ -1,0 +1,100 @@
+{% load gravatar %}
+{% load static %}
+<div class="col-8 py-3 g-0 mx-auto">
+    <h2 class="my-2">Qui sommes-nous ?</h2>
+    <p class="mb-1">
+        SOS Ponts est un projet porté par le <a href="https://www.cerema.fr/fr" target="_new">Cerema</a>, qui bénéficie du programme <a href="https://eig.etalab.gouv.fr/" target="_new">Entrepreneurs d’Intérêt Général</a>.
+    </p>
+    <p class="mb-1">
+        L’objectif est de développer un outil à destination des petites collectivités pour favoriser l’entretien et la rénovation des ponts communaux en France.
+    </p>
+    <p class="mb-1">
+        L’équipe du Cerema dédiée à ce projet est pluridisciplinaire : expert.e.s en ouvrages d’art, designer de services centrés sur les utilisateurs et utilisatrices, développeur web et spécialiste de la donnée.
+    </p>
+    <h3 class="my-2">Comment travaillons-nous ?</h3>
+    <p class="mb-1">
+        L’équipe travaille avec des méthodes propices à l’innovation et centrées sur les utilisateurs et utilisatrices.
+        Nous échangeons actuellement avec les petites collectivités pour comprendre leurs besoins et leurs difficultés. Ce service est d’ailleurs une des manières d’échanger.
+    </p>
+    <p class="mb-1">
+        Nous développerons ensuite des solutions, en les testant régulièrement et en les améliorant pour qu’elles répondent au mieux aux besoins des petites collectivités.
+    </p>
+    <p class="mb-1">
+        Tous les retours sont les bienvenus, n’hésitez pas à nous faire part de vos commentaires ou suggestions !
+    </p>
+    <p class="my-3">
+        Pour nous contacter c’est <strong><a href="{% url 'home-contact' %}">ici</a></strong>
+    </p>
+    <div class="row row-cols-1 row-cols-sm-4 row-cols-md-6 g-2">
+        <div class="col">
+            <div class="card" style="width: 160px">
+                <img src="{% static 'sosponts.recoconseil.fr/home/img/home/whoweare/Cecile_bis.jpg' 160 %}"
+                     alt="Cécile"
+                     class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text text-center">
+                        Cécile,
+                        <br />
+                        <em>Experte en ouvrages d’art</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 160px">
+                <img src="{% static 'sosponts.recoconseil.fr/home/img/home/whoweare/esil.jpg' 160 %}"
+                     alt="Esil"
+                     class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text text-center">
+                        Esil,
+                        <br />
+                        <em>Designer</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 160px">
+                <img src="{% static 'sosponts.recoconseil.fr/home/img/home/whoweare/Piero_bis.jpg' 160 %}"
+                     alt="Piero"
+                     class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text text-center">
+                        Piero,
+                        <br />
+                        <em>Expert en ouvrages d’art</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 160px">
+                <img src="{% static 'sosponts.recoconseil.fr/home/img/home/whoweare/Selyane_bis.jpg' 160 %}"
+                     alt="Sélyane"
+                     class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text text-center">
+                        Sélyane,
+                        <br />
+                        <em>Experte en ouvrages d’art</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 160px">
+                <img src="{% static 'sosponts.recoconseil.fr/home/img/home/whoweare/Vladimir_bis.jpeg' 160 %}"
+                     alt="Vladimir"
+                     class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text text-center">
+                        Vladimir,
+                        <br />
+                        <em>Développeur web</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
