@@ -189,56 +189,95 @@
                 </div>
             </div>
         </div>
-    <div class="fr-background-alt--grey fr-py-8w"
-         style="font-family: 'Marianne', arial, sans-serif">
-        <div class="fr-container">
-            <h3 class="fr-pb-4v">Nos actualités</h3>
-            <div class="fr-grid-row fr-grid-row--gutters justify-content-end">
-                <div class="fr-col-12 fr-col-md-6">
-                    <div class="fr-background-default--grey fr-border-default-grey border fr-p-2w">
-                        <a href="https://www.cerema.fr/fr/programmenationalponts/communes/outils"
-                           target="_blank">
-                            <img class="mb-3 home-images"
-                                 src="{% static 'sosponts.recoconseil.fr/home/img/home/logo_programme_national_ponts.png' %}"
-                                 width="100%"
-                                 height="100%"
-                                 alt="Programme National des ponts" />
-                            <h6 class="fr-mb-1v">Consultez La boîte à outils du Programme National Ponts</h6>
-                            <p class="fr-text--sm fr-mb-1v">
-                                Que vous ayez ou non bénéficié du Programme national Ponts, vous y retrouverez des
-                                ressources, documents et vidéos pour vous aider dans la gestion de vos ponts et murs
-                                communaux. Comment s'organiser, les entretenir, les réparer et les rénover ?
-                            </p>
-                            <p class="fr-text--sm fr-mb-1v">
-                                <strong>Accédez aux ressources de la boite à outils</strong> >
-                            </p>
-                        </a>
-                    </div>
+        <div class="fr-py-6w"
+             style="background-color: #1b1b35;
+                    font-family: 'Marianne', arial, sans-serif">
+            <div class="fr-container fr-pt-2w fr-pb-6w">
+                <div class="fr-m-auto">
+                    <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Actualités</h3>
                 </div>
-                <div class="fr-col-12 fr-col-md-6">
-                    <div class="fr-background-default--grey fr-border-default-grey border fr-p-2w">
-                        <a href="https://www.expertises-territoires.fr/jcms/pl1_27463/fr/communaute-ponts"
-                           target="_blank">
-                            <img class="mb-3 home-images"
-                                 src="{% static 'sosponts.recoconseil.fr/home/img/home/logo_expertises_territoires.png' %}"
-                                 width="100%"
-                                 height="100%"
-                                 alt="Programme National des ponts" />
-                            <h6 class="fr-mb-1v">Rejoignez la communauté Ponts sur la plateforme Expertises Territoires du Cerema</h6>
-                            <p class="fr-text--sm fr-mb-1v">
-                                C'est une communauté dédiée aux ponts et murs, disponible sur la plate-forme
-                                collaborative Expertises Territoires. Vous souhaitez : Suivre les acutalités ?
-                                Retrouver des documents de référence ? Partager un retour d'expérience ?
-                            </p>
-                            <p class="fr-text--sm fr-mb-1v">
-                                <strong>Rejoignez la communauté ponts et devenez membre !</strong> 
-                            </p>
-                        </a>
+                <div class="fr-grid-row fr-grid-row--gutters">
+                    <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
+                        <div class="fr-background-default--grey" style="height: 100%">
+                            <div class="w-100 fr-m-auto mb-4" style="height:45%">
+                                <a target="_blank"
+                                   href="https://www.ecologie.gouv.fr/politiques-publiques/eco-energie-tertiaire-eet"
+                                   style="display:flex;flex-direction:column;">
+                                    <img src="{% static 'depannemarenov.beta.gouv.fr/home/img/home/MTE.png' %}"
+                                         width="auto"
+                                         alt="lien vers le site gouvernemental sur l'eet (eco energie tertiaire)"
+                                         style="margin: auto" />
+                                </a>
+                            </div>
+                            <article class="fr-px-2w pb-4 d-flex flex-column">
+                                <span class="text-info-custom text-grey-dark mb-2">Eco Energie Tertiaire (EET)</span>
+                                <h6>
+                                    <a target="_blank"
+                                       href="https://www.ecologie.gouv.fr/politiques-publiques/eco-energie-tertiaire-eet">Plateforme OPERAT</a>
+                                </h6>
+                                <p class="mt-2">
+                                    Objectifs. Qui est concerné ? Quels sont les leviers d'action ?
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
+                        <div class="fr-background-default--grey" style="height: 100%">
+                            <div class="w-100 fr-m-auto mb-4"style="height:45%">
+                                <a target="_blank"
+                                   href="https://programme-cee-actee.fr/actualites/webinaire-actee-x-intercommunalites-de-france/"
+                                   style="display:flex;flex-direction:column;height:100%;">
+                                    <img src="{% static 'depannemarenov.beta.gouv.fr/home/img/home/logo-actee-v2.svg' %}"
+                                         alt="lien vers le site du programme de l'actee" 
+                                         style="
+                                       display: flex;
+                                       flex-direction: column;
+                                       justify-content: center;
+                                       height: 100%;"/>
+                                </a>
+                            </div>
+                            <article class="fr-px-2w pb-4 d-flex flex-column">
+                                <span class="text-info-custom text-grey-dark mb-2">webinaire</span>
+                                <h6>
+                                    <a
+                                       href="https://programme-cee-actee.fr/actualites/webinaire-actee-x-intercommunalites-de-france/">
+                                       ACTEE x Intercommunalités de France sur la massification de la rénovation énergétique</a>
+                                </h6>
+                                <p class="mt-2">
+                                    Pour massifier la rénovation énergétique des bâtiments publics, 
+                                    quels outils de mutualisation peuvent être mobilisés ? 
+                                    Quelles ressources techniques et financières sont disponibles ?
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
+                        <div class="fr-background-default--grey" style="height: 100%">
+                            <div class="w-100 fr-m-auto mb-4"style="height:45%">
+                                <a target="_blank"
+                                   href="https://www.cerema.fr/fr/centre-ressources/boutique/diminuer-consommation-energetique-batiments"
+                                   style="display:flex;flex-direction:column;">
+                                    <img src="{% static 'depannemarenov.beta.gouv.fr/home/img/home/diminuer_consommation_energetique_batiments_1.png' %}"
+                                         alt="lien vers l'ouvrage du cerema sur la diminution de la consommation energetique des batiments"
+                                         style="margin: auto; width: 40%;"/>
+                                </a>
+                            </div>
+                            <article class="fr-px-2w pb-4 d-flex flex-column">
+                                <span class="text-info-custom text-grey-dark mb-2">Diminuer la consommation énergétique des bâtiments</span>
+                                <h6>
+                                    <a target="_blank"
+                                       href="https://www.cerema.fr/fr/centre-ressources/boutique/diminuer-consommation-energetique-batiments">Ressources du cerema</a>
+                                </h6>
+                                <p class="mt-2">
+                                    Des actions simples et concrètes pour la gestion du patrimoine immobilier.
+                                </p>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    
     <div class="fr-py-6w"
          style="background-color: #1b1b35;
                 font-family: 'Marianne', arial, sans-serif">
