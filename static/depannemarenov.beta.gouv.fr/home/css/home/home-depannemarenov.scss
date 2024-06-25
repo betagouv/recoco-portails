@@ -1,0 +1,30 @@
+.custom-background-home-image {
+  background-image: url('../../img/home/home-background-depannemarenov.jpg') !important;
+}
+
+.custom-depannemarenov-banner {
+  background-image: url('../../img/home/home-background-depannemarenov.jpg') !important;
+}
+
+@media (max-width: 48em) {
+  .custom-background-home-image {
+    background-position: 0 -119px;
+  }
+
+  .custom-background-home-source {
+    top: 56px !important;
+  }
+}
+
+@media (min-width: 48em) {
+  .home-images {
+    max-height: 200px;
+  }
+}
+
+.text-center-white {
+  color: white;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 2rem;
+}
