@@ -10,7 +10,7 @@
         {% get_obj_perms request.user for request.site as "user_site_perms" %}
     {% endif %}
     {% if 'moderate_projects' in user_site_perms %}
-        {% project_to_examine_count as project_to_examine_count %}
+        {% get_project_moderation_count as projects_to_moderate_count %}
     {% endif %}
     <ul class="list-unstyled mb-0 d-flex align-items-center"
         data-test-id="secondary-menu"
@@ -190,10 +190,10 @@
                 </li>
             {% endif %}
             <!-- Projects moderation -->
-            {% if project_to_examine_count > 0 %}
+            {% if projects_to_moderate_count > 0 %}
                 <li style="{% if url_name == 'projects-moderation-list' %}activated{% endif %}">
                     <a href="{% url "projects-moderation-list" %}"
-                       class="nav-link link-dark {% if url_name == 'resources-resource-search' %}active{% endif %}">Projets à examiner <span class="badge text-bg-danger">{{ project_to_examine_count }}</span></a>
+                       class="nav-link link-dark {% if url_name == 'resources-resource-search' %}active{% endif %}">Projets à examiner <span class="badge text-bg-danger">{{ projects_to_moderate_count }}</span></a>
                 </li>
             {% endif %}
             <!-- Ressources -->
