@@ -60,7 +60,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <span class="text-break text-truncate">
                                                 <a class="stretched-link text-reset text-decoration-none"
-                                                   href="{% url "projects-project-detail" project.id %}">{{ project.name|capfirst }}</a>
+                                                   href="{% url "projects-project-detail" project.id %}">{{ project.commune|capfirst }}</a>
                                             </span>
                                             {% if project.actions_open > 0 %}
                                                 <div>
@@ -68,7 +68,7 @@
                                                 </div>
                                             {% endif %}
                                         </div>
-                                        <span class="text-secondary small text-break text-truncate">{{ project.location|truncatechars:40|capfirst }}</span>
+                                        <span class="text-secondary small text-break text-truncate">{{ project.name|capfirst }}</span>
                                     </li>
                                 {% endfor %}
                             </ul>
