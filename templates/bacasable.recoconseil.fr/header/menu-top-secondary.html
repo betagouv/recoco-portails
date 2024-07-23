@@ -1,9 +1,17 @@
 {% load static %}
+{% load guardian_tags %}
 {% load django_vite %}
+{% load projects_extra %}
 {% block js %}
     {% vite_asset 'js/apps/menuNotification.js' %}
 {% endblock js %}
 {% with request.resolver_match.url_name as url_name %}
+    {% if user.is_authenticated %}
+        {% get_obj_perms request.user for request.site as "user_site_perms" %}
+    {% endif %}
+    {% if 'moderate_projects' in user_site_perms %}
+        {% project_to_examine_count as project_to_examine_count %}
+    {% endif %}
     <ul class="list-unstyled mb-0 d-flex justify-content-center align-items-center"
         style="padding-left: 15px">
         <!-- Projects -->
@@ -20,7 +28,8 @@
                     </div>
                 </div>
             </li>
-            <li style="{% if 'projects-project-detail' in url_name %}border-bottom:solid 2px #0063CB;{% endif %}">
+            <li style="{% if 'projects-project-detail' in url_name %}border-bottom:solid 2px #0063CB;
+                       {% endif %}">
                 <div id="project-selector" class="nav-item">
                     <div x-data="{ open: false }"
                          x-on:click.outside="open = false"
@@ -71,7 +80,8 @@
         <!-- Dashboard -->
         {% if is_switchtender or is_administrating_project %}
             <li class="nav-item dropdown nav-item-admin"
-                style="margin-right: 35px;{% if url_name == 'projects-project-list' %}border-bottom:solid 2px #0063CB;{% endif %}">
+                style="margin-right: 35px;
+                       {% if url_name == 'projects-project-list' %}border-bottom:solid 2px #0063CB;{% endif %}">
                 <div class="btn-group">
                     <a href="{% url 'projects-project-list' %}"
                        class="nav-link link-dark {% if url_name == 'projects-project-list' %}active{% endif %}">
@@ -90,8 +100,16 @@
         </div>
     </li>
     {% endif %} -->
+        <!-- Projects moderation -->
+        {% if project_to_examine_count > 0 %}
+            <li style="{% if url_name == 'projects-moderation-list' %}activated{% endif %}">
+                <a href="{% url "projects-moderation-list" %}"
+                   class="nav-link link-dark {% if url_name == 'resources-resource-search' %}active{% endif %}">Projets à examiner <span class="badge text-bg-danger">{{ project_to_examine_count }}</span></a>
+            </li>
+        {% endif %}
         <!-- Ressources -->
-        <li style="{% if url_name == 'resources-resource-search' %}border-bottom:solid 2px #0063CB;{% endif %}">
+        <li style="{% if url_name == 'resources-resource-search' %}border-bottom:solid 2px #0063CB;
+                   {% endif %}">
             <div x-data="{ open: false }"
                  x-on:click.outside="open = false"
                  class="btn-group d-flex justify-content-center align-items-center">
@@ -128,7 +146,8 @@
         </li>
         <!-- Address Book -->
         {% if request.user.is_staff %}
-            <li style="{% if 'addressbook' in url_name %}border-bottom:solid 2px #0063CB;{% endif %}">
+            <li style="{% if 'addressbook' in url_name %}border-bottom:solid 2px #0063CB;
+                       {% endif %}">
                 <a href="{% url 'addressbook-organization-list' %}"
                    class="nav-link link-dark {% if url_name == 'addressbook-organization-list' %}active{% endif %}">
                     <span class="ms-1 me-2 align-middle">Carnet d'adresses</span>
