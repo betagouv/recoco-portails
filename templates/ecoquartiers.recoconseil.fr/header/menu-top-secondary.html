@@ -17,9 +17,7 @@
                {% if not user.is_authenticated %}border-left: 0.1rem solid #d5d5d5;{% endif %}">
         <!-- Projects -->
         {% if active_project %}
-            <li style="margin-right: 15px;
-                       padding-bottom:20px;
-                       border-bottom:solid 2px transparent">
+            <li style="margin-right: 15px;">
                 <div id="project-selector" class="nav-item">
                     <div x-data="{ open: false }"
                          x-on:click.outside="open = false"
@@ -32,8 +30,6 @@
                 </div>
             </li>
             <li style="margin-right: 15px;
-                       padding-bottom:20px;
-                       border-bottom:solid 2px transparent;
                        {% if 'projects-project-detail' in url_name %}border-bottom:solid 2px #0063CB;{% endif %}">
                 <div id="project-selector" class="nav-item">
                     <div x-data="{ open: false }"
@@ -86,8 +82,6 @@
         {% if is_switchtender or is_administrating_project %}
             <li class="nav-item dropdown nav-item-admin"
                 style="margin-right: 35px;
-                       padding-bottom:20px;
-                       border-bottom:solid 2px transparent;
                        {% if url_name == 'projects-project-list' %}border-bottom:solid 2px #0063CB;{% endif %}">
                 <div class="btn-group">
                     <a href="{% url 'projects-project-list' %}"
@@ -145,18 +139,6 @@
                     {% endif %}
                 </div>
             </li>
-            <!-- Address Book -->
-            {% if request.user.is_staff %}
-                <li style="margin-right: 35px;
-                           padding-bottom:20px;
-                           border-bottom:solid 2px transparent;
-                           {% if 'addressbook' in url_name %}border-bottom:solid 2px #0063CB;{% endif %}">
-                    <a href="{% url 'addressbook-organization-list' %}"
-                       class="nav-link link-dark {% if url_name == 'addressbook-organization-list' %}active{% endif %}">
-                        <span class="ms-1 me-2 align-middle">Carnet d'adresses</span>
-                    </a>
-                </li>
-            {% endif %}
             <!-- Notifications -->
             {% if user.is_authenticated %}
                 <li class="dropdown"
