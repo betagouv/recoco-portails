@@ -1,20 +1,63 @@
-{% load static %} {% if user.is_authenticated %}
+{% load static %}
+{% if user.is_authenticated and request.site.configuration.logo_small %}
+     <a href="{% url 'home' %}"
+        class="d-flex align-middle align-items-center">
+          <img class="logo-{{ request.site.name|lower }}"
+               src="{{ request.site.configuration.logo_small.url }}"
+               width="auto"
+               height="40px"
+               alt="logo {{ request.site.name }} - lien retour page accueil" />
+     </a>
+{% elif user.is_authenticated %}
 <a href="{% url 'home' %}" class="d-flex align-middle align-items-center">
 	<img
 		src="{% static 'accompagnement.encommuns.org/home/img/home/logo-encommuns.png' %}"
 		width="40px"
 		alt="Accompagnement EnCommuns"
-		style="margin-right: 1vw"
 	/>
 </a>
+{% elif not user.is_authenticated and request.site.configuration.logo_large %}
+     <div class="navbar-logo">
+          <button class="toggler-secondary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#secondary-navbar"
+                  aria-controls="secondary-navbar"
+                  aria-expanded="false"
+                  aria-label="Ouvrir le Menu"
+                  data-test-id="toggler-secondary-menu">
+               <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="{% url 'home' %}"
+             class="d-flex align-middle p-3 align-items-center">
+               <img class="logo-{{ request.site.name|lower }}"
+                    src="{{ request.site.configuration.logo_large.url }}"
+                    width="auto"
+                    height="40px"
+                    alt="logo {{ request.site.name }} - lien retour page accueil" />
+                    <span style="font-size: 30px; font-weight: bold;margin-left: 30px;">{{ request.site.name }}</span>
+          </a>
+     </div>
 {% else %}
-<a href="{% url 'home' %}" class="d-flex align-middle p-3 align-items-center">
-	<img
-		src="{% static 'accompagnement.encommuns.org/home/img/home/logo-encommuns.png' %}"
-		width="60px"
-		alt=""
-		style="margin-right: 1vw"
-	/>
-	<span style="font-size: 30px; font-weight: bold">Accompagnement EnCommuns</span>
-</a>
+	<div class="navbar-logo">
+		<button class="toggler-secondary"
+				type="button"
+				data-bs-toggle="collapse"
+				data-bs-target="#secondary-navbar"
+				aria-controls="secondary-navbar"
+				aria-expanded="false"
+				aria-label="Ouvrir le Menu"
+				data-test-id="toggler-secondary-menu">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a href="{% url 'home' %}" class="d-flex align-middle p-3 align-items-center">
+			<img
+				src="{% static 'accompagnement.encommuns.org/home/img/home/logo-encommuns.png' %}"
+				width="60px"
+				alt=""
+				style="margin-right: 1vw"
+			/>
+			<span style="font-size: 30px; font-weight: bold">{{ request.site.name }}</span>
+		</a>
+	</div>
 {% endif %}
