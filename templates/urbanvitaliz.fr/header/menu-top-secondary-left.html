@@ -1,0 +1,10 @@
+<!-- Methodology -->
+{% if not user.is_authenticated %}
+    <li>
+        <div class="btn-group">
+            <a href="{% url 'methodology' %}" class="nav-link link-dark">
+                <span class="me-2 ms-1 align-middle">Méthodologie</span>
+            </a>
+        </div>
+    </li>
+{% endif %}
