@@ -1,9 +1,17 @@
 {% load static %}
+{% load guardian_tags %}
 {% load django_vite %}
+{% load projects_extra %}
 {% block js %}
     {% vite_asset 'js/apps/menuNotification.js' %}
 {% endblock js %}
 {% with request.resolver_match.url_name as url_name %}
+    {% if user.is_authenticated %}
+        {% get_obj_perms request.user for request.site as "user_site_perms" %}
+    {% endif %}
+    {% if 'moderate_projects' in user_site_perms %}
+        {% project_to_examine_count as project_to_examine_count %}
+    {% endif %}
     <ul class="list-unstyled mb-0 d-flex justify-content-center align-items-center"
         style="padding-left: 15px">
         <!-- Projects -->
@@ -92,6 +100,13 @@
         </div>
     </li>
     {% endif %} -->
+        <!-- Projects moderation -->
+        {% if project_to_examine_count > 0 %}
+            <li style="{% if url_name == 'projects-moderation-list' %}activated{% endif %}">
+                <a href="{% url "projects-moderation-list" %}"
+                   class="nav-link link-dark {% if url_name == 'resources-resource-search' %}active{% endif %}">Projets à examiner <span class="badge text-bg-danger">{{ project_to_examine_count }}</span></a>
+            </li>
+        {% endif %}
         <!-- Ressources -->
         <li style="{% if url_name == 'resources-resource-search' %}border-bottom:solid 2px #0063CB;
                    {% endif %}">
