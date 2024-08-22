@@ -28,9 +28,7 @@
                             {% if unread_notifications_count %}<span class="has-notification">&nbsp;</span>{% endif %}
                             <span class="ms-1 align-middle">Accueil</span>
                         </a>
-                        <button x-on:click="open = !open"
-                                type="button"
-                                class="border-0 btn py-0 px-1">
+                        <button x-on:click="open = !open" type="button" class="border-0 py-0 px-1">
                             <svg data-toggle="tooltip"
                                  data-placement="top"
                                  title="Notifications désactivées"
@@ -105,9 +103,7 @@
                              class="btn-group">
                             {% if request.session.projects|length > 0 %}
                                 <span class="ms-1 align-middle">Mes projets</span>
-                                <button x-on:click="open = !open"
-                                        type="button"
-                                        class="border-0 btn py-0 px-1">
+                                <button x-on:click="open = !open" type="button" class="border-0 py-0 px-1">
                                     <svg data-toggle="tooltip"
                                          data-placement="top"
                                          title="Notifications désactivées"
@@ -193,7 +189,7 @@
             {% if projects_to_moderate_count > 0 %}
                 <li style="{% if url_name == 'projects-moderation-list' %}activated{% endif %}">
                     <a href="{% url "projects-moderation-list" %}"
-                       class="nav-link link-dark {% if url_name == 'resources-resource-search' %}active{% endif %}">Projets à examiner <span class="badge text-bg-danger">{{ projects_to_moderate_count }}</span></a>
+                       class="nav-link link-dark {% if url_name == 'projects-moderation-list' %}active{% endif %}">Projets à examiner <span class="badge text-bg-danger">{{ projects_to_moderate_count }}</span></a>
                 </li>
             {% endif %}
             <!-- Ressources -->
@@ -212,9 +208,7 @@
                             <span class="ms-1 align-middle">Ressources</span>
                         </a>
                         {% if "manage_resources" in user_site_perms %}
-                            <button x-on:click="open = !open"
-                                    type="button"
-                                    class="border-0 btn py-0 px-1">
+                            <button x-on:click="open = !open" type="button" class="border-0 py-0 px-1">
                                 <svg data-toggle="tooltip"
                                      data-placement="top"
                                      title="Notifications désactivées"
