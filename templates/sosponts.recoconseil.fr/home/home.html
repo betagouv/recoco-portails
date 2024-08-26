@@ -2,8 +2,13 @@
 {% extends "base.html" %}
 {% load sass_tags %}
 {% load static %}
-{% block title %}Entretien des ponts communaux{% endblock %}
 {% load django_vite %}
+{% block title %}
+    Entretien des ponts communaux
+{% endblock title %}
+{% block og_title %}
+    Entretien des ponts communaux
+{% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
 {% endblock %}
@@ -32,10 +37,9 @@
                     </svg>
                     <p class="m-0 me-2">Regardez l’enregistrement du webinaire SOS PONTS destiné aux collectivités.</p>
                 </div>
-                <a class="button filled white small"
-                   target="_blank"
+                <a target="_blank"
                    href="https://cerema.app.box.com/v/webinairesosponts"
-                   class="fr-btn fr-btn--secondary">Voir le webinaire</a>
+                   class="fr-btn fr-btn--secondary bg-white">Voir le webinaire</a>
             </div>
             <span class="position-absolute custom-background-home-source bg-white text-dark tiny px-1"
                   style="transform: rotate(90deg);
@@ -223,9 +227,9 @@
             <div class="text-center">
                 {% if user.is_authenticated %}
                     <a href="{% url 'onboarding-project' %}"
-                       class="font-medium fr-btn fr-btn--tertiary fr-text-inverted--grey fr-btn-custom-hover">Nous poser une question</a>
+                       class="fr-btn fr-btn--tertiary fr-btn--lg fr-text-inverted--grey">Nous poser une question</a>
                 {% else %}
-                    <button class="font-medium fr-btn fr-btn--tertiary fr-text-inverted--grey fr-btn-custom-hover"
+                    <button class="fr-btn fr-btn--tertiary fr-btn--lg fr-text-inverted--grey"
                             data-fr-opened="false"
                             aria-controls="onboarding-modal">Nous poser une question</button>
                 {% endif %}
