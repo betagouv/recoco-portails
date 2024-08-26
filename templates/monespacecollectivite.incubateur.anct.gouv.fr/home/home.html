@@ -2,7 +2,12 @@
 {% extends "base.html" %}
 {% load sass_tags %}
 {% load static %}
-{% block title %}Accélérez les projets de votre territoire{% endblock %}
+{% block title %}
+    Accélérez les projets de votre territoire
+{% endblock title %}
+{% block og_title %}
+    Accélérez les projets de votre territoire
+{% endblock og_title %}
 {% load django_vite %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
@@ -36,9 +41,9 @@
                         </p>
                         {% if user.is_authenticated %}
                             <a href="{% url 'onboarding-project' %}"
-                               class="fr-btn fr-btn--primary fr-text--xl fr-btn-custom-hover">Démarrer un projet</a>
+                               class="fr-btn fr-btn--primary fr-text--xl">Démarrer un projet</a>
                         {% else %}
-                            <button class="fr-btn fr-btn--primary fr-text--xl fr-btn-custom-hover"
+                            <button class="fr-btn fr-btn--primary fr-text--xl"
                                     data-fr-opened="false"
                                     aria-controls="onboarding-modal">Démarrer un projet</button>
                         {% endif %}
@@ -129,9 +134,9 @@
                 <div class="text-center">
                     {% if user.is_authenticated %}
                         <a href="{% url 'onboarding-project' %}"
-                           class="fr-btn fr-btn--primary fr-text--xl fr-text-inverted--grey fr-btn-custom-hover">Démarrer un projet</a>
+                           class="fr-btn fr-btn--tertiary fr-text--xl fr-text-inverted--grey">Démarrer un projet</a>
                     {% else %}
-                        <button class="fr-btn fr-btn--primary fr-text--xl fr-text-inverted--grey fr-btn-custom-hover"
+                        <button class="fr-btn fr-btn--tertiary fr-text--xl fr-text-inverted--grey"
                                 data-fr-opened="false"
                                 aria-controls="onboarding-modal">Démarrer un projet</button>
                     {% endif %}
