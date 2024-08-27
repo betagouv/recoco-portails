@@ -57,7 +57,7 @@
                                     <li class="list-group-item px-3 py-2 list-group-item-action dropdown-item border-0 border-bottom">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <span class="text-break text-truncate">
-                                                <a class="stretched-link text-reset text-decoration-none"
+                                                <a class="text-reset text-decoration-none"
                                                    href="{% url "projects-project-detail" project.id %}">{{ project.commune|capfirst }}</a>
                                             </span>
                                             {% if project.actions_open > 0 %}
@@ -102,7 +102,7 @@
         {% if project_to_moderate_count > 0 %}
             <li style="{% if url_name == 'projects-moderation-list' %}activated{% endif %}">
                 <a href="{% url "projects-moderation-list" %}"
-                   class="nav-link link-dark {% if url_name == 'resources-resource-search' %}active{% endif %}">Projets à examiner <span class="badge text-bg-danger">{{ project_to_moderate_count }}</span></a>
+                   class="nav-link link-dark {% if url_name == 'projects-moderation-list' %}active{% endif %}">Projets à examiner <span class="badge text-bg-danger">{{ project_to_moderate_count }}</span></a>
             </li>
         {% endif %}
         <!-- Ressources -->
