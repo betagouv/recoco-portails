@@ -37,9 +37,7 @@
                          class="btn-group">
                         {% if request.session.projects|length > 0 %}
                             <span class="ms-1 align-middle">Mes projets</span>
-                            <button x-on:click="open = !open"
-                                    type="button"
-                                    class="border-0 btn py-0 px-1">
+                            <button x-on:click="open = !open" type="button" class="border-0 py-0 px-1">
                                 <svg data-toggle="tooltip"
                                      data-placement="top"
                                      title="Notifications désactivées"
@@ -113,9 +111,7 @@
                         <span class="ms-1 align-middle">Ressources</span>
                     </a>
                     {% if user.is_staff %}
-                        <button x-on:click="open = !open"
-                                type="button"
-                                class="border-0 btn py-0 px-1">
+                        <button x-on:click="open = !open" type="button" class="border-0 py-0 px-1">
                             <svg data-toggle="tooltip"
                                  data-placement="top"
                                  title="Notifications désactivées"
