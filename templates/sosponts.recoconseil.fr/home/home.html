@@ -24,8 +24,7 @@
           type="text/css" />
 {% endblock %}
 {% block content %}
-    <div class="fr-container"
-         style="font-family: 'Marianne', arial, sans-serif">
+    <div class="fr-container">
         <div class="position-relative custom-background-home-image custom-sosponts-banner">
             <div class="custom-banner left-banner">
                 <div class="d-flex align-items-center">
@@ -41,11 +40,7 @@
                    href="https://cerema.app.box.com/v/webinairesosponts"
                    class="fr-btn fr-btn--secondary bg-white">Voir le webinaire</a>
             </div>
-            <span class="position-absolute custom-background-home-source bg-white text-dark tiny px-1"
-                  style="transform: rotate(90deg);
-                         transform-origin: center;
-                         top: 30px;
-                         right: -25px">shutterstock</span>
+            <span class="position-absolute custom-background-home-source bg-white text-dark tiny px-1 specific-transformations">shutterstock</span>
             <div class="fr-grid-row">
                 <div class="fr-col-offset-md-1"></div>
                 <div class="fr-col-12 fr-col-md-10 fr-background-default--grey fr-pt-4w fr-p-0w fr-p-md-4w custom-background-home">
@@ -75,15 +70,13 @@
             </div>
         </div>
     </div>
-    <div class="fr-background-alt--grey fr-py-4w"
-         style="font-family: 'Marianne', arial, sans-serif">
+    <div class="fr-background-alt--grey fr-py-4w">
         <div class="fr-container fr-pt-2w">
             <div class="fr-grid-row fr-grid-row--gutters">
                 <div class="fr-col-12 fr-col-sm-3 text-center">
-                    <img class="p-2"
+                    <img class="p-2 specific-maxwidth-160px"
                          src="{% static 'sosponts.recoconseil.fr/home/img/home/target.png' %}"
                          width="100%"
-                         style="max-width: 160px"
                          alt="Image de coopération humaine" />
                 </div>
                 <div class="fr-col-12 fr-col-sm-9 fr-text--lg d-flex align-items-center">
@@ -96,17 +89,15 @@
             </div>
         </div>
     </div>
-    <div class="fr-py-6w"
-         style="background-color: #1b1b35;
-                font-family: 'Marianne', arial, sans-serif">
+    <div class="fr-py-6w specific-backgroundcolor-1b1b35">
         <div class="fr-container fr-pt-2w fr-pb-6w">
             <div class="fr-m-auto">
                 <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Comment fonctionne ce service ?</h3>
             </div>
             <div class="fr-grid-row fr-grid-row--gutters">
                 <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                    <div class="fr-p-2w fr-background-default--grey" style="height: 100%">
-                        <div class="w-100 fr-p-2w fr-m-auto" style="max-width: 160px">
+                    <div class="fr-p-2w fr-background-default--grey h-100">
+                        <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
                             <img src="{% static 'sosponts.recoconseil.fr/home/img/home/computer.png' %}"
                                  width="100%"
                                  height="100%"
@@ -120,8 +111,8 @@
                     </div>
                 </div>
                 <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                    <div class="fr-p-2w fr-background-default--grey" style="height: 100%">
-                        <div class="w-100 fr-p-2w fr-m-auto" style="max-width: 160px">
+                    <div class="fr-p-2w fr-background-default--grey h-100">
+                        <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
                             <img src="{% static 'sosponts.recoconseil.fr/home/img/home/dialog.png' %}"
                                  width="100%"
                                  height="100%"
@@ -135,8 +126,8 @@
                     </div>
                 </div>
                 <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                    <div class="fr-p-2w fr-background-default--grey" style="height: 100%">
-                        <div class="w-100 fr-p-2w fr-m-auto" style="max-width: 150px">
+                    <div class="fr-p-2w fr-background-default--grey h-100">
+                        <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
                             <img src="{% static 'sosponts.recoconseil.fr/home/img/home/light.png' %}"
                                  width="100%"
                                  height="100%"
@@ -150,8 +141,8 @@
                     </div>
                 </div>
                 <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                    <div class="fr-p-2w fr-background-default--grey" style="height: 100%">
-                        <div class="w-100 fr-p-2w fr-m-auto" style="max-width: 150px">
+                    <div class="fr-p-2w fr-background-default--grey h-100">
+                        <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
                             <img src="{% static 'sosponts.recoconseil.fr/home/img/home/people.png' %}"
                                  width="100%"
                                  height="100%"
@@ -167,8 +158,7 @@
             </div>
         </div>
     </div>
-    <div class="fr-background-alt--grey fr-py-8w"
-         style="font-family: 'Marianne', arial, sans-serif">
+    <div class="fr-background-alt--grey fr-py-8w">
         <div class="fr-container">
             <h3 class="fr-pb-4v">Retrouvez plus d'informations sur les ponts sur d'autres outils du Cerema</h3>
             <div class="fr-grid-row fr-grid-row--gutters justify-content-end">
@@ -217,9 +207,7 @@
             </div>
         </div>
     </div>
-    <div class="fr-py-6w"
-         style="background-color: #1b1b35;
-                font-family: 'Marianne', arial, sans-serif">
+    <div class="fr-py-6w specific-backgroundcolor-1b1b35">
         <div class="fr-container fr-pt-2w fr-pb-2w">
             <div class="fr-m-auto">
                 <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Besoin d'un accompagnement ? Faites appel à SOS PONTS</h3>

@@ -1,18 +1,26 @@
 .custom-background-home-image {
-	background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/Wikipedia_Community_cartoon_-_for_International_Women%27s_Day.svg) !important;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/Wikipedia_Community_cartoon_-_for_International_Women%27s_Day.svg) !important;
 }
 
 @media (max-width: 48em) {
-	.custom-background-home-image {
-		background-position: 0 -119px;
-	}
-	.custom-background-home-source {
-		top: 56px !important;
-	}
+  .custom-background-home-image {
+    background-position: 0 -119px;
+  }
+  .custom-background-home-source {
+    top: 56px !important;
+  }
 }
 
 @media (min-width: 48em) {
-	.home-images {
-		max-height: 200px;
-	}
+  .home-images {
+    max-height: 200px;
+  }
+}
+
+.specific-backgroundcolor-1b1b35 {
+  background-color: #1b1b35;
+}
+
+.specific-maxwidth-160px {
+  max-width: 160px;
 }

@@ -30,8 +30,7 @@ Réhabilitation une friche
 {% block content %}
     <div x-data="ModalVideo">
         {% include "home/modal_video.html" %}
-        <div class="fr-container"
-             style="font-family: 'Marianne', arial, sans-serif">
+        <div class="fr-container">
             <div class="custom-background-home-image position-relative">
                 <div class="custom-banner">
                     <svg class="bi align-middle me-2"
@@ -76,16 +75,14 @@ Réhabilitation une friche
                 </div>
             </div>
         </div>
-        <div class="fr-py-6w"
-             style="background-color: #1b1b35;
-                    font-family: 'Marianne', arial, sans-serif">
+        <div class="fr-py-6w specific-backgroundcolor-1b1b35">
             <div class="fr-container fr-pt-2w fr-pb-6w">
                 <div class="fr-m-auto">
                     <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Actualités</h3>
                 </div>
                 <div class="fr-grid-row fr-grid-row--gutters">
                     <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
-                        <div class="fr-background-default--grey" style="height: 100%">
+                        <div class="fr-background-default--grey h-100">
                             <div class="w-100 fr-m-auto mb-4">
                                 <a target="_blank"
                                    href="https://radioterritoria.fr/broadcast/28087-UrbanVitaliz-le-service-qui-aide-les-collectivit%C3%A9s-%C3%A0-revitaliser-leurs-fonciers-%C3%A0-l%E2%80%99abandon">
@@ -109,7 +106,7 @@ Réhabilitation une friche
                         </div>
                     </div>
                     <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
-                        <div class="fr-background-default--grey" style="height: 100%">
+                        <div class="fr-background-default--grey h-100">
                             <div class="w-100 fr-m-auto mb-4">
                                 <a target="_blank"
                                    href="https://www.youtube.com/watch?v=HiAq3VhuMzo&ab_channel=Cerema">
@@ -133,7 +130,7 @@ Réhabilitation une friche
                         </div>
                     </div>
                     <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
-                        <div class="fr-background-default--grey" style="height: 100%">
+                        <div class="fr-background-default--grey h-100">
                             <div class="w-100 fr-m-auto mb-4">
                                 <a target="_blank"
                                    href="https://www.cerema.fr/fr/actualites/rehabiliter-friche-replays-webinaires-urbanvitaliz#paragraph--41603">
@@ -159,14 +156,13 @@ Réhabilitation une friche
                 </div>
             </div>
         </div>
-        <div class="fr-background-alt--grey fr-py-4w"
-             style="font-family: 'Marianne', arial, sans-serif">
+        <div class="fr-background-alt--grey fr-py-4w">
             <div class="fr-container fr-pt-2w">
                 <div class="fr-grid-row fr-grid-row--gutters">
                     <div class="fr-col-12 fr-col-sm-3 text-center">
                         <img src="{% static 'home/img/home/human_cooperation.png' %}"
                              width="100%"
-                             style="max-width: 160px"
+                             class="specific-maxwidth-160px"
                              alt="Image de coopération humaine" />
                     </div>
                     <div class="fr-col-12 fr-col-sm-9 fr-text--lg">
@@ -177,17 +173,15 @@ Réhabilitation une friche
                 </div>
             </div>
         </div>
-        <div class="fr-py-6w"
-             style="background-color: #1b1b35;
-                    font-family: 'Marianne', arial, sans-serif">
+        <div class="fr-py-6w specific-backgroundcolor-1b1b35">
             <div class="fr-container fr-pt-2w fr-pb-6w">
                 <div class="fr-m-auto">
                     <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Comment fonctionne UrbanVitaliz ?</h3>
                 </div>
                 <div class="fr-grid-row fr-grid-row--gutters">
                     <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                        <div class="fr-p-2w fr-background-default--grey" style="height: 100%">
-                            <div class="w-100 fr-p-2w fr-m-auto" style="max-width: 160px">
+                        <div class="fr-p-2w fr-background-default--grey h-100">
+                            <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
                                 <img src="{% static 'home/img/home/search.png' %}"
                                      width="100%"
                                      height="100%"
@@ -198,8 +192,8 @@ Réhabilitation une friche
                         </div>
                     </div>
                     <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                        <div class="fr-p-2w fr-background-default--grey" style="height: 100%">
-                            <div class="w-100 fr-p-2w fr-m-auto" style="max-width: 160px">
+                        <div class="fr-p-2w fr-background-default--grey h-100">
+                            <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
                                 <img src="{% static 'home/img/home/form.png' %}"
                                      width="100%"
                                      height="100%"
@@ -210,8 +204,8 @@ Réhabilitation une friche
                         </div>
                     </div>
                     <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                        <div class="fr-p-2w fr-background-default--grey" style="height: 100%">
-                            <div class="w-100 fr-p-2w fr-m-auto" style="max-width: 160px">
+                        <div class="fr-p-2w fr-background-default--grey h-100">
+                            <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
                                 <img src="{% static 'home/img/home/community.png' %}"
                                      width="100%"
                                      height="100%"
@@ -222,8 +216,8 @@ Réhabilitation une friche
                         </div>
                     </div>
                     <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                        <div class="fr-p-2w fr-background-default--grey" style="height: 100%">
-                            <div class="w-100 fr-p-2w fr-m-auto" style="max-width: 160px">
+                        <div class="fr-p-2w fr-background-default--grey h-100">
+                            <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
                                 <img src="{% static 'home/img/home/progress.png' %}"
                                      width="100%"
                                      height="100%"
@@ -236,8 +230,7 @@ Réhabilitation une friche
                 </div>
             </div>
         </div>
-        <div class="fr-background-alt--grey fr-py-8w"
-             style="font-family: 'Marianne', arial, sans-serif">
+        <div class="fr-background-alt--grey fr-py-8w">
             <div class="fr-container">
                 <h3 class="fr-pb-4v">Exemples de recommandations à des collectivités</h3>
                 <div class="fr-grid-row fr-grid-row--gutters">
@@ -274,9 +267,7 @@ Réhabilitation une friche
                         </div>
                     </div>
                     <div class="fr-col-12 fr-col-md-6">
-                        <div class="fr-border-default-grey border fr-p-2w fr-text-inverted--grey"
-                             style="background-color: #1b1b35;
-                                    height: 100%">
+                        <div class="fr-border-default-grey border fr-p-2w fr-text-inverted--grey specific-backgroundcolor-1b1b35 h-100">
                             <h6 class="fr-mb-13v fr-text-inverted--grey">Faites-vous accompagner</h6>
                             {% if user.is_authenticated %}
                                 <a href="{% url 'onboarding-project' %}"
@@ -293,8 +284,7 @@ Réhabilitation une friche
         </div>
         <div class="fr-container fr-mt-8v">
             <p class="fr-text--sm fr-mb-1v">Nos partenaires :</p>
-            <div class="fr-mt-2v fr-mb-4w fr-grid-row fr-grid-row--middle"
-                 style="justify-content: center">
+            <div class="fr-mt-2v fr-mb-4w fr-grid-row fr-grid-row--middle justify-content-center">
                 <div class="fr-col-6 fr-col-sm-3 fr-col-md-2 fr-pr-2v fr-pr-md-4v">
                     <img src="{% static 'img/partners/logo_cerema.png' %}"
                          width="100%"
