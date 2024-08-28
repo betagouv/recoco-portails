@@ -46,6 +46,10 @@
         .datum(newFrichesData())
         .call(chart);
 
+        setTimeout(()=> {
+            chart.update();
+        }, 500);
+        
         nv.utils.windowResize(chart.update);
 
         return chart;

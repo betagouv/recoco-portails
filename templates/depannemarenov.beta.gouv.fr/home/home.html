@@ -11,7 +11,7 @@
 {% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
-{% endblock %}
+{% endblock js %}
 {% block css %}
     <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
           rel="stylesheet"
@@ -22,7 +22,7 @@
     <link href="{% sass_src 'home/css/home/home.scss' %}"
           rel="stylesheet"
           type="text/css" />
-{% endblock %}
+{% endblock css %}
 {% block content %}
     <div class="fr-container">
         <div class="position-relative custom-background-home-image custom-depannemarenov-banner">
@@ -212,7 +212,7 @@
                         </article>
                     </div>
                 </div>
-                <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
+                <div class="fr-col-12 fr-col-sm-6 fr-col-md-4 specific-height-600px">
                     <div class="fr-background-default--grey h-100">
                         <div class="w-100 fr-m-auto fr-mb-3w specific-height-45prct">
                             <a target="_blank"
@@ -225,7 +225,7 @@
                         </div>
                         <article class="fr-px-2w fr-pb-3w d-flex flex-column">
                             <span class="text-info-custom text-grey-dark fr-mb-2v">webinaire</span>
-                            <h6>
+                            <h6 class="fr-text">
                                 <a href="https://programme-cee-actee.fr/actualites/webinaire-actee-x-intercommunalites-de-france/">
                                 ACTEE x Intercommunalités de France sur la massification de la rénovation énergétique</a>
                             </h6>

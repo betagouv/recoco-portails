@@ -27,49 +27,7 @@
     }
 
     </script>
-    <!-- Charts -->
-    <script type="text/javascript">
-    nv.addGraph(function() {
-        var chart = nv.models.discreteBarChart()
-                    .x(function(d) { return d.label })    //Specify the data accessors.
-                    .y(function(d) { return d.value })
-                    .staggerLabels(true)    //Too many bars and not enough room? Try staggering labels.
-                    .tooltips(false)        //Don't show tooltips
-                    .showValues(true)       //...instead, show the bar value right on top of each bar.
-                    .transitionDuration(350)
-        ;
-
-        chart.yAxis.tickFormat(d3.format('d'));
-        chart.valueFormat(d3.format('d'));
-        
-        d3.select('#chart-new svg')
-        .datum(newFrichesData())
-        .call(chart);
-
-        nv.utils.windowResize(chart.update);
-
-        return chart;
-    });
-
-    //Each bar represents a single discrete quantity.
-    function newFrichesData() {
-        return  [ 
-            {
-                key: "Nouvelles Friches",
-                values: [
-                    {% for month in new_col_per_month %}
-                    { 
-                      "label" : "{{ month.0 }}",
-                      "value" : {{ month.1|unlocalize }}
-                    } ,
-                    {% endfor %}
-                ]
-            }
-        ]
-
-    }
-    </script>
-{% endblock %}
+{% endblock js %}
 {% block css %}
     {% leaflet_css %}
     <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
