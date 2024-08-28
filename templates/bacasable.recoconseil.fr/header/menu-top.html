@@ -12,15 +12,15 @@
     {% if user.is_authenticated %}
         <div class="navbar-border-top navbar-shadow w-100">
             <div class="d-flex align-items-center justify-content-between w-100">
-                <div class="d-flex align-items-center ms-4">
+                <div class="d-flex align-items-center fr-ml-3w">
                     {% include 'header/menu-top-logo.html' %}
-                    <div class="p-2">{% include "header/menu-top-secondary.html" %}</div>
+                    <div class="fr-p-2v">{% include "header/menu-top-secondary.html" %}</div>
                 </div>
                 <div class="bg-white">{% include 'header/menu-top-user-tools.html' %}</div>
             </div>
         </div>
     {% else %}
-        <div class="container-fluid me-2">
+        <div class="container-fluid fr-mr-2v">
             {% include 'header/menu-top-logo.html' %}
             <div>
                 {% include "header/menu-top-secondary.html" %}

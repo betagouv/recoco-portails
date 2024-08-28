@@ -303,7 +303,7 @@
                                                 <p>Bonjour,</p>
                                                 {% autoescape off %}
                                                     {% user_display user as user_display %}
-                                                    <p class="mb-6 align-center">
+                                                    <p class="align-center">
                                                         Vous recevez cet e-mail parce que l'utilistateur·rice {{ user_display }} a donné ce mail pour l'enregistrement du compte sur {{ current_site.domain }}. Pour confirmer, cliquez sur le bouton suivant.
                                                     </p>
                                                 {% endautoescape %}
@@ -330,7 +330,7 @@
                                             <div>
                                                 <p>Des difficultés pour vous connecter ?</p>
                                                 <p>Nous vous recommandons de copier-coller ce lien dans un navigateur :</p>
-                                                <p class="mb-6 align-center">
+                                                <p class="align-center">
                                                     <strong>{{ activate_url }}</strong>
                                                 </p>
                                                 <p>Bonne journée,</p>
