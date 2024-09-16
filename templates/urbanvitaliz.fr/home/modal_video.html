@@ -1,7 +1,6 @@
 {% load static %}
 {% load cookie_consent_tags %}
-<div style="z-index:100000000"
-     class="modal fade"
+<div class="modal fade z-3"
      id="home-video-modal"
      tabindex="-1"
      aria-labelledby="home-video-modal-label"
@@ -9,7 +8,7 @@
      x-init="initHomeVideoModal()">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
-            <div class="modal-body" style="60vw">
+            <div class="modal-body">
                 {% if request|cookie_group_accepted:"tracking_media" %}
                     <iframe width="100%"
                             height="500"

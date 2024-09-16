@@ -3,6 +3,12 @@
 {% load sass_tags %}
 {% load static %}
 {% load django_vite %}
+{% block title %}
+    SOS Mobilités Hauts-de-France
+{% endblock title %}
+{% block og_title %}
+    SOS Mobilités Hauts-de-France
+{% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
 {% endblock %}
@@ -18,8 +24,7 @@
           type="text/css" />
 {% endblock %}
 {% block content %}
-    <div class="fr-container"
-         style="font-family: 'Marianne', arial, sans-serif">
+    <div class="fr-container">
         <div class="custom-background-home-image">
             <div class="fr-grid-row">
                 <div class="fr-col-offset-md-1"></div>
@@ -34,10 +39,9 @@
                     <ul class="fr-btns-group fr-btns-group--inline fr-my-3w">
                         <li>
                             {% if user.is_authenticated %}
-                                <a href="{% url 'onboarding-project' %}"
-                                   class="fr-btn fr-text--xl custom-button">Solliciter SOS Mobilités HDF</a>
+                                <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Solliciter SOS Mobilités HDF</a>
                             {% else %}
-                                <button class="fr-btn fr-text--xl custom-button"
+                                <button class="fr-btn fr-text--xl"
                                         data-fr-opened="false"
                                         aria-controls="onboarding-modal">Solliciter SOS Mobilités HDF</button>
                             {% endif %}
@@ -56,17 +60,15 @@
             </div>
         </div>
     </div>
-    <div class="fr-py-6w"
-         style="background-color: #1b1b35;
-                font-family: 'Marianne', arial, sans-serif">
+    <div class="fr-py-6w specific-backgroundcolor-1b1b35">
         <div class="fr-container fr-pt-2w fr-pb-6w">
             <div class="fr-m-auto">
                 <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Comment fonctionne ce service ?</h3>
             </div>
             <div class="fr-grid-row fr-grid-row--gutters">
                 <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                    <div class="fr-p-2w fr-background-default--grey" style="height: 100%">
-                        <div class="w-100 fr-p-2w fr-m-auto" style="max-width: 160px">
+                    <div class="fr-p-2w fr-background-default--grey h-100">
+                        <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
                             <img src="{% static 'home/img/home/search.png' %}"
                                  width="100%"
                                  height="100%"
@@ -77,8 +79,8 @@
                     </div>
                 </div>
                 <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                    <div class="fr-p-2w fr-background-default--grey" style="height: 100%">
-                        <div class="w-100 fr-p-2w fr-m-auto" style="max-width: 160px">
+                    <div class="fr-p-2w fr-background-default--grey h-100">
+                        <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
                             <img src="{% static 'home/img/home/form.png' %}"
                                  width="100%"
                                  height="100%"
@@ -92,8 +94,8 @@
                     </div>
                 </div>
                 <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                    <div class="fr-p-2w fr-background-default--grey" style="height: 100%">
-                        <div class="w-100 fr-p-2w fr-m-auto" style="max-width: 160px">
+                    <div class="fr-p-2w fr-background-default--grey h-100">
+                        <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
                             <img src="{% static 'home/img/home/community.png' %}"
                                  width="100%"
                                  height="100%"
@@ -107,8 +109,8 @@
                     </div>
                 </div>
                 <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                    <div class="fr-p-2w fr-background-default--grey" style="height: 100%">
-                        <div class="w-100 fr-p-2w fr-m-auto" style="max-width: 160px">
+                    <div class="fr-p-2w fr-background-default--grey h-100">
+                        <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
                             <img src="{% static 'home/img/home/progress.png' %}"
                                  width="100%"
                                  height="100%"
@@ -124,15 +126,14 @@
             </div>
         </div>
     </div>
-    <div class="fr-background-alt--grey fr-py-8w"
-         style="font-family: 'Marianne', arial, sans-serif">
+    <div class="fr-background-alt--grey fr-py-8w">
         <div class="fr-container">
             <h3 class="fr-pb-4v">Retrouvez plus d'informations sur la mobilité sur d'autres outils</h3>
             <div class="fr-grid-row fr-grid-row--gutters justify-content-end">
                 <div class="fr-col-12 fr-col-md-6">
                     <div class="fr-background-default--grey fr-border-default-grey border fr-p-2w">
                         <a href="https://www.francemobilites.fr" target="_blank">
-                            <img class="mb-3 home-images"
+                            <img class="fr-mb-1w home-images"
                                  src="{% static 'sos-mobilites-hdf.recoconseil.fr/home/img/home/logo_france_mobilites.png' %}"
                                  width="100%"
                                  height="100%"
@@ -149,7 +150,7 @@
                     <div class="fr-background-default--grey fr-border-default-grey border fr-p-2w">
                         <a href="https://www.expertises-territoires.fr/jcms/pl1_6709/fr/france-mobilites-hauts-de-france"
                            target="_blank">
-                            <img class="mb-3 home-images"
+                            <img class="fr-mb-1w home-images"
                                  src="{% static 'sos-mobilites-hdf.recoconseil.fr/home/img/home/logo_expertises_territoires.png' %}"
                                  width="100%"
                                  height="100%"
@@ -165,17 +166,15 @@
                     </div>
                 </div>
                 <div class="fr-col-12 fr-col-md-6">
-                    <div class="fr-border-default-grey border fr-p-2w fr-text-inverted--grey"
-                         style="background-color: #1b1b35;
-                                height: 100%">
+                    <div class="fr-border-default-grey border fr-p-2w fr-text-inverted--grey specific-backgroundcolor-1b1b35 h-100">
                         <!-- <h6 class="fr-mb-13v fr-text-inverted--grey">
                         Faites-vous accompagner
 </h6> -->
                         {% if user.is_authenticated %}
                             <a href="{% url 'onboarding-project' %}"
-                               class="fr-btn fr-btn--tertiary fr-text-inverted--grey fr-btn-custom-hover">Nous poser une question</a>
+                               class="fr-btn fr-btn--tertiary fr-text-inverted--grey">Nous poser une question</a>
                         {% else %}
-                            <button class="fr-btn fr-btn--tertiary fr-text-inverted--grey fr-btn-custom-hover"
+                            <button class="fr-btn fr-btn--tertiary fr-text-inverted--grey"
                                     data-fr-opened="false"
                                     aria-controls="onboarding-modal">Nous poser une question</button>
                         {% endif %}
@@ -186,8 +185,7 @@
     </div>
     <div class="fr-container fr-mt-8v">
         <p class="fr-text--sm fr-mb-1v">Nos partenaires :</p>
-        <div class="fr-mt-2v fr-mb-4w fr-grid-row fr-grid-row--middle"
-             style="justify-content: center">
+        <div class="fr-mt-2v fr-mb-4w fr-grid-row fr-grid-row--middle justify-content-center">
             <div class="fr-col-6 fr-col-sm-3 fr-col-md-2 fr-pr-2v fr-pr-md-4v">
                 <img src="{% static 'img/partners/logo_cerema.png' %}"
                      width="100%"
