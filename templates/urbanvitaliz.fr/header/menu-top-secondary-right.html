@@ -1,0 +1,11 @@
+<!-- Methodology -->
+{% if not user.is_authenticated %}
+    <li>
+        <div class="btn-group">
+            <a href="{% url 'usage-case-example' %}" class="nav-link link-dark">
+                <span class="fr-ml-1v fr-mr-2v align-middle">Exemples de cas d'usage</span>
+            </a>
+        </div>
+    </li>
+{% endif %}
+
