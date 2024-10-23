@@ -1,4 +1,7 @@
 {% load static %}
+{% load wagtailcore_tags %}
+{% wagtail_site as current_site %}
+
 <footer class="col-11 fr-py-6w">
     <hr />
     <div class="row fr-py-6w">
@@ -13,6 +16,11 @@
                 <li>
                     <a class="link-secondary" href="{% url 'whoweare' %}">Qui sommes-nous ?</a>
                 </li>
+                {% for menuitem in current_site.root_page.get_children.live.in_menu %}
+                    <li>
+                        <a class="link-secondary" href="{% pageurl menuitem %}">{{ menuitem.title }}</a>
+                    </li>
+                {% endfor %}
                 <li>
                     <a class="link-secondary" href="{% url 'followus' %}">Suivre le projet</a>
                 </li>
