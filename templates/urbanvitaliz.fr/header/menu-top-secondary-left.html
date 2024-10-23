@@ -1,10 +1,9 @@
 <!-- Methodology -->
 {% if not user.is_authenticated %}
-    <li>
-        <div class="btn-group">
-            <a href="{% url 'methodology' %}" class="nav-link link-dark">
-                <span class="fr-ml-1v fr-mr-2v align-middle">Méthodologie</span>
-            </a>
-        </div>
+    <li class="navigation__item">
+        <a class="fr-link {% if url_name == 'methodology' %}active{% endif %}"
+           href="{% url 'methodology' %}">
+            <span class="fr-ml-2v fr-mr-1v align-middle">Méthodologie</span>
+        </a>
     </li>
 {% endif %}
