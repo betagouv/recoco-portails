@@ -11,11 +11,8 @@
 {% load django_vite %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
-{% endblock %}
+{% endblock js %}
 {% block css %}
-    <link href="{% sass_src 'home/css/dsfr/dsfr.css' %}"
-          rel="stylesheet"
-          type="text/css">
     <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
           rel="stylesheet"
           type="text/css">
@@ -25,7 +22,7 @@
     <link href="{% sass_src 'monespacecollectivite.incubateur.anct.gouv.fr/home/css/home/home-mon-espace-collectivite.scss' %}"
           rel="stylesheet"
           type="text/css">
-{% endblock %}
+{% endblock css %}
 {% block content %}
     <div class="fr-container-fluid">
         <div class="fr-container">
@@ -139,4 +136,4 @@
         </div>
     </div>
     {% include "home/onboarding/onboarding-modal.html" with form=onboarding_modal_form %}
-{% endblock %}
+{% endblock content %}
