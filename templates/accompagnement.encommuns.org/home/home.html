@@ -14,9 +14,6 @@
     {% vite_asset 'js/apps/home.js' %}
 {% endblock js %}
 {% block css %}
-    <link href="{% sass_src 'home/css/dsfr/dsfr.css' %}"
-          rel="stylesheet"
-          type="text/css" />
     <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
           rel="stylesheet"
           type="text/css" />
@@ -26,7 +23,7 @@
     <link href="{% sass_src 'accompagnement.encommuns.org/home/css/home/home-encommuns.scss' %}"
           rel="stylesheet"
           type="text/css" />
-{% endblock %}
+{% endblock css %}
 {% block content %}
     <div class="fr-container">
         <div class="custom-background-home-image">
@@ -46,7 +43,6 @@
                             {% endif %}
                         </li>
                     </ul>
-                    <div></div>
                 </div>
             </div>
         </div>
@@ -110,4 +106,4 @@
     </div>
     <div class="border-bottom"></div>
     {% include "home/onboarding/onboarding-modal.html" with form=onboarding_modal_form %}
-{% endblock %}
+{% endblock content %}
