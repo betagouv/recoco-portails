@@ -4,10 +4,10 @@
 {% load static %}
 {% load django_vite %}
 {% block title %}
-    Entretien des ponts communaux
+    {{ request.site.configuration.main_topic }}
 {% endblock title %}
 {% block og_title %}
-    Entretien des ponts communaux
+    {{ request.site.configuration.main_topic }}
 {% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
@@ -60,11 +60,7 @@
                         </li>
                     </ul>
                     <div class="fr">
-                        <p class="fr-text--lg fw-normal">
-                            Vous vous posez des questions sur l'entretien et la rénovation de vos ponts communaux ?
-                            Le Cerema met à disposition SOS Ponts, un service public gratuit pour vous guider vers
-                            la prochaine étape, les bons acteurs à contacter et les actions à mettre en place.
-                        </p>
+                        <p class="fr-text--lg fw-normal">{{ request.site.configuration.description }}</p>
                     </div>
                 </div>
             </div>

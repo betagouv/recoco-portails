@@ -4,10 +4,10 @@
 {% load static %}
 {% load django_vite %}
 {% block title %}
-    SOS Mobilités Hauts-de-France
+    {{ request.site.configuration.main_topic }}
 {% endblock title %}
 {% block og_title %}
-    SOS Mobilités Hauts-de-France
+    {{ request.site.configuration.main_topic }}
 {% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
@@ -48,13 +48,7 @@
                         </li>
                     </ul>
                     <div class="fr">
-                        <p class="fr-text--lg">
-                            SOS Mobilités HDF est un service public gratuit. Il répond aux questions et blocages des
-                            collectivités qui lancent des projets de mobilités. Le suivi de votre dossier est assuré
-                            par des membres de la cellule France mobilités Hauts-de-France (Cerema, Ademe, Dreal,
-                            Banque des territoires, Région, Agence nationale de la cohésion des territoires).
-                            D'autres experts peuvent être aussi sollicités.
-                        </p>
+                        <p class="fr-text--lg">{{ request.site.configuration.description }}</p>
                     </div>
                 </div>
             </div>

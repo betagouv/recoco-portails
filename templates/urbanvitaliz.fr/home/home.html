@@ -5,10 +5,10 @@
 {% load django_vite %}
 {% load cookie_consent_tags %}
 {% block title %}
-    Réhabiliter une friche
+    {{ request.site.configuration.main_topic }}
 {% endblock title %}
 {% block og_title %}
-    Réhabiliter une friche
+    {{ request.site.configuration.main_topic }}
 {% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
@@ -63,13 +63,7 @@
                             </li>
                         </ul>
                         <div id="webinaire-video" class="fr-mt-2v">
-                            <p class="fr-text--lg">
-                                UrbanVitaliz est un service public gratuit. Il répond aux questions et aux blocages
-                                des collectivités dans le recyclage de leurs fonciers artificialisés (construits,
-                                bétonnés, pollués) qui ont perdu leur usage. Le suivi des projets friche est assuré
-                                par les urbanistes de l’équipe ainsi que par les conseiller·e·s publics (selon les
-                                territoires : DDT, DREAL, EPF…).
-                            </p>
+                            <p class="fr-text--lg">{{ request.site.configuration.description }}</p>
                         </div>
                     </div>
                 </div>

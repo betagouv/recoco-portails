@@ -5,10 +5,10 @@
 {% load django_vite %}
 {% load cookie_consent_tags %}
 {% block title %}
-    Bac à sable
+    {{ request.site.configuration.main_topic }}
 {% endblock title %}
 {% block og_title %}
-    Bac à sable
+    {{ request.site.configuration.main_topic }}
 {% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
@@ -29,10 +29,7 @@
                     <div class="fr-col-offset-md-1"></div>
                     <div class="fr-col-12 fr-col-md-10 fr-background-default--grey fr-pt-4w fr-p-0w fr-p-md-4w custom-background-home">
                         <h1 class="fr-h1">Le bac à sable de Recommandations Collaboratives</h1>
-                        <p class="fr-text--lg fr-my-3w">
-                            L'ensemble des fonctionnalités de Recommandations Collaboratives sont disponibles dans
-                            ce <strong>bac à sable</strong> pour vous aider à vous familiariser avec le service.
-                        </p>
+                        <p class="fr-text--lg fr-my-3w">{{ request.site.configuration.description }}</p>
                         <ul class="fr-btns-group fr-btns-group--inline">
                             <li>
                                 {% if user.is_authenticated %}

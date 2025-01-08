@@ -5,10 +5,10 @@
 {% load django_vite %}
 {% load cookie_consent_tags %}
 {% block title %}
-    Accompagnement des communs
+    {{ request.site.configuration.main_topic }}
 {% endblock title %}
 {% block og_title %}
-    Accompagnement des communs
+    {{ request.site.configuration.main_topic }}
 {% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
@@ -31,7 +31,7 @@
                 <div class="fr-col-offset-md-1"></div>
                 <div class="fr-col-12 fr-col-md-10 fr-background-default--grey fr-pt-4w fr-p-0w fr-p-md-4w custom-background-home">
                     <h1 class="fr-h1">{{ request.site.name }}</h1>
-                    <p class="fr-text--lg fr-my-3w">Porteurs de projets, recevez des conseils personnalisés des conseillers compétents.</p>
+                    <p class="fr-text--lg fr-my-3w">{{ request.site.configuration.description }}</p>
                     <ul class="fr-btns-group fr-btns-group--inline" data-test-id="intro-uv">
                         <li>
                             {% if user.is_authenticated %}
