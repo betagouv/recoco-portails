@@ -3,10 +3,10 @@
 {% load sass_tags %}
 {% load static %}
 {% block title %}
-    Elaborer vos projets d'écoquartiers
+    {{ request.site.configuration.main_topic }}
 {% endblock title %}
 {% block og_title %}
-    Elaborer vos projets d'écoquartiers
+    {{ request.site.configuration.main_topic }}
 {% endblock og_title %}
 {% block css %}
     <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
@@ -31,11 +31,7 @@
                 <div class="fr-col-offset-md-1"></div>
                 <div class="fr-col-12 fr-col-md-10 fr-background-default--grey fr-pt-4w fr-p-0w fr-p-md-4w custom-background-home">
                     <h1 class="fr-h1">Le Cerema vous accompagne pour élaborer vos projets d'EcoQuartiers.</h1>
-                    <p class="fr-text--lg fr-my-3w">
-                        Conseil EcoQuartiers est un outil qui permet le suivi de l'accompagnement du Cerema dans
-                        vos projets EcoQuartiers. Vous pouvez y trouver des ressources, le suivi de vos dossiers
-                        par l'équipe du Cerema, des conseils, etc.
-                    </p>
+                    <p class="fr-text--lg fr-my-3w">{{ request.site.configuration.description }}</p>
                     <ul class="fr-btns-group fr-btns-group--inline">
                         <li>
                             <a href="{% url 'account_login' %}"
