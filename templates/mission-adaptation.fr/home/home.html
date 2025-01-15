@@ -5,10 +5,10 @@
 {% load django_vite %}
 {% load cookie_consent_tags %}
 {% block title %}
-    {{ request.site.configuration.main_topic }}
+    S'adapter au changement climatique
 {% endblock title %}
 {% block og_title %}
-    {{ request.site.configuration.main_topic }}
+    S'adapter au changement climatique
 {% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
@@ -43,7 +43,15 @@
                         </li>
                     </ul>
                     <div id="webinaire-video" class="fr-mt-2v">
-                        <p class="fr-text--lg">{{ request.site.configuration.description }}</p>
+                        <p class="fr-text--lg">
+                            Vous vous posez des questions sur l’initiation ou le renforcement
+                            de votre stratégie d’adaptation au changement climatique ?
+                            <br>
+                            La mission Adaptation est un nouveau service commun en expertise
+                            et ingénierie à destination des collectivités territoriales
+                            et de leurs groupements, pour les orienter, les accompagner, innover,
+                            expérimenter et apporter des solutions face à des problèmes complexes.
+                        </p>
                     </div>
                 </div>
             </div>
