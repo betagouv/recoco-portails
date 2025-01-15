@@ -4,10 +4,10 @@
 {% load static %}
 {% load django_vite %}
 {% block title %}
-    {{ request.site.configuration.main_topic }}
+    Dépanne ma Rénov’
 {% endblock title %}
 {% block og_title %}
-    {{ request.site.configuration.main_topic }}
+    Dépanne ma Rénov’
 {% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
@@ -45,7 +45,12 @@
                         </li>
                     </ul>
                     <div class="fr">
-                        <p class="fr-text--lg fw-normal">{{ request.site.configuration.description }}</p>
+                        <p class="fr-text--lg fw-normal">
+                            Dépanne ma Rénov’ est un service public gratuit. Des conseiller.es spécialisé.es répondent aux questions
+                            et aux blocages des acteurs publics dans leurs démarches de réduction de consommation énergétique et
+                            dans leurs travaux de rénovation énergétique. Nous vous guiderons vers la prochaine étape,
+                            les bons acteurs à contacter et les actions à mettre en œuvre.
+                        </p>
                     </div>
                 </div>
             </div>
