@@ -1,7 +1,6 @@
 {% load static %}
 {% load wagtailcore_tags %}
 {% wagtail_site as current_site %}
-
 <footer class="col-11 fr-py-6w">
     <hr />
     <div class="row fr-py-6w">
@@ -45,7 +44,7 @@
                     <a class="link-secondary" href="{% url 'legals' %}">Mentions légales</a>
                 </li>
                 <li>
-                    <a class="link-secondary" href="{% url 'privacy' %}">Politique de confidentialité</a>
+                    <a class="link-secondary" href="{% slugurl 'confidentialite' %}">Politique de confidentialité</a>
                 </li>
                 <li>
                     <a class="link-secondary" href="{% url 'termsofuse' %}">Conditions d'utilisation</a>
