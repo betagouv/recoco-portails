@@ -46,7 +46,7 @@
                 </div>
                 <div class="fr-grid-row">
                     <div class="fr-col-offset-md-1"></div>
-                    <div class="fr-col-12 fr-col-md-10 fr-background-default--grey fr-pt-4w fr-p-0w fr-p-md-4w custom-background-home">
+                    <div class="fr-col-12 fr-col-md-10 fr-background-default--grey fr-pt-4w fr-p-0w fr-px-md-4w custom-background-home">
                         <h1 class="fr-h1">UrbanVitaliz vous guide dans la réhabilitation de vos friches.</h1>
                         <p class="fr-text--lg fr-my-3w">
                             Collectivités, recevez des conseils personnalisés des conseillers publics compétents.
@@ -58,12 +58,12 @@
                                 {% else %}
                                     <button class="fr-btn fr-text--xl"
                                             data-fr-opened="false"
-                                            aria-controls="onboarding-modal">Solliciter UrbanVitaliz</button>
+                                            aria-controls="onboarding-modal">Demandez-nous conseil</button>
                                 {% endif %}
                             </li>
                         </ul>
                         <div id="webinaire-video" class="fr-mt-2v">
-                            <p class="fr-text--lg">
+                            <p class="fr-text--lg fr-mb-0">
                                 UrbanVitaliz est un service public gratuit. Il répond aux questions et aux blocages
                                 des collectivités dans le recyclage de leurs fonciers artificialisés (construits,
                                 bétonnés, pollués) qui ont perdu leur usage. Le suivi des projets friche est assuré
@@ -75,8 +75,42 @@
                 </div>
             </div>
         </div>
+        <div class="fr-container d-flex">
+            <div class="fr-mb-4w fr-grid-row fr-grid-row--middle justify-content-center w-75 fr-m-auto">
+                <div class="fr-col-6 fr-col-sm-3 fr-col-md-2 fr-pr-2v fr-pr-md-4v w-75">
+                    <img src="{% static 'img/partners/logo_cerema.png' %}"
+                         width="100%"
+                         alt="Logo du Cerema" />
+                </div>
+                <div class="fr-col-6 fr-col-sm-3 fr-col-md-2 fr-p-6w fr-p-md-4w w-75">
+                    <img src="{% static 'home/img/home/logo_beta_gouv.png' %}"
+                         width="100%"
+                         alt="Logo de beta.gouv" />
+                </div>
+                <div class="fr-col-6 fr-col-sm-3 fr-col-md-2 fr-px-6w fr-p-md-2w w-75">
+                    <img src="{% static 'urbanvitaliz.fr/home/img/home/anct.png' %}"
+                         width="100%"
+                         alt="Logo de anct" />
+                </div>
+                <div class="fr-col-6 fr-col-sm-3 fr-col-md-2 fr-p-6w fr-p-md-4w w-75">
+                    <img src="{% static 'urbanvitaliz.fr/home/img/home/mte.svg' %}"
+                         width="100%"
+                         alt="Logo de mte" />
+                </div>
+                <div class="fr-col-6 fr-col-sm-3 fr-col-md-2 fr-p-6w fr-p-md-6w w-75">
+                    <img src="{% static 'home/img/home/logo_france_relance.png' %}"
+                         width="100%"
+                         alt="Logo de france relance" />
+                </div>
+                <div class="fr-col-6 fr-col-sm-3 fr-col-md-2 fr-p-6w fr-p-md-4w w-75">
+                    <img src="{% static 'home/img/home/logo_epf.png' %}"
+                         width="100%"
+                         alt="Logo de epf" />
+                </div>
+            </div>
+        </div>
         {% if request|cookie_group_accepted:"tracking_media" %}
-            <div class="d-flex">
+            <div class="d-flex fr-mb-6w">
                 <div class="fr-m-auto w-50">
                     <div style="position:relative;
                                 padding-bottom:56.25%;
@@ -99,92 +133,11 @@
             </div>
         {% endif %}
         <div>
-            <div class="fr-py-6w specific-backgroundcolor-1b1b35">
-                <div class="fr-container fr-pt-2w fr-pb-6w">
-                    <div class="fr-m-auto">
-                        <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Actualités</h3>
-                    </div>
-                    <div class="fr-grid-row fr-grid-row--gutters">
-                        <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
-                            <div class="fr-background-default--grey h-100">
-                                <div class="w-100 fr-m-auto fr-mb-3w">
-                                    <a target="_blank"
-                                       href="https://radioterritoria.fr/broadcast/28087-UrbanVitaliz-le-service-qui-aide-les-collectivit%C3%A9s-%C3%A0-revitaliser-leurs-fonciers-%C3%A0-l%E2%80%99abandon">
-                                        <img src="{% static 'urbanvitaliz.fr/home/img/home/radioterritoria.png' %}"
-                                             width="100%"
-                                             height=""
-                                             alt="radioterritoria" />
-                                    </a>
-                                </div>
-                                <article class="fr-px-2w fr-pb-3w d-flex flex-column">
-                                    <span class="text-info-custom text-grey-dark fr-mb-2v">Radio</span>
-                                    <h6>
-                                        <a target="_blank"
-                                           href="https://radioterritoria.fr/broadcast/28087-UrbanVitaliz-le-service-qui-aide-les-collectivit%C3%A9s-%C3%A0-revitaliser-leurs-fonciers-%C3%A0-l%E2%80%99abandon">Émission RadioTerritoria</a>
-                                    </h6>
-                                    <p class="fr-mt-2v">
-                                        UrbanVitaliz, le service qui aide les collectivités à revitaliser leurs fonciers à
-                                        l'abandon.
-                                    </p>
-                                </article>
-                            </div>
-                        </div>
-                        <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
-                            <div class="fr-background-default--grey h-100">
-                                <div class="w-100 fr-m-auto fr-mb-3w">
-                                    <a target="_blank"
-                                       href="https://www.youtube.com/watch?v=HiAq3VhuMzo&ab_channel=Cerema">
-                                        <img src="{% static 'urbanvitaliz.fr/home/img/home/actu-webinaire.png' %}"
-                                             width="100%"
-                                             height=""
-                                             alt="webinaire" />
-                                    </a>
-                                </div>
-                                <article class="fr-px-2w fr-pb-3w d-flex flex-column">
-                                    <span class="text-info-custom text-grey-dark fr-mb-2v">Webinaire</span>
-                                    <h6>
-                                        <a target="_blank"
-                                           href="https://www.youtube.com/watch?v=HiAq3VhuMzo&ab_channel=Cerema">Replay du webinaire UrbanVitaliz</a>
-                                    </h6>
-                                    <p class="fr-mt-2v">
-                                        Les principaux problèmes rencontrés par les collectivités pour la réhabilitation des
-                                        friches et leurs solutions
-                                    </p>
-                                </article>
-                            </div>
-                        </div>
-                        <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
-                            <div class="fr-background-default--grey h-100">
-                                <div class="w-100 fr-m-auto fr-mb-3w">
-                                    <a target="_blank"
-                                       href="https://www.cerema.fr/fr/actualites/rehabiliter-friche-replays-webinaires-urbanvitaliz#paragraph--41603">
-                                        <img src="{% static 'urbanvitaliz.fr/home/img/home/webinaire.png' %}"
-                                             width="100%"
-                                             height=""
-                                             alt="webinaire" />
-                                    </a>
-                                </div>
-                                <article class="fr-px-2w fr-pb-3w d-flex flex-column">
-                                    <span class="text-info-custom text-grey-dark fr-mb-2v">Webinaire</span>
-                                    <h6>
-                                        <a target="_blank"
-                                           href="https://www.cerema.fr/fr/actualites/rehabiliter-friche-replays-webinaires-urbanvitaliz#paragraph--41603">Replay du webinaire UrbanVitaliz 2023</a>
-                                    </h6>
-                                    <p class="fr-mt-2v">
-                                        En tant que collectivité, comment faire maturer son projet et être prêt pour
-                                        mobiliser des financements pour les projets de friches ?
-                                    </p>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="fr-background-alt--grey fr-py-4w">
                 <div class="fr-container fr-pt-2w">
                     <div class="fr-grid-row fr-grid-row--gutters">
                         <div class="fr-col-12 fr-col-sm-3 text-center">
-                            <img src="{% static 'home/img/home/human_cooperation.png' %}"
+                            <img src="{% static 'urbanvitaliz.fr/home/img/home/illu-terrain.png' %}"
                                  width="100%"
                                  class="specific-maxwidth-160px"
                                  alt="Image de coopération humaine" />
@@ -211,7 +164,12 @@
                                          height="100%"
                                          alt="Icone de recherche" />
                                 </div>
-                                <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">1</span>
+                                <div class="w-100 fr-p-2w specific-maxwidth-160px">
+                                    <img src="{% static 'urbanvitaliz.fr/home/img/home/1-VertBleu.png' %}"
+                                         width="40%"
+                                         height="40%"
+                                         alt="Etape une" />
+                                </div>
                                 <h6>La collectivité décrit la friche qu’elle souhaite recycler et ses besoins</h6>
                             </div>
                         </div>
@@ -223,7 +181,12 @@
                                          height="100%"
                                          alt="Icone d'un fichier" />
                                 </div>
-                                <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">2</span>
+                                <div class="w-100 fr-p-2w specific-maxwidth-160px">
+                                    <img src="{% static 'urbanvitaliz.fr/home/img/home/2-VertBleu.png' %}"
+                                         width="40%"
+                                         height="40%"
+                                         alt="Etape 2" />
+                                </div>
                                 <h6>Les conseillers compétents la guident à chaque étape</h6>
                             </div>
                         </div>
@@ -235,7 +198,12 @@
                                          height="100%"
                                          alt="Icone de communauté" />
                                 </div>
-                                <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">3</span>
+                                <div class="w-100 fr-p-2w specific-maxwidth-160px">
+                                    <img src="{% static 'urbanvitaliz.fr/home/img/home/3-VertBleu.png' %}"
+                                         width="40%"
+                                         height="40%"
+                                         alt="Etape 3" />
+                                </div>
                                 <h6>La collectivité fait avancer son projet</h6>
                             </div>
                         </div>
@@ -247,7 +215,12 @@
                                          height="100%"
                                          alt="Icone de progrès" />
                                 </div>
-                                <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">4</span>
+                                <div class="w-100 fr-p-2w specific-maxwidth-160px">
+                                    <img src="{% static 'urbanvitaliz.fr/home/img/home/4-VertBleu.png' %}"
+                                         width="40%"
+                                         height="40%"
+                                         alt="Etape 4" />
+                                </div>
                                 <h6>Tous alimentent l’évolution du projet et des besoins</h6>
                             </div>
                         </div>
@@ -255,91 +228,183 @@
                 </div>
             </div>
             <div class="fr-background-alt--grey fr-py-8w">
-                <div class="fr-container">
-                    <h3 class="fr-pb-4v">Exemples de recommandations à des collectivités</h3>
+                <div class="d-flex flex-column space-between">
+                    <h3 class="fr-pb-4v text-center">Exemples de recommandations à des collectivités</h3>
                     <div class="fr-grid-row fr-grid-row--gutters">
-                        <div class="fr-col-12 fr-col-md-6">
-                            <div class="fr-background-default--grey fr-border-default-grey border fr-p-2w">
-                                <p class="fr-text--xs fr-mb-4v">Cher (18), 900 hab.</p>
-                                <h6 class="fr-mb-1v">Projet culturel dans local abandonné</h6>
-                                <p class="fr-text--sm fr-mb-1v">
-                                    9 recommandations dont l’évaluation du prix d’achat par les Domaines, présentation de
-                                    l’EPF et ses interventions, sélection de financements et de dispositifs d’appui en
-                                    ingénierie pour projet culturel.
-                                </p>
+                        <div class="d-flex justify-content-evenly fr-mb-2w">
+                            {% comment %} ------------------ carte 1 --------------------- {% endcomment %}
+                            <div class="fr-card fr-enlarge-link fr-card--horizontal fr-m-1w specific-width-45">
+                                <div class="fr-card__body">
+                                    <div class="fr-card__content">
+                                        <h3 class="fr-card__title">
+                                            <a href="https://urbanvitaliz.fr/p/exemples-daccompagnements/dammartin-sur-meuse/">Bâtiment menaçant de s’effondrer</a>
+                                        </h3>
+                                        <p class="fr-card__desc">
+                                            Aiguillage d’UrbanVitaliz vers les bons financements, mise en relation avec l’EPF,
+                                            le CAUE, la DDT, aide sur un appel à projet régional.
+                                        </p>
+                                        <div class="fr-card__start">
+                                            <p class="fr-card__detail">Dammartin-sur-Meuse, Haute-Marne, 200 hab.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fr-card__header">
+                                    <div class="fr-card__img">
+                                        <img class="fr-responsive-img"
+                                             src="{% static 'urbanvitaliz.fr/home/img/home/dammartin.png' %}"
+                                             alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            {% comment %} ------------------ carte 2 --------------------- {% endcomment %}
+                            <div class="fr-card fr-enlarge-link fr-card--horizontal fr-m-1w specific-width-45">
+                                <div class="fr-card__body">
+                                    <div class="fr-card__content">
+                                        <h3 class="fr-card__title">
+                                            <a href="https://urbanvitaliz.fr/p/exemples-daccompagnements/college-isere/">Ancien collège (terrain de 1,3 ha, bâti env. 6000 m²)</a>
+                                        </h3>
+                                        <p class="fr-card__desc">
+                                            La ville cherchait des financements pour réaliser les travaux, afin de requalifier le bâti.
+                                            Nous leur indiquons les financements mobilisables dans leur situation,
+                                            et les mettons en relation avec les instructeurs des dossiers en DDT.
+                                        </p>
+                                        <div class="fr-card__start">
+                                            <p class="fr-card__detail">Pont-de-Claix, Isère, 10.800 hab.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fr-card__header">
+                                    <div class="fr-card__img">
+                                        <img class="fr-responsive-img"
+                                             src="{% static 'urbanvitaliz.fr/home/img/home/college.png' %}"
+                                             alt="" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="fr-col-12 fr-col-md-6">
-                            <div class="fr-background-default--grey fr-border-default-grey border fr-p-2w">
-                                <p class="fr-text--xs fr-mb-4v">Nièvre (58), 4.000 hab.</p>
-                                <h6 class="fr-mb-1v">Anciens silos et hangars, pas de projet défini</h6>
-                                <p class="fr-text--sm fr-mb-1v">
-                                    6 recommandations, dont présentation du CAUE et ses interventions, une étude
-                                    cofinancée par l’Ademe pour identifier d’éventuelles pollutions, un cahier des charges
-                                    “à trous” comme base de travail, des dispositifs d’appui en ingénierie
-                                </p>
+                        <div class="d-flex justify-content-evenly">
+                            {% comment %} ------------------ carte 3 --------------------- {% endcomment %}
+                            <div class="fr-card fr-enlarge-link fr-card--horizontal fr-m-1w specific-width-45">
+                                <div class="fr-card__body">
+                                    <div class="fr-card__content">
+                                        <h3 class="fr-card__title">
+                                            <a href="https://urbanvitaliz.fr/p/exemples-daccompagnements/mayet-ancienne-laiterie/">Ancienne laiterie</a>
+                                        </h3>
+                                        <p class="fr-card__desc">
+                                            La commune avait des difficultés à joindre le propriétaire,
+                                            et le montant des travaux à effectuer représente plusieurs centaines de milliers d'euros.
+                                            Découvrez les aides proposées par UrbanVitaliz
+                                        </p>
+                                        <div class="fr-card__start">
+                                            <p class="fr-card__detail">Mayet, Sarthe, 3.200 hab.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fr-card__header">
+                                    <div class="fr-card__img">
+                                        <img class="fr-responsive-img"
+                                             src="{% static 'urbanvitaliz.fr/home/img/home/laiterie.png' %}"
+                                             alt="" />
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="fr-col-12 fr-col-md-6">
-                            <div class="fr-background-default--grey fr-border-default-grey border fr-p-2w">
-                                <p class="fr-text--xs fr-mb-4v">Eure (27), 50.000 hab.</p>
-                                <h6 class="fr-mb-1v">Ancienne usine polluée, pas de projet défini</h6>
-                                <p class="fr-text--sm fr-mb-1v">
-                                    4 recommandations, dont plusieurs prestations d’accompagnement de l’Ademe et des
-                                    financements de dépollution et d’AMO
-                                </p>
-                            </div>
-                        </div>
-                        <div class="fr-col-12 fr-col-md-6">
-                            <div class="fr-border-default-grey border fr-p-2w fr-text-inverted--grey specific-backgroundcolor-1b1b35 h-100">
-                                <h6 class="fr-mb-13v fr-text-inverted--grey">Faites-vous accompagner</h6>
-                                {% if user.is_authenticated %}
-                                    <a href="{% url 'onboarding-project' %}"
-                                       class="fr-btn fr-btn--tertiary fr-text-inverted--grey">Solliciter {{ request.site.name }}</a>
-                                {% else %}
-                                    <button class="fr-btn fr-btn--tertiary fr-text-inverted--grey"
-                                            data-fr-opened="false"
-                                            aria-controls="onboarding-modal">
-                                        Solliciter {{ request.site.name }}
-                                    </button>
-                                {% endif %}
+                            {% comment %} ------------------ carte 4 --------------------- {% endcomment %}
+                            <div class="fr-card fr-enlarge-link fr-card--horizontal fr-m-1w specific-width-45 specific-backgroundcolor-1b1b35">
+                                <div class="fr-card__body">
+                                    <div class="fr-card__content">
+                                        <h3 class="fr-card__title">
+                                            <a href="https://urbanvitaliz.fr/p/exemples-daccompagnements/"
+                                               class="actu__link">Découvrez en détail des exemples d’accompagnement, avec les problématiques de collectivités et les solutions proposées</a>
+                                        </h3>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="fr-container fr-mt-8v">
-                <p class="fr-text--sm fr-mb-1v">Nos partenaires :</p>
-                <div class="fr-mt-2v fr-mb-4w fr-grid-row fr-grid-row--middle justify-content-center">
-                    <div class="fr-col-6 fr-col-sm-3 fr-col-md-2 fr-pr-2v fr-pr-md-4v">
-                        <img src="{% static 'img/partners/logo_cerema.png' %}"
-                             width="100%"
-                             alt="Logo du Cerema" />
+            <div class="fr-py-6w specific-backgroundcolor-1b1b35">
+                <div class="fr-container fr-pt-2w fr-pb-6w">
+                    <div class="fr-m-auto">
+                        <h3 class="fr-text-inverted--grey text-center fr-pb-6w actu">Actualités</h3>
                     </div>
-                    <div class="fr-col-6 fr-col-sm-3 fr-col-md-2 fr-p-6w fr-p-md-4w">
-                        <img src="{% static 'home/img/home/logo_beta_gouv.png' %}"
-                             width="100%"
-                             alt="Logo de beta.gouv" />
-                    </div>
-                    <div class="fr-col-6 fr-col-sm-3 fr-col-md-2 fr-p-6w fr-p-md-2w">
-                        <img src="{% static 'urbanvitaliz.fr/home/img/home/anct.png' %}"
-                             width="100%"
-                             alt="Logo de anct" />
-                    </div>
-                    <div class="fr-col-6 fr-col-sm-3 fr-col-md-2 fr-p-6w fr-p-md-4w">
-                        <img src="{% static 'urbanvitaliz.fr/home/img/home/mte.svg' %}"
-                             width="100%"
-                             alt="Logo de mte" />
-                    </div>
-                    <div class="fr-col-6 fr-col-sm-3 fr-col-md-2 fr-p-6w fr-p-md-6w">
-                        <img src="{% static 'home/img/home/logo_france_relance.png' %}"
-                             width="100%"
-                             alt="Logo de france relance" />
-                    </div>
-                    <div class="fr-col-6 fr-col-sm-3 fr-col-md-2 fr-p-6w fr-p-md-4w">
-                        <img src="{% static 'home/img/home/logo_epf.png' %}"
-                             width="100%"
-                             alt="Logo de epf" />
+                    <div class="fr-grid-row fr-grid-row--gutters">
+                        <div class="fr-col-12 fr-col-sm-6 fr-col-md-4 d-flex">
+                            <div class="fr-background-default--grey w-75 h-100 fr-m-auto">
+                                <div class="w-100">
+                                    <a target="_blank"
+                                       href="https://radioterritoria.fr/broadcast/28087-UrbanVitaliz-le-service-qui-aide-les-collectivit%C3%A9s-%C3%A0-revitaliser-leurs-fonciers-%C3%A0-l%E2%80%99abandon">
+                                        <img src="{% static 'urbanvitaliz.fr/home/img/home/radioterritoria.png' %}"
+                                             width="100%"
+                                             height=""
+                                             alt="radioterritoria" />
+                                    </a>
+                                </div>
+                                <article class="fr-px-2w fr-pb-3w d-flex flex-column">
+                                    <span class="text-info-custom text-grey-dark fr-mb-2v">Radio</span>
+                                    <h6 class="actu__h6">
+                                        <a class="actu__title"
+                                           target="_blank"
+                                           href="https://radioterritoria.fr/broadcast/28087-UrbanVitaliz-le-service-qui-aide-les-collectivit%C3%A9s-%C3%A0-revitaliser-leurs-fonciers-%C3%A0-l%E2%80%99abandon">Émission RadioTerritoria</a>
+                                    </h6>
+                                    <p class="fr-mt-2v actu__content">
+                                        UrbanVitaliz, le service qui aide les collectivités à revitaliser leurs fonciers à
+                                        l'abandon.
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="fr-col-12 fr-col-sm-6 fr-col-md-4 d-flex">
+                            <div class="fr-background-default--grey w-75 h-100 fr-m-auto">
+                                <div class="w-100">
+                                    <a target="_blank"
+                                       href="https://www.lagazettedescommunes.com/958964/recycler-les-friches-mode-demploi-et-retour-dexperience/">
+                                        <img src="{% static 'urbanvitaliz.fr/home/img/home/Actu.png' %}"
+                                             width="100%"
+                                             height=""
+                                             alt="webinaire" />
+                                    </a>
+                                </div>
+                                <article class="fr-px-2w fr-pb-3w d-flex flex-column">
+                                    <span class="text-info-custom text-grey-dark fr-mb-2v">Webinaire</span>
+                                    <h6 class="actu__h6">
+                                        <a class="actu__title"
+                                           target="_blank"
+                                           href="https://www.lagazettedescommunes.com/958964/recycler-les-friches-mode-demploi-et-retour-dexperience/">
+                                        Recycler les friches : mode d’emploi et retour d’expérience</a>
+                                    </h6>
+                                    <p class="fr-mt-2v actu__content">
+                                        Présentation du service, avec un témoignage du Chef de service urbanisme habitat Petites Villes de Demain,
+                                        Commune de Mauges-sur-Loire
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="fr-col-12 fr-col-sm-6 fr-col-md-4 d-flex">
+                            <div class="fr-background-default--grey w-75 h-100 fr-m-auto">
+                                <div class="w-100">
+                                    <a target="_blank"
+                                       href="https://www.cerema.fr/fr/actualites/rehabiliter-friche-replays-webinaires-urbanvitaliz#paragraph--41603">
+                                        <img src="{% static 'urbanvitaliz.fr/home/img/home/webinaire.png' %}"
+                                             width="100%"
+                                             height=""
+                                             alt="webinaire" />
+                                    </a>
+                                </div>
+                                <article class="fr-px-2w fr-pb-3w d-flex flex-column">
+                                    <span class="text-info-custom text-grey-dark fr-mb-2v">Webinaire</span>
+                                    <h6 class="actu__h6">
+                                        <a class="actu__title"
+                                           target="_blank"
+                                           href="https://www.cerema.fr/fr/actualites/rehabiliter-friche-replays-webinaires-urbanvitaliz#paragraph--41603">Replay du webinaire UrbanVitaliz 2023</a>
+                                    </h6>
+                                    <p class="fr-mt-2v actu__content">
+                                        En tant que collectivité, comment faire maturer son projet et être prêt pour
+                                        mobiliser des financements pour les projets de friches ?
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
