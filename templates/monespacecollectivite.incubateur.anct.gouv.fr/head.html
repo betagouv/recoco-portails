@@ -1,12 +1,14 @@
 <title>{{ request.site.name }}
-    {% block title %},  la plateforme d’accompagnement sur mesure pour vos projet{% endblock %}
+    {% block title %}
+        ,  la plateforme d’accompagnement sur mesure pour vos dossiers
+    {% endblock title %}
 </title>
 <meta name="description"
-      content="{% block description %}Mon Espace Collectivité permet d’accélérer vos projets du quotidien et ceux du Contrat de relance et de transition écologique (CRTE) en les orientant le plus en amont possible vers le bon service.{% endblock %}">
+      content="{% block description %}Mon Espace Collectivité permet d’accélérer vos dossiers du quotidien et ceux du Contrat de relance et de transition écologique (CRTE) en les orientant le plus en amont possible vers le bon service.{% endblock description %}">
 <meta name="robots" content="index, archive" />
 <meta property="og:title"
-      content="{{ site.name }}{% block og_title %}, la plateforme d’accompagnement sur mesure pour vos projet{% endblock %}" />
+      content="{{ site.name }}{% block og_title %}, la plateforme d’accompagnement sur mesure pour vos dossiers{% endblock og_title %}" />
 <meta property="og:locale" content="fr" />
 <meta property="og:site_name" content="{{ site.name }}" />
 <meta property="og:description"
-      content="{% block og_description %}Mon Espace Collectivité permet d’accélérer vos projets du quotidien et ceux du Contrat de relance et de transition écologique (CRTE) en les orientant le plus en amont possible vers le bon service.{% endblock %}" />
+      content="{% block og_description %}Mon Espace Collectivité permet d’accélérer vos dossiers du quotidien et ceux du Contrat de relance et de transition écologique (CRTE) en les orientant le plus en amont possible vers le bon service.{% endblock og_description %}" />
