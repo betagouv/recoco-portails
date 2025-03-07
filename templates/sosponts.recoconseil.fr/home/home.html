@@ -11,7 +11,7 @@
 {% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
-{% endblock %}
+{% endblock js %}
 {% block css %}
     <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
           rel="stylesheet"
@@ -22,7 +22,7 @@
     <link href="{% sass_src 'home/css/home/home.scss' %}"
           rel="stylesheet"
           type="text/css" />
-{% endblock %}
+{% endblock css %}
 {% block content %}
     <div class="fr-container">
         <div class="position-relative custom-background-home-image custom-sosponts-banner">
@@ -226,4 +226,7 @@
     </div>
     <div class="border-bottom"></div>
     {% include "home/onboarding/onboarding-modal.html" with form=onboarding_modal_form %}
-{% endblock %}
+{% endblock content %}
+{% block footer %}
+    <div class="row justify-content-center" id="footer">{% include "footer.html" %}</div>
+{% endblock footer %}
