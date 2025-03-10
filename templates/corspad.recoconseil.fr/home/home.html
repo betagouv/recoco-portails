@@ -24,16 +24,17 @@
           type="text/css">
 {% endblock css %}
 {% block content %}
-    <div class="fr-m-2v fr-p-2v fr-mt-4w">
+    <div class="fr-m-2v fr-p-2v fr-mt-4w fr-mb-6w">
         <div class="position-relative">
             <div class="d-flex">
-                <div class="fr-pl-12w fr-mt-12w w-50">
+                <div class="fr-pl-12w fr-mt-12w w-50 fr-pr-2w">
                     <h1 class="fr-h1">{{ request.site.name }}</h1>
+                    <p>{{ request.site.configuration.description }}</p>
                     <div>
                         {% if user.is_authenticated %}
                             <a href="{% url 'onboarding-project' %}"
-                                class="fr-btn fr-text--xl"
-                                data-test-id="button-need-help">Solliciter {{ request.site.name }}</a>
+                               class="fr-btn fr-text--xl"
+                               data-test-id="button-need-help">Solliciter {{ request.site.name }}</a>
                         {% else %}
                             <button class="fr-btn fr-text--xl"
                                     data-fr-opened="false"
@@ -43,19 +44,11 @@
                 </div>
                 <div class="w-50">
                     <img src="{% static 'corspad.recoconseil.fr/home/img/home/home-background-corspad.png' %}"
-                        width="100%"
-                        class="center-cropped img-shadow"
-                        alt="" />
+                         width="100%"
+                         class="center-cropped img-shadow"
+                         alt="" />
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="fr-mt-6w fr-mx-0 fr-p-4w dark-section">
-        <h2 class="text-light">La mission de Corspad</h2>
-        <div id="webinaire-video" class="fr-mt-2v">
-            <p class="fr-text--lg fr-mb-0">
-                {{ request.site.configuration.description }}
-            </p>
         </div>
     </div>
     <div class="fr-py-6w div-background">

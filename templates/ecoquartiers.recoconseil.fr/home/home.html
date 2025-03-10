@@ -23,8 +23,9 @@
     <div class="fr-m-2v fr-p-2v fr-mt-4w">
         <div class="position-relative">
             <div class="d-flex">
-                <div class="fr-pl-12w fr-mt-12w w-50">
+                <div class="fr-pl-12w fr-mt-12w w-50 fr-pr-2w">
                     <h1 class="fr-h1">Le Cerema vous accompagne pour élaborer vos projets d'EcoQuartiers.</h1>
+                    <p>{{ request.site.configuration.description }}</p>
                     <ul class="fr-btns-group fr-btns-group--inline">
                         <li>
                             <a href="{% url 'account_login' %}"
@@ -37,17 +38,11 @@
                 </div>
                 <div class="w-50">
                     <img src="{% static 'ecoquartiers.recoconseil.fr/home/img/home/home-background-ecoquartiers.jpeg' %}"
-                        width="100%"
-                        class="center-cropped img-shadow"
-                        alt="" />
+                         width="100%"
+                         class="center-cropped img-shadow"
+                         alt="" />
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="fr-mt-6w fr-mx-0 fr-p-4w dark-section">
-        <h2 class="text-light">La mission d’écoquartiers</h2>
-        <div id="webinaire-video" class="fr-mt-2v">
-            <p class="fr-text--lg fr-my-3w">{{ request.site.configuration.description }}</p>
         </div>
     </div>
     <div class="fr-container fr-mt-8v">

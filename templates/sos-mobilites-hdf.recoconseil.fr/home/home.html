@@ -24,11 +24,13 @@
           type="text/css" />
 {% endblock %}
 {% block content %}
-    <div class="fr-m-2v fr-p-2v fr-mt-4w">
+    <div class="fr-m-2v fr-p-2v fr-mt-4w fr-mb-6w">
         <div class="position-relative">
             <div class="d-flex">
-                <div class="fr-pl-12w fr-mt-12w w-50">
-                    <h1 class="fr-h1">SOS Mobilités Hauts-de-France vous guide dans l'élaboration de vos projets de mobilités en zones peu denses.</h1>
+                <div class="fr-pl-12w fr-mt-12w w-50 fr-pr-2w">
+                    <h1 class="fr-h1">
+                        SOS Mobilités Hauts-de-France vous guide dans l'élaboration de vos projets de mobilités en zones peu denses.
+                    </h1>
                     <p>
                         <i>
                             {{ request.site.configuration.description }}
@@ -46,9 +48,9 @@
                 </div>
                 <div class="w-50">
                     <img src="{% static 'sos-mobilites-hdf.recoconseil.fr/home/img/home/home-background-sos-mobilites-hdf.jpg' %}"
-                        width="100%"
-                        class="center-cropped img-shadow"
-                        alt="" />
+                         width="100%"
+                         class="center-cropped img-shadow"
+                         alt="" />
                 </div>
             </div>
         </div>
