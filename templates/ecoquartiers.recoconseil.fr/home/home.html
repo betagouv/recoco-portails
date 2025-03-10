@@ -20,18 +20,11 @@
           type="text/css" />
 {% endblock %}
 {% block content %}
-    <div class="fr-container">
-        <div class="custom-background-home-image">
-            <!-- <div class="fr-grid-row">
-            <div class="fr-col-12 custom-background-image">
-                <img src="{% static 'home/img/home/background.png' %}" width="100%" alt="Image de friche">
-            </div>
-</div> -->
-            <div class="fr-grid-row">
-                <div class="fr-col-offset-md-1"></div>
-                <div class="fr-col-12 fr-col-md-10 fr-background-default--grey fr-pt-4w fr-p-0w fr-p-md-4w custom-background-home">
+    <div class="fr-m-2v fr-p-2v fr-mt-4w">
+        <div class="position-relative">
+            <div class="d-flex">
+                <div class="fr-pl-12w fr-mt-12w w-50">
                     <h1 class="fr-h1">Le Cerema vous accompagne pour élaborer vos projets d'EcoQuartiers.</h1>
-                    <p class="fr-text--lg fr-my-3w">{{ request.site.configuration.description }}</p>
                     <ul class="fr-btns-group fr-btns-group--inline">
                         <li>
                             <a href="{% url 'account_login' %}"
@@ -41,23 +34,20 @@
                             <a href="{% url 'account_signup' %}" class="fr-btn fr-text--xl">Demander un compte conseiller</a>
                         </li>
                     </ul>
-                    <div class="fr-mt-2v">
-                        <span class="fr-text--xl">Raccourcis :</span>
-                        <ul>
-                            <li>
-                                <a class="fr-text--lg text-decoration-underline"
-                                   target="_blank"
-                                   href="https://www.expertises-territoires.fr/jcms/pl1_46732/fr/conseil-ecoquartiers">Communauté Expertises Territoires</a>
-                            </li>
-                            <li>
-                                <a class="fr-text--lg text-decoration-underline"
-                                   target="_blank"
-                                   href="http://www.ecoquartiers.logement.gouv.fr/">Plateforme de la démarche Ecoquartiers</a>
-                            </li>
-                        </ul>
-                    </div>
+                </div>
+                <div class="w-50">
+                    <img src="{% static 'ecoquartiers.recoconseil.fr/home/img/home/home-background-ecoquartiers.jpeg' %}"
+                        width="100%"
+                        class="center-cropped img-shadow"
+                        alt="" />
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="fr-mt-6w fr-mx-0 fr-p-4w dark-section">
+        <h2 class="text-light">La mission d’écoquartiers</h2>
+        <div id="webinaire-video" class="fr-mt-2v">
+            <p class="fr-text--lg fr-my-3w">{{ request.site.configuration.description }}</p>
         </div>
     </div>
     <div class="fr-container fr-mt-8v">
