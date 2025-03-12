@@ -31,11 +31,7 @@
                     <h1 class="fr-h1">
                         SOS Mobilités Hauts-de-France vous guide dans l'élaboration de vos projets de mobilités en zones peu denses.
                     </h1>
-                    <p>
-                        <i>
-                            {{ request.site.configuration.description }}
-                        </i>
-                    </p>
+                    <p>{{ request.site.configuration.description }}</p>
                     <div>
                         {% if user.is_authenticated %}
                             <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Solliciter SOS Mobilités HDF</a>
