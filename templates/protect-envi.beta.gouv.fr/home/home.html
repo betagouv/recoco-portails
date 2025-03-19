@@ -25,98 +25,100 @@
           type="text/css" />
 {% endblock css %}
 {% block content %}
-    <div class="fr-m-2v fr-p-2v fr-mt-4w">
-        <div class="position-relative">
-            <div class="d-flex">
-                <div class="fr-pl-12w fr-mt-12w w-50 fr-pr-2w">
-                    <h1 class="fr-h1">Protect-Envi facilite la lutte contre les atteintes à l'environnement</h1>
-                    <div>
-                        {% if user.is_authenticated %}
-                            <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Déposer un dossier</a>
-                        {% else %}
-                            <button class="fr-btn fr-text--xl"
-                                    data-fr-opened="false"
-                                    aria-controls="onboarding-modal">Déposer un dossier</button>
-                        {% endif %}
-                    </div>
-                </div>
-                <div class="w-50">
-                    <img src="{% static 'protect-envi.beta.gouv.fr/home/img/home/background-protect-envi.jpg' %}"
-                         width="100%"
-                         class="center-cropped img-shadow"
-                         alt="" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="fr-mt-6w fr-mx-0 fr-px-14w fr-py-10w dark-section">
-        <h2 class="text-light">La mission de protect-envi</h2>
-        <div id="webinaire-video" class="fr-mt-2v">
-            <p class="fr-text--lg fr-mb-0 fw-light">
-                ProtectEnvi est une plateforme qui facilite la coopération opérationnelle dans la lutte contre les atteintes à l'environnement.
-                Elle permet de signaler des faits, d'en faire un suivi collaboratif et interservices, d'avoir une vision globale
-                du phénomène grace à une carte interactive, d'avoir accès à de la documentation, de se saisir ou de saisir
-                un service compétent mais aussi de partager les bonnes pratiques de prévention en la matière.
-            </p>
-        </div>
-    </div>
-    <div class="fr-py-6w specific-backgroundcolor-1b1b35">
-        <div class="fr-container fr-pt-2w fr-pb-6w">
-            <div class="fr-m-auto">
-                <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Comment fonctionne {{ request.site.name }} ?</h3>
-            </div>
-            <div class="fr-grid-row fr-grid-row--gutters">
-                <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                    <div class="fr-p-2w fr-background-default--grey h-100">
-                        <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
-                            <img src="{% static 'home/img/home/search.png' %}"
-                                 width="100%"
-                                 height="100%"
-                                 alt="Icone de recherche" />
+    <div>
+        <div class="hero-div">
+            <div class="hero-div__sub-container">
+                <div class="d-flex">
+                    <div class="hero-div__text-part">
+                        <h1 class="fr-h1">Protect-Envi facilite la lutte contre les atteintes à l'environnement</h1>
+                        <div>
+                            {% if user.is_authenticated %}
+                                <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Déposer un dossier</a>
+                            {% else %}
+                                <button class="fr-btn fr-text--xl"
+                                        data-fr-opened="false"
+                                        aria-controls="onboarding-modal">Déposer un dossier</button>
+                            {% endif %}
                         </div>
-                        <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">1</span>
-                        <h4 class="imiteH6">Les demandeurs décrivent leurs besoins</h4>
                     </div>
-                </div>
-                <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                    <div class="fr-p-2w fr-background-default--grey h-100">
-                        <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
-                            <img src="{% static 'home/img/home/form.png' %}"
-                                 width="100%"
-                                 height="100%"
-                                 alt="Icone d'un fichier" />
-                        </div>
-                        <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">2</span>
-                        <h4 class="imiteH6">Les conseillers compétents la guident à chaque étape</h4>
-                    </div>
-                </div>
-                <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                    <div class="fr-p-2w fr-background-default--grey h-100">
-                        <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
-                            <img src="{% static 'home/img/home/community.png' %}"
-                                 width="100%"
-                                 height="100%"
-                                 alt="Icone de communauté" />
-                        </div>
-                        <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">3</span>
-                        <h4 class="imiteH6">Les demandeurs font avancer leur demande</h4>
-                    </div>
-                </div>
-                <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
-                    <div class="fr-p-2w fr-background-default--grey h-100">
-                        <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
-                            <img src="{% static 'home/img/home/progress.png' %}"
-                                 width="100%"
-                                 height="100%"
-                                 alt="Icone de progrès" />
-                        </div>
-                        <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">4</span>
-                        <h4 class="imiteH6">Tous alimentent l’évolution du dossier et des besoins</h4>
+                    <div class="w-50 hero-div__img-div">
+                        <img src="{% static 'protect-envi.beta.gouv.fr/home/img/home/background-protect-envi.jpg' %}"
+                             width="100%"
+                             class="center-cropped img-shadow"
+                             alt="" />
                     </div>
                 </div>
             </div>
         </div>
+        <div class="fr-mt-6w fr-mx-0 hero-div__dark-section">
+            <h2>La mission de protect-envi</h2>
+            <div id="webinaire-video" class="fr-mt-2v">
+                <p class="fr-text--lg fr-mb-0 fw-light">
+                    ProtectEnvi est une plateforme qui facilite la coopération opérationnelle dans la lutte contre les atteintes à l'environnement.
+                    Elle permet de signaler des faits, d'en faire un suivi collaboratif et interservices, d'avoir une vision globale
+                    du phénomène grace à une carte interactive, d'avoir accès à de la documentation, de se saisir ou de saisir
+                    un service compétent mais aussi de partager les bonnes pratiques de prévention en la matière.
+                </p>
+            </div>
+        </div>
+        <div class="fr-py-6w specific-backgroundcolor-1b1b35">
+            <div class="fr-container fr-pt-2w fr-pb-6w">
+                <div class="fr-m-auto">
+                    <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Comment fonctionne {{ request.site.name }} ?</h3>
+                </div>
+                <div class="fr-grid-row fr-grid-row--gutters">
+                    <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
+                        <div class="fr-p-2w fr-background-default--grey h-100">
+                            <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
+                                <img src="{% static 'home/img/home/search.png' %}"
+                                     width="100%"
+                                     height="100%"
+                                     alt="Icone de recherche" />
+                            </div>
+                            <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">1</span>
+                            <h4 class="imiteH6">Les demandeurs décrivent leurs besoins</h4>
+                        </div>
+                    </div>
+                    <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
+                        <div class="fr-p-2w fr-background-default--grey h-100">
+                            <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
+                                <img src="{% static 'home/img/home/form.png' %}"
+                                     width="100%"
+                                     height="100%"
+                                     alt="Icone d'un fichier" />
+                            </div>
+                            <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">2</span>
+                            <h4 class="imiteH6">Les conseillers compétents la guident à chaque étape</h4>
+                        </div>
+                    </div>
+                    <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
+                        <div class="fr-p-2w fr-background-default--grey h-100">
+                            <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
+                                <img src="{% static 'home/img/home/community.png' %}"
+                                     width="100%"
+                                     height="100%"
+                                     alt="Icone de communauté" />
+                            </div>
+                            <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">3</span>
+                            <h4 class="imiteH6">Les demandeurs font avancer leur demande</h4>
+                        </div>
+                    </div>
+                    <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
+                        <div class="fr-p-2w fr-background-default--grey h-100">
+                            <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px">
+                                <img src="{% static 'home/img/home/progress.png' %}"
+                                     width="100%"
+                                     height="100%"
+                                     alt="Icone de progrès" />
+                            </div>
+                            <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">4</span>
+                            <h4 class="imiteH6">Tous alimentent l’évolution du dossier et des besoins</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-bottom"></div>
     </div>
-    <div class="border-bottom"></div>
     {% include "home/onboarding/onboarding-modal.html" with form=onboarding_modal_form %}
 {% endblock content %}

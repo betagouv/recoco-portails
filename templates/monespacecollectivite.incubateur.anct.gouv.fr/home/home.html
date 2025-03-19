@@ -24,10 +24,10 @@
           type="text/css">
 {% endblock css %}
 {% block content %}
-    <div class="fr-m-2v fr-p-2v fr-mt-4w fr-mb-6w">
-        <div class="position-relative">
+    <div class="hero-div">
+        <div class="hero-div__sub-container">
             <div class="d-flex">
-                <div class="fr-pl-12w fr-mt-12w w-50 fr-pr-2w">
+                <div class="hero-div__text-part">
                     <h1 class="fr-h1">Accélérez les projets de votre territoire</h1>
                     <p>
                         Mon Espace Collectivité est un service public et gratuit qui permet aux collectivités de concrétiser leurs projets du quotidien et ceux du Contrat de relance et de transition écologique (CRTE). Elles soumettent leurs besoins ou blocages afin que les acteurs publics du territoire puissent les suivre et les conseiller.
@@ -43,7 +43,7 @@
                         {% endif %}
                     </div>
                 </div>
-                <div class="w-50">
+                <div class="w-50 hero-div__img-div">
                     <img src="{% static 'monespacecollectivite.incubateur.anct.gouv.fr/home/img/home/home-background-mon-espace-collectivite.jpeg' %}"
                          width="100%"
                          class="center-cropped img-shadow"
@@ -52,7 +52,7 @@
             </div>
         </div>
     </div>
-    <div class="fr-container-fluid">
+    <div class="fr-container-fluid fr-mt-4w">
         <div class="fr-py-8w specific-backgroundcolor-1B1B35">
             <div class="fr-container fr-pt-2w fr-pb-6w">
                 <div class="fr-m-auto">

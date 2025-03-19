@@ -9,3 +9,7 @@
 .specific-maxwidth-160px {
   max-width: 160px;
 }
+
+.row>* {
+  padding: 0px !important;
+}
