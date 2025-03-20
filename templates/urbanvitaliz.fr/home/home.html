@@ -30,15 +30,15 @@
 {% block content %}
     <div x-data="ModalVideo">
         {% include "home/modal_video.html" %}
-        <div class="fr-m-2v fr-p-2v fr-mt-4w">
-            <div class="position-relative">
-                <div class="custom-banner fr-ml-12w z-2">
+        <div class="hero-div">
+            <div class="hero-div__sub-container">
+                <div class="hero-div__custom-banner z-2">
                     <span class="fr-icon-bank-line fr-mr-1v" aria-hidden="true"></span>
                     <p class="fr-m-0 fr-mr-2v">Vous êtes une DDT(M) ou un acteur local (DREAL, EPF, Cerema...) ?</p>
-                    <a href="{% url 'regional-actors' %}">Demandez votre accès</a>
+                    <a class="fw-700" href="{% url 'regional-actors' %}">Demandez votre accès</a>
                 </div>
                 <div class="d-flex">
-                    <div class="fr-pl-12w fr-mt-12w w-50 fr-pr-2w">
+                    <div class="hero-div__text-part">
                         <h1 class="fr-h1">UrbanVitaliz vous guide dans la réhabilitation de vos friches.</h1>
                         <p>
                             <i>
@@ -53,10 +53,11 @@
                                         data-fr-opened="false"
                                         aria-controls="onboarding-modal">Demandez-nous conseil</button>
                             {% endif %}
-                            <a class="fr-btn fr-btn--secondary" href="{% url 'home-contact' %}">Nous envoyer un email</a>
+                            <a class="fr-btn fr-btn--secondary fr-mt-3v"
+                               href="{% url 'home-contact' %}">Nous envoyer un email</a>
                         </div>
                     </div>
-                    <div class="w-50">
+                    <div class="w-50 hero-div__img-div">
                         <img src="{% static 'urbanvitaliz.fr/home/img/home/home-background-urbanvitaliz.png' %}"
                              width="100%"
                              class="center-cropped img-shadow"
@@ -65,8 +66,8 @@
                 </div>
             </div>
         </div>
-        <div class="fr-mt-6w fr-mx-0 fr-px-14w fr-py-10w dark-section">
-            <h2 class="text-light">La mission d’UrbanVitaliz</h2>
+        <div class="fr-mx-0 hero-div__dark-section">
+            <h2>La mission d’UrbanVitaliz</h2>
             <div id="webinaire-video" class="fr-mt-2v">
                 <p class="fr-text--lg fr-mb-0 fw-light">
                     UrbanVitaliz est un service public gratuit. Il répond aux questions et aux blocages
