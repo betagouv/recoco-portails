@@ -28,8 +28,8 @@
                     <p>{{ request.site.configuration.description }}</p>
                     <div>
                         <a href="{% url 'account_login' %}"
-                           class="fr-btn fr-btn--secondary fr-text--xl">Je me connecte</a>
-                        <a href="{% url 'account_signup' %}" class="fr-btn fr-text--xl fr-mt-3v">Demander un compte conseiller</a>
+                           class="fr-btn fr-text--xl">Je me connecte</a>
+                        <a href="{% url 'home-contact' %}?subject=Demande d’accès à UrbanVitaliz en tant que conseiller·e" class="fr-btn fr-btn--secondary fr-text--xl fr-mt-3v">Demander un compte conseiller</a>
                     </div>
                 </div>
                 <div class="w-50 hero-div__img-div">
