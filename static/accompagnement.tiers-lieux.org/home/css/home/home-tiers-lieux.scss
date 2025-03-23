@@ -1,0 +1,37 @@
+@media (max-width: 1250px) {
+    .home {
+        // background-color: blue;
+        &__twelve-logo-div {
+            flex: 0 0 70% !important;
+            max-width: 70% !important;
+            width: 70%!important;
+        }
+        &__one-logo-div {
+            flex: 0 0 30% !important;
+            max-width: 30% !important;
+            width: 30% !important;
+        }
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .home {
+        &__twelve-logo-div {
+            flex: 0 0 60% !important;
+            max-width: 60% !important;
+            width: 60% !important;
+        }
+
+        &__one-logo-div {
+            flex: 0 0 40% !important;
+            max-width: 40% !important;
+            width: 40% !important;
+        }
+
+        &__little-logo {
+            width: 20% !important;
+        }
+    }
+}
