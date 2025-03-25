@@ -37,14 +37,17 @@
                 <div class="hero-div__text-part">
                     <h1 class="fr-h1">SOS Ponts vous guide dans l’entretien et la rénovation des ponts communaux.</h1>
                     <p>
-                        Vous vous posez des questions sur l'entretien et la rénovation de vos ponts communaux ? Le Cerema met à disposition SOS Ponts, un service public gratuit pour vous guider vers la prochaine étape, les bons acteurs à contacter et les actions à mettre en place.
+                        Vous vous posez des questions sur l'entretien et la rénovation de vos ponts communaux ?
+                        Le Cerema met à disposition SOS Ponts, un service public gratuit pour vous guider vers la prochaine étape,
+                        les bons acteurs à contacter et les actions à mettre en place.
+                        <br>
+                        Les acteurs publics locaux (ATD, DDT) peuvent également accéder aux dossiers de leur territoire et ainsi interagir avec vous.
                     </p>
                     <div>
                         {% if user.is_authenticated %}
-                            <a href="{% url 'onboarding-project' %}"
-                               class="fr-btn fr-btn--secondary">Nous poser une question</a>
+                            <a href="{% url 'onboarding-project' %}" class="fr-btn">Nous poser une question</a>
                         {% else %}
-                            <button class="fr-btn fr-btn--secondary"
+                            <button class="fr-btn"
                                     data-fr-opened="false"
                                     aria-controls="onboarding-modal">Nous poser une question</button>
                         {% endif %}
