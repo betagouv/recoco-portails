@@ -31,7 +31,7 @@
                 <div class="d-flex">
                     <div class="hero-div__text-part">
                         <h1 class="fr-h1">
-                            Le Pôle Universitaire d’Innovation de l’Alliance Sorbonne Université (PUI ASU) vous accompagne et vous conseille dans votre projet.
+                            Le Pôle Universitaire d’Innovation de l’Alliance Sorbonne Université (PUI ASU) vous accompagne et vous conseille dans votre dossier.
                         </h1>
                         <p>
                             <i> Quel que soit votre projet, votre statut et vos besoins,
@@ -40,11 +40,11 @@
                         </p>
                         <div>
                             {% if user.is_authenticated %}
-                                <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Discuter de mon projet</a>
+                                <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Discuter de mon dossier</a>
                             {% else %}
                                 <button class="fr-btn fr-text--xl"
                                         data-fr-opened="false"
-                                        aria-controls="onboarding-modal">Discuter de mon projet</button>
+                                        aria-controls="onboarding-modal">Discuter de mon dossier</button>
                             {% endif %}
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                                      class="fr-m-auto" />
                             </div>
                             <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">1</span>
-                            <h6>Le porteur se connecte et décrit son projet et ses besoins.</h6>
+                            <h6>Le demandeur se connecte et décrit son dossier et ses besoins.</h6>
                         </div>
                     </div>
                     <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
@@ -130,7 +130,7 @@
                             <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">4</span>
                             <h6>
                                 A tout moment, les équipes du PUI ASU et le porteur peuvent discuter,
-                                alimenter et compléter le projet et les recommandations associées
+                                alimenter et compléter le dossier et les recommandations associées
                             </h6>
                         </div>
                     </div>
