@@ -48,3 +48,7 @@
 .specific-height-600px {
   height: 600px;
 }
+
+.row>* {
+  padding: 0px !important;
+}

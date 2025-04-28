@@ -1,7 +1,11 @@
 <!-- Methodology -->
 {% if not user.is_authenticated %}
-    <li class="navigation__item">
-        <a class="fr-link {% if url_name == 'methodology' %}active{% endif %}"
+    <li x-data="{ width: window.innerWidth }"
+        x-on:resize.window="width = window.innerWidth"
+        class="navigation__item">
+        <a class="fr-link responsive-header__element-not-mobile {% if url_name == 'methodology' %}active{% endif %}"
+           :class="width < 992 ? 'fr-nav__link' : ''"
+           {% if url_name == 'methodology' %}aria-current="page"{% endif %}
            href="{% url 'methodology' %}">
             <span class="fr-ml-2v fr-mr-1v align-middle">Méthodologie</span>
         </a>

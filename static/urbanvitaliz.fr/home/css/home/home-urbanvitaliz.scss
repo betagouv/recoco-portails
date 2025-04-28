@@ -10,7 +10,6 @@
 }
 
 .actu {
-
   &__title {
     font-size: 16px !important;
   }
@@ -29,4 +28,14 @@
 
 .specific-width-45 {
   width: 45%;
-} 
+}
+
+.row > * {
+  padding: 0px !important;
+}
+
+.center-verticaly {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

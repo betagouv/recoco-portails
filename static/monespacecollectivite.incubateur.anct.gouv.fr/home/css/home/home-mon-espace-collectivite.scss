@@ -9,3 +9,14 @@
 .specific-maxwidth-160px {
   max-width: 160px;
 }
+
+.center-verticaly {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+.hero-div__text-part {
+  padding-right: 4rem;
+}
