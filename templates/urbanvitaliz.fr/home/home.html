@@ -47,14 +47,14 @@
                         </p>
                         <div class="hero-div__buttons">
                             {% if user.is_authenticated %}
-                                <a href="{% url 'onboarding-project' %}" class="fr-btn">Solliciter UrbanVitaliz</a>
+                                <a href="{% url 'onboarding-project' %}" class="fr-btn">Demander conseil sur une friche</a>
                             {% else %}
                                 <button class="fr-btn"
                                         data-fr-opened="false"
-                                        aria-controls="onboarding-modal">Nous demander conseil</button>
+                                        aria-controls="onboarding-modal">Demander conseil sur une friche</button>
                             {% endif %}
                             <a class="fr-mt-3v fr-ml-1w normal-link-style"
-                               href="{% url 'home-contact' %}">Nous envoyer un email</a>
+                               href="{% url 'home-contact' %}">Nous contacter</a>
                         </div>
                     </div>
                     <div class="w-50 hero-div__img-div">
