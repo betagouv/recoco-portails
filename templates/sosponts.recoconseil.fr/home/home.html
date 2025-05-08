@@ -45,11 +45,11 @@
                     </p>
                     <div>
                         {% if user.is_authenticated %}
-                            <a href="{% url 'onboarding-project' %}" class="fr-btn">Nous poser une question</a>
+                            <a href="{% url 'onboarding-project' %}" class="fr-btn">Solliciter SOS Ponts</a>
                         {% else %}
                             <button class="fr-btn"
                                     data-fr-opened="false"
-                                    aria-controls="onboarding-modal">Nous poser une question</button>
+                                    aria-controls="onboarding-modal">Solliciter SOS Ponts</button>
                         {% endif %}
                         <a href="{% url 'home-contact' %}"
                            class="fr-btn fr-btn--secondary fr-mt-3v">Demander un accès conseiller</a>
