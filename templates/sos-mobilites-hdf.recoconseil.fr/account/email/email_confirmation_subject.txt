@@ -1,3 +1,0 @@
-{% autoescape off %}
-Confirmez votre adresse email sur SOS Mobilités HDF
-{% endautoescape %}
