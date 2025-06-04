@@ -27,7 +27,7 @@
     <div class="hero-div">
         <div class="hero-div__sub-container">
             <div class="hero-div__custom-banner z-2">
-                <span class="fr-icon-bank-line fr-mr-1v" aria-hidden="true"></span>
+                <span class="fr-icon-live-line fr-mr-1v" aria-hidden="true"></span>
                 <p class="fr-m-0 fr-mr-2v">Regardez l’enregistrement du webinaire SOS PONTS destiné aux collectivités.</p>
                 <a class="fw-700"
                    target="_blank"
@@ -35,24 +35,26 @@
             </div>
             <div class="d-flex">
                 <div class="hero-div__text-part">
-                    <h1 class="fr-h1">SOS Ponts vous guide dans l’entretien et la rénovation des ponts communaux.</h1>
+                    <h1 class="fr-h1 h1-dsfr-rework">SOS Ponts vous guide dans l’entretien et la rénovation des ponts communaux.</h1>
                     <p>
                         Vous vous posez des questions sur l'entretien et la rénovation de vos ponts communaux ?
                         Le Cerema met à disposition SOS Ponts, un service public gratuit pour vous guider vers la prochaine étape,
                         les bons acteurs à contacter et les actions à mettre en place.
-                        <br>
-                        Les acteurs publics locaux (ATD, DDT) peuvent également accéder aux dossiers de leur territoire et ainsi interagir avec vous.
                     </p>
                     <div>
                         {% if user.is_authenticated %}
-                            <a href="{% url 'onboarding-project' %}" class="fr-btn">Solliciter SOS Ponts</a>
+                            <a href="{% url 'onboarding-project' %}" class="fr-btn">Posez-nous une question</a>
                         {% else %}
                             <button class="fr-btn"
                                     data-fr-opened="false"
-                                    aria-controls="onboarding-modal">Solliciter SOS Ponts</button>
+                                    aria-controls="onboarding-modal">Posez-nous une question</button>
                         {% endif %}
-                        <a href="{% url 'advisor-access-request' %}"
-                           class="fr-btn fr-btn--secondary fr-mt-3v fr-ml-1w">Demander un accès conseiller</a>
+                    </div>
+                    <div class="blue-hero-banner fr-mt-4w fr-p-4v">
+                        <p class="fr-m-0">
+                            Acteurs publics locaux (ATD, DDT) : vous pouvez accéder aux dossiers de votre territoire et interagir avec les collectivités.
+                            <a href="{% url 'advisor-access-request' %}" class="">Demandez un accès en tant que conseiller</a>
+                        </p>
                     </div>
                 </div>
                 <div class="w-50 hero-div__img-div">
