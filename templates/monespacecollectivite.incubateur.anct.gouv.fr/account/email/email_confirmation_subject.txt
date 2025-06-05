@@ -1,3 +1,0 @@
-{% autoescape off %}
-Confirmez votre adresse email sur Mon Espace Collectivité
-{% endautoescape %}

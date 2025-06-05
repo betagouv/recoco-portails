@@ -1,3 +1,0 @@
-{% autoescape off %}
-    Modification de votre mot de passe sur UrbanVitaliz
-{% endautoescape %}
