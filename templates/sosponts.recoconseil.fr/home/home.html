@@ -27,7 +27,7 @@
     <div class="hero-div">
         <div class="hero-div__sub-container">
             <div class="hero-div__custom-banner z-2">
-                <span class="fr-icon-bank-line fr-mr-1v" aria-hidden="true"></span>
+                <span class="fr-icon-live-line fr-mr-1v" aria-hidden="true"></span>
                 <p class="fr-m-0 fr-mr-2v">Regardez l’enregistrement du webinaire SOS PONTS destiné aux collectivités.</p>
                 <a class="fw-700"
                    target="_blank"
@@ -35,24 +35,26 @@
             </div>
             <div class="d-flex">
                 <div class="hero-div__text-part">
-                    <h1 class="fr-h1">SOS Ponts vous guide dans l’entretien et la rénovation des ponts communaux.</h1>
+                    <h1 class="fr-h1 h1-dsfr-rework">SOS Ponts vous guide dans l’entretien et la rénovation des ponts communaux.</h1>
                     <p>
                         Vous vous posez des questions sur l'entretien et la rénovation de vos ponts communaux ?
                         Le Cerema met à disposition SOS Ponts, un service public gratuit pour vous guider vers la prochaine étape,
                         les bons acteurs à contacter et les actions à mettre en place.
-                        <br>
-                        Les acteurs publics locaux (ATD, DDT) peuvent également accéder aux dossiers de leur territoire et ainsi interagir avec vous.
                     </p>
                     <div>
                         {% if user.is_authenticated %}
-                            <a href="{% url 'onboarding-project' %}" class="fr-btn">Solliciter SOS Ponts</a>
+                            <a href="{% url 'onboarding-project' %}" class="fr-btn">Posez-nous une question</a>
                         {% else %}
                             <button class="fr-btn"
                                     data-fr-opened="false"
-                                    aria-controls="onboarding-modal">Solliciter SOS Ponts</button>
+                                    aria-controls="onboarding-modal">Posez-nous une question</button>
                         {% endif %}
-                        <a href="{% url 'advisor-access-request' %}"
-                           class="fr-btn fr-btn--secondary fr-mt-3v fr-ml-1w">Demander un accès conseiller</a>
+                    </div>
+                    <div class="blue-hero-banner fr-mt-4w fr-p-4v">
+                        <p class="fr-m-0">
+                            Acteurs publics locaux (ATD, DDT) : vous pouvez accéder aux dossiers de votre territoire et interagir avec les collectivités.
+                            <a href="{% url 'advisor-access-request' %}" class="">Demandez un accès en tant que conseiller</a>
+                        </p>
                     </div>
                 </div>
                 <div class="w-50 hero-div__img-div">
@@ -64,26 +66,7 @@
             </div>
         </div>
     </div>
-    <div class="fr-background-alt--grey fr-py-4w fr-mt-4w">
-        <div class="fr-container fr-pt-2w">
-            <div class="fr-grid-row fr-grid-row--gutters">
-                <div class="fr-col-12 fr-col-sm-3 text-center">
-                    <img class="fr-p-2v specific-maxwidth-160px"
-                         src="{% static 'sosponts.recoconseil.fr/home/img/home/target.png' %}"
-                         width="100%"
-                         alt="Image de coopération humaine" />
-                </div>
-                <div class="fr-col-12 fr-col-sm-9 fr-text--lg d-flex align-items-center">
-                    <p class="fr-my-2w">
-                        SOS Ponts est en phase d'expérimentation. Ce service s'appuie sur une démarche
-                        exploratoire, centrée sur les utilisateurs et utilisatrices. Vos questions nous
-                        permettront de bâtir ensemble un outil pertinent, adapté à vos préoccupations.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="fr-py-6w specific-backgroundcolor-1b1b35">
+    <div class="fr-py-6w specific-backgroundcolor-1b1b35 fr-mt-6w">
         <div class="fr-container fr-pt-2w fr-pb-6w">
             <div class="fr-m-auto">
                 <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Comment fonctionne ce service ?</h3>
@@ -194,6 +177,31 @@
                             </p>
                             <p class="fr-text--sm fr-mb-1v">
                                 <strong>Rejoignez la communauté ponts et devenez membre !</strong>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="fr-grid-row fr-grid-row--gutters justify-content-center">
+                <div class="fr-col-12 fr-col-md-6">
+                    <div class="fr-background-default--grey fr-border-default-grey border fr-p-2w">
+                        <a href="https://www.cerema.fr/fr/programmenationalpontstravaux"
+                           target="_blank">
+                            <img class="fr-mb-1w"
+                                 src="{% static 'sosponts.recoconseil.fr/home/img/home/programme-national-banner.png' %}"
+                                 width="100%"
+                                 height="100%"
+                                 alt="Programme National des ponts" />
+                            <h6 class="fr-mb-1v">
+                                Consultez l’ensemble des informations relatives au Programme National Ponts TRAVAUX (2023-2026)
+                            </h6>
+                            <p class="fr-text--sm fr-mb-1v">
+                                Retrouvez le dispositif mis à jour pour le financement des réparations des ouvrages communaux
+                                ainsi que les liens utiles pour comprendre les conditions d’éligibilités et le processus d’admission.
+                                Quelles communes et quels ouvrages sont éligibles ? Comment faire sa demande de subvention ?
+                            </p>
+                            <p class="fr-text--sm fr-mb-1v">
+                                <strong>Accédez à la page dédiée</strong>
                             </p>
                         </a>
                     </div>
