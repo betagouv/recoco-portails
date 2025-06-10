@@ -36,13 +36,7 @@
                             </i>
                         </p>
                         <div>
-                            {% if user.is_authenticated %}
-                                <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Solliciter la Mission Adaptation</a>
-                            {% else %}
-                                <button class="fr-btn fr-text--xl"
-                                        data-fr-opened="false"
-                                        aria-controls="onboarding-modal">Solliciter la Mission Adaptation</button>
-                            {% endif %}
+                            <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Solliciter la Mission Adaptation</a>
                             <a href="{% url 'advisor-access-request' %}"
                                class="fr-btn fr-btn--secondary fr-text--xl fr-mt-3w">Demander un accès conseiller</a>
                         </div>
@@ -259,7 +253,6 @@
         </div>
         <div class="border-bottom"></div>
     </div>
-    {% include "home/onboarding/onboarding-modal.html" with form=onboarding_modal_form %}
 {% endblock content %}
 {% block footer %}
     <div class="row justify-content-center" id="footer">{% include "footer.html" %}</div>
