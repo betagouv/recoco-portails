@@ -44,13 +44,7 @@
                         Les acteurs publics locaux (ATD, DDT) peuvent également accéder aux dossiers de leur territoire et ainsi interagir avec vous.
                     </p>
                     <div>
-                        {% if user.is_authenticated %}
-                            <a href="{% url 'onboarding-project' %}" class="fr-btn">Solliciter SOS Ponts</a>
-                        {% else %}
-                            <button class="fr-btn"
-                                    data-fr-opened="false"
-                                    aria-controls="onboarding-modal">Solliciter SOS Ponts</button>
-                        {% endif %}
+                        <a href="{% url 'onboarding-project' %}" class="fr-btn">Solliciter SOS Ponts</a>
                         <a href="{% url 'home-contact' %}"
                            class="fr-btn fr-btn--secondary fr-mt-3v">Demander un accès conseiller</a>
                     </div>
@@ -207,19 +201,12 @@
                 <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Besoin d'un accompagnement ? Faites appel à SOS PONTS</h3>
             </div>
             <div class="text-center">
-                {% if user.is_authenticated %}
-                    <a href="{% url 'onboarding-project' %}"
-                       class="fr-btn fr-btn--tertiary fr-btn--lg fr-text-inverted--grey">Nous poser une question</a>
-                {% else %}
-                    <button class="fr-btn fr-btn--tertiary fr-btn--lg fr-text-inverted--grey"
-                            data-fr-opened="false"
-                            aria-controls="onboarding-modal">Nous poser une question</button>
-                {% endif %}
+                <a href="{% url 'onboarding-project' %}"
+                   class="fr-btn fr-btn--tertiary fr-btn--lg fr-text-inverted--grey">Nous poser une question</a>
             </div>
         </div>
     </div>
     <div class="border-bottom"></div>
-    {% include "home/onboarding/onboarding-modal.html" with form=onboarding_modal_form %}
 {% endblock content %}
 {% block footer %}
     <div class="row justify-content-center" id="footer">{% include "footer.html" %}</div>
