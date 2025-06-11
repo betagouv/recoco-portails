@@ -36,8 +36,10 @@
                         d'action : études, outils, méthodes, infos à ne pas manquer, etc
                     </p>
                     <div>
-                        <a href="{% url 'account_login' %}" class="fr-btn fr-text--xl">Je me connecte</a>
-                        <a href="{% url 'home-contact' %}?subject=Demande d’accès à Cerema Hauts-de-France en tant que conseiller·e"
+                        <button class="fr-btn fr-text--xl"
+                                data-fr-opened="false"
+                                aria-controls="onboarding-modal">Demander de l'aide</button>
+                        <a href="{% url 'advisor-access-request' %}"
                            class="fr-btn fr-btn--secondary fr-text--xl fr-mt-3v">Demander un compte conseiller</a>
                     </div>
                 </div>
