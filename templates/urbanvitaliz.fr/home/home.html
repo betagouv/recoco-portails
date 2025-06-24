@@ -46,7 +46,8 @@
                             </i>
                         </p>
                         <div class="hero-div__buttons">
-                            <a href="{% url 'onboarding-project' %}" class="fr-btn">Demander conseil sur une friche</a>
+                            <a href="{% if user.is_authenticated %}{% url 'onboarding-prefill-set-user' %}{% else %}{% url 'onboarding-project' %}{% endif %}"
+                               class="fr-btn">Demander conseil sur une friche</a>
                             <a class="fr-mt-3v fr-ml-1w normal-link-style"
                                href="{% url 'home-contact' %}">Nous contacter</a>
                         </div>

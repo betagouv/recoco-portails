@@ -34,7 +34,8 @@
                             </i>
                         </p>
                         <div>
-                            <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Créer un dossier</a>
+                            <a href="{% if user.is_authenticated %}{% url 'onboarding-prefill-set-user' %}{% else %}{% url 'onboarding-project' %}{% endif %}"
+                               class="fr-btn fr-text--xl">Créer un dossier</a>
                         </div>
                     </div>
                     <div class="w-50 hero-div__img-div">
