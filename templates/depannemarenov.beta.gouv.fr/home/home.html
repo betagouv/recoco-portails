@@ -33,8 +33,7 @@
                             Dépanne ma Rénov’ guide les organismes publics dans l’amélioration et la rénovation énergétique de leur bâtiment
                         </h1>
                         <div>
-                            <a href="{% if user.is_authenticated %}{% url 'onboarding-prefill-set-user' %}{% else %}{% url 'onboarding-project' %}{% endif %}"
-                               class="fr-btn fr-text--xl">Demander conseil</a>
+                            <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Demander conseil</a>
                         </div>
                     </div>
                     <div class="w-50 hero-div__img-div">

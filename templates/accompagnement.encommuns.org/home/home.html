@@ -36,8 +36,7 @@
                         </i>
                     </p>
                     <div>
-                        <a href="{% if user.is_authenticated %}{% url 'onboarding-project' %}{% else %}{% url 'onboarding-prefill-set-user' %}{% endif %}"
-                           class="fr-btn fr-text--xl">Etre accompagné</a>
+                        <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Etre accompagné</a>
                     </div>
                 </div>
                 <div class="w-50 hero-div__img-div">

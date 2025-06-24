@@ -33,8 +33,7 @@
                     </h1>
                     <p>{{ request.site.configuration.description }}</p>
                     <div>
-                        <a href="{% if user.is_authenticated %}{% url 'onboarding-prefill-set-user' %}{% else %}{% url 'onboarding-project' %}{% endif %}"
-                           class="fr-btn fr-text--xl">Solliciter SOS Mobilités HDF</a>
+                        <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Solliciter SOS Mobilités HDF</a>
                     </div>
                 </div>
                 <div class="w-50 hero-div__img-div">
@@ -156,7 +155,7 @@
                         <!-- <h6 class="fr-mb-13v fr-text-inverted--grey">
                         Faites-vous accompagner
 </h6> -->
-                        <a href="{% if user.is_authenticated %}{% url 'onboarding-prefill-set-user' %}{% else %}{% url 'onboarding-project' %}{% endif %}"
+                        <a href="{% url 'onboarding-project' %}"
                            class="fr-btn fr-btn--tertiary fr-text-inverted--grey">Nous poser une question</a>
                     </div>
                 </div>

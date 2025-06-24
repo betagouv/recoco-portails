@@ -31,7 +31,7 @@
                     <h1 class="fr-h1">CORSPAD plateforme d'accélération de projets</h1>
                     <p>{{ request.site.configuration.description }}</p>
                     <div>
-                        <a href="{% if user.is_authenticated %}{% url 'onboarding-prefill-set-user' %}{% else %}{% url 'onboarding-project' %}{% endif %}"
+                        <a href="{% url 'onboarding-project' %}"
                            class="fr-btn fr-text--xl"
                            data-test-id="button-need-help">Solliciter {{ request.site.name }}</a>
                     </div>

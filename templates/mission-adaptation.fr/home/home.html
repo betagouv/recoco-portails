@@ -36,8 +36,7 @@
                             </i>
                         </p>
                         <div>
-                            <a href="{% if user.is_authenticated %}{% url 'onboarding-prefill-set-user' %}{% else %}{% url 'onboarding-project' %}{% endif %}"
-                               class="fr-btn fr-text--xl">Solliciter la Mission Adaptation</a>
+                            <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Solliciter la Mission Adaptation</a>
                             <a href="{% url 'advisor-access-request' %}"
                                class="fr-btn fr-btn--secondary fr-text--xl fr-mt-3w">Demander un accès conseiller</a>
                         </div>

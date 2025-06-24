@@ -32,8 +32,7 @@
                     <div class="hero-div__text-part">
                         <h1 class="fr-h1">Protect-Envi facilite la lutte contre les atteintes à l'environnement</h1>
                         <div>
-                            <a href="{% if user.is_authenticated %}{% url 'onboarding-prefill-set-user' %}{% else %}{% url 'onboarding-project' %}{% endif %}"
-                               class="fr-btn fr-text--xl">Déposer un dossier</a>
+                            <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Déposer un dossier</a>
                         </div>
                     </div>
                     <div class="w-50 hero-div__img-div">

@@ -33,7 +33,7 @@
                         Les réseaux régionaux et l'Association Nationale des Tiers-Lieux vous aiguillent dans vos différentes problématiques
                     </p>
                     <div>
-                        <a href="{% if user.is_authenticated %}{% url 'onboarding-prefill-set-user' %}{% else %}{% url 'onboarding-project' %}{% endif %}"
+                        <a href="{% url 'onboarding-project' %}"
                            class="fr-btn fr-text--xl"
                            data-test-id="button-need-help">Solliciter l'aiguillage des Tiers-Lieux</a>
                     </div>
