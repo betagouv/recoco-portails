@@ -7,5 +7,36 @@
                  width="150px"
                  alt="Logo république française">
         </div>
+        <div class="col-6 col-md">
+            <h5>Légal</h5>
+            <ul class="list-unstyled text-small">
+                <li>
+                    <a class="link-secondary" href="{% url 'legals' %}">Mentions légales</a>
+                </li>
+                <li>
+                    <a class="link-secondary" href="{% url 'termsofuse' %}">Conditions d'utilisation</a>
+                </li>
+                <li>
+                    <a class="link-secondary" href="{% url 'accessibility' %}">Accessibilité : non conforme</a>
+                </li>
+                <li>
+                    <a class="link-secondary" href="{% url 'security' %}">Sécurité</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Ressources</h5>
+            <ul class="list-unstyled text-small">
+                <li>
+                    <a class="link-secondary" href="{% url 'statistics' %}">Statistiques d'impact</a>
+                </li>
+            </ul>
+            <h5>Logiciel Libre</h5>
+            <ul class="list-unstyled text-small">
+                <a class="link-secondary"
+                   href="https://github.com/betagouv/recommandations-collaboratives"
+                   target="_new">Code Source</a>
+            </ul>
+        </div>
     </div>
 </footer>
