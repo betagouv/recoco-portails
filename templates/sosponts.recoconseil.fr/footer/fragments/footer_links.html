@@ -1,0 +1,15 @@
+{% load wagtailcore_tags %}
+{% wagtail_site as current_site %}
+{% load static %}
+<div class="fr-col-12 fr-col-sm-3 fr-col-md-2">
+    <h3 class="fr-footer__top-cat">{{ request.site.name }}</h3>
+    <ul class="fr-footer__top-list">
+        <!-- TODO: add links -->
+        <li>
+            <a href="{% slugurl 'qui-sommes-nous-' %}" class="fr-footer__top-link">Qui sommes-nous ?</a>
+        </li>
+        <li>
+            <a href="{% url 'home-contact' %}" class="fr-footer__top-link">Nous contacter</a>
+        </li>
+    </ul>
+</div>
