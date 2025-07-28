@@ -41,13 +41,7 @@
                         les bons acteurs à contacter et les actions à mettre en place.
                     </p>
                     <div>
-                        {% if user.is_authenticated %}
-                            <a href="{% url 'onboarding-project' %}" class="fr-btn">Posez-nous une question</a>
-                        {% else %}
-                            <button class="fr-btn"
-                                    data-fr-opened="false"
-                                    aria-controls="onboarding-modal">Posez-nous une question</button>
-                        {% endif %}
+                        <a href="{% url 'onboarding-project' %}" class="fr-btn">Posez-nous une question</a>
                     </div>
                     <div class="blue-hero-banner fr-mt-4w fr-p-4v">
                         <p class="fr-m-0">
@@ -214,19 +208,12 @@
                 <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Besoin d'un accompagnement ? Faites appel à SOS PONTS</h3>
             </div>
             <div class="text-center">
-                {% if user.is_authenticated %}
-                    <a href="{% url 'onboarding-project' %}"
-                       class="fr-btn fr-btn--tertiary fr-btn--lg fr-text-inverted--grey">Nous poser une question</a>
-                {% else %}
-                    <button class="fr-btn fr-btn--tertiary fr-btn--lg fr-text-inverted--grey"
-                            data-fr-opened="false"
-                            aria-controls="onboarding-modal">Nous poser une question</button>
-                {% endif %}
+                <a href="{% url 'onboarding-project' %}"
+                   class="fr-btn fr-btn--tertiary fr-btn--lg fr-text-inverted--grey">Nous poser une question</a>
             </div>
         </div>
     </div>
     <div class="border-bottom"></div>
-    {% include "home/onboarding/onboarding-modal.html" with form=onboarding_modal_form %}
 {% endblock content %}
 {% block footer %}
     <div class="row justify-content-center" id="footer">{% include "footer/footer.html" %}</div>

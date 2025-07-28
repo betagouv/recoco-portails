@@ -36,17 +36,11 @@
                             </i>
                         </p>
                         <div>
-                            {% if user.is_authenticated %}
-                                <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Solliciter la Mission Adaptation</a>
-                            {% else %}
-                                <button class="fr-btn fr-text--xl"
-                                        data-fr-opened="false"
-                                        aria-controls="onboarding-modal">Solliciter la Mission Adaptation</button>
-                            {% endif %}
+                            <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Solliciter la Mission Adaptation</a>
                         </div>
                         <div class="blue-hero-banner fr-mt-4w fr-p-4v">
                             <p class="fr-m-0">
-                                Vous êtes une DDT(M), DREAL ou un opérateur local (Cerema, ADEME, OFB, Agences de l'eau, etc.) ? 
+                                Vous êtes une DDT(M), DREAL ou un opérateur local (Cerema, ADEME, OFB, Agences de l'eau, etc.) ?
                                 <a href="{% url 'advisor-access-request' %}">Demandez votre accès</a>
                             </p>
                         </div>
@@ -263,7 +257,6 @@
         </div>
         <div class="border-bottom"></div>
     </div>
-    {% include "home/onboarding/onboarding-modal.html" with form=onboarding_modal_form %}
 {% endblock content %}
 {% block footer %}
     <div class="row justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
