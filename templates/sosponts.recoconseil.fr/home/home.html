@@ -37,8 +37,7 @@
                 <div class="hero-div__text-part">
                     <h1 class="fr-h1 h1-dsfr-rework">SOS Ponts vous guide dans l’entretien et la rénovation des ponts communaux.</h1>
                     <p>
-                        Vous vous posez des questions sur l'entretien et la rénovation de vos ponts communaux ?
-                        Le Cerema met à disposition SOS Ponts, un service public gratuit pour vous guider vers la prochaine étape,
+                        Nous répondons gratuitement à vos questions en vous guidant vers les financements disponibles,
                         les bons acteurs à contacter et les actions à mettre en place.
                     </p>
                     <div>
@@ -46,8 +45,8 @@
                     </div>
                     <div class="blue-hero-banner fr-mt-4w fr-p-4v">
                         <p class="fr-m-0">
-                            Acteurs publics locaux (ATD, DDT) : vous pouvez accéder aux dossiers de votre territoire et interagir avec les collectivités.
-                            <a href="{% url 'advisor-access-request' %}" class="">Demandez un accès en tant que conseiller</a>
+                            Acteurs publics locaux (ATD, DDT) : pour accéder aux dossiers de votre territoire,
+                            <a href="{% url 'advisor-access-request' %}">demandez un accès en tant que conseiller</a>
                         </p>
                     </div>
                 </div>
@@ -217,5 +216,5 @@
     <div class="border-bottom"></div>
 {% endblock content %}
 {% block footer %}
-    <div class="row justify-content-center" id="footer">{% include "footer.html" %}</div>
+    <div class="row justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
 {% endblock footer %}

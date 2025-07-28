@@ -37,8 +37,12 @@
                         </p>
                         <div>
                             <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Solliciter la Mission Adaptation</a>
-                            <a href="{% url 'advisor-access-request' %}"
-                               class="fr-btn fr-btn--secondary fr-text--xl fr-mt-3w">Demander un accès conseiller</a>
+                        </div>
+                        <div class="blue-hero-banner fr-mt-4w fr-p-4v">
+                            <p class="fr-m-0">
+                                Vous êtes une DDT(M), DREAL ou un opérateur local (Cerema, ADEME, OFB, Agences de l'eau, etc.) ?
+                                <a href="{% url 'advisor-access-request' %}">Demandez votre accès</a>
+                            </p>
                         </div>
                     </div>
                     <div class="w-50 hero-div__img-div">
@@ -255,5 +259,5 @@
     </div>
 {% endblock content %}
 {% block footer %}
-    <div class="row justify-content-center" id="footer">{% include "footer.html" %}</div>
+    <div class="row justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
 {% endblock footer %}

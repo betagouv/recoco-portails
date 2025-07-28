@@ -1,0 +1,9 @@
+<a id="brand-link"
+   title="Retour à l'accueil du site - {{ request.site.name }}"
+   href="{% url 'home' %}">
+    <img class="logo-{{ request.site.name|lower }}"
+         src="{{ request.site.configuration.logo_large.url }}"
+         width="auto"
+         height="40px"
+         alt="logo {{ request.site.name }} - lien retour page accueil" />
+</a>

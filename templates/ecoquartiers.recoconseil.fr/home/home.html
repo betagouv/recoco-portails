@@ -28,7 +28,7 @@
                     <p>{{ request.site.configuration.description }}</p>
                     <div>
                         <a href="{% url 'account_login' %}" class="fr-btn fr-text--xl">Je me connecte</a>
-                        <a href="{% url 'home-contact' %}?subject=Demande d’accès à UrbanVitaliz en tant que conseiller·e"
+                        <a href="{% url 'home-contact' %}?subject=Demande d’accès à EcoQuartiers en tant que conseiller·e"
                            class="fr-btn fr-btn--secondary fr-text--xl fr-mt-3v">Demander un compte conseiller</a>
                     </div>
                 </div>
@@ -59,5 +59,5 @@
     <div class="border-bottom"></div>
 {% endblock content %}
 {% block footer %}
-    <div class="row justify-content-center" id="footer">{% include "footer.html" %}</div>
+    <div class="row justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
 {% endblock footer %}
