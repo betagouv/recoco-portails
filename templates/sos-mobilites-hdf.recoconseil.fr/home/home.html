@@ -33,13 +33,7 @@
                     </h1>
                     <p>{{ request.site.configuration.description }}</p>
                     <div>
-                        {% if user.is_authenticated %}
-                            <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Solliciter SOS Mobilités HDF</a>
-                        {% else %}
-                            <button class="fr-btn fr-text--xl"
-                                    data-fr-opened="false"
-                                    aria-controls="onboarding-modal">Solliciter SOS Mobilités HDF</button>
-                        {% endif %}
+                        <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Solliciter SOS Mobilités HDF</a>
                     </div>
                 </div>
                 <div class="w-50 hero-div__img-div">
@@ -161,14 +155,8 @@
                         <!-- <h6 class="fr-mb-13v fr-text-inverted--grey">
                         Faites-vous accompagner
 </h6> -->
-                        {% if user.is_authenticated %}
-                            <a href="{% url 'onboarding-project' %}"
-                               class="fr-btn fr-btn--tertiary fr-text-inverted--grey">Nous poser une question</a>
-                        {% else %}
-                            <button class="fr-btn fr-btn--tertiary fr-text-inverted--grey"
-                                    data-fr-opened="false"
-                                    aria-controls="onboarding-modal">Nous poser une question</button>
-                        {% endif %}
+                        <a href="{% url 'onboarding-project' %}"
+                           class="fr-btn fr-btn--tertiary fr-text-inverted--grey">Nous poser une question</a>
                     </div>
                 </div>
             </div>
@@ -210,7 +198,6 @@
         </div>
     </div>
     <div class="border-bottom"></div>
-    {% include "home/onboarding/onboarding-modal.html" with form=onboarding_modal_form %}
 {% endblock content %}
 {% block footer %}
     <div class="row justify-content-center" id="footer">{% include "footer/footer.html" %}</div>

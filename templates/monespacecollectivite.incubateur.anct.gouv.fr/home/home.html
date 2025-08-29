@@ -33,14 +33,8 @@
                         Mon Espace Collectivité est un service public et gratuit qui permet aux collectivités de concrétiser leurs projets du quotidien et ceux du Contrat de relance et de transition écologique (CRTE). Elles soumettent leurs besoins ou blocages afin que les acteurs publics du territoire puissent les suivre et les conseiller.
                     </p>
                     <div>
-                        {% if user.is_authenticated %}
-                            <a href="{% url 'onboarding-project' %}"
-                               class="fr-btn fr-btn--primary fr-text--xl">Démarrer un dossier</a>
-                        {% else %}
-                            <button class="fr-btn fr-btn--primary fr-text--xl"
-                                    data-fr-opened="false"
-                                    aria-controls="onboarding-modal">Démarrer un dossier</button>
-                        {% endif %}
+                        <a href="{% url 'onboarding-project' %}"
+                           class="fr-btn fr-btn--primary fr-text--xl">Démarrer un dossier</a>
                     </div>
                 </div>
                 <div class="w-50 hero-div__img-div">
@@ -129,19 +123,12 @@
                     <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Vous souhaitez vous faire accompagner ?</h3>
                 </div>
                 <div class="text-center">
-                    {% if user.is_authenticated %}
-                        <a href="{% url 'onboarding-project' %}"
-                           class="fr-btn fr-btn--tertiary fr-text--xl fr-text-inverted--grey">Démarrer un dossier</a>
-                    {% else %}
-                        <button class="fr-btn fr-btn--tertiary fr-text--xl fr-text-inverted--grey"
-                                data-fr-opened="false"
-                                aria-controls="onboarding-modal">Démarrer un dossier</button>
-                    {% endif %}
+                    <a href="{% url 'onboarding-project' %}"
+                       class="fr-btn fr-btn--tertiary fr-text--xl fr-text-inverted--grey">Démarrer un dossier</a>
                 </div>
             </div>
         </div>
     </div>
-    {% include "home/onboarding/onboarding-modal.html" with form=onboarding_modal_form %}
 {% endblock content %}
 {% block footer %}
     <div class="row justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
