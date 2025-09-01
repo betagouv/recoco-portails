@@ -48,16 +48,7 @@
                         </div>
                         <div class="blue-hero-banner fr-mt-4w fr-p-4v">
                             <p class="fr-m-0">
-                                Vous avez identifié une friche ? Nous vous aidons à mobiliser les bons acteurs, méthodes et financements pour concrétiser votre projet.
-                                {% if user.is_authenticated %}
-                                    <a href="{% url 'onboarding-project' %}">Déposer un projet</a>
-                                {% else %}
-                                    <button class="styling-like-a-link"
-                                            data-fr-opened="false"
-                                            aria-controls="onboarding-modal">Demander conseil sur une friche</button>
-                                {% endif %}
-                                <br>
-                                Pour trouver une friche pour développer votre projet, consultez
+                                Si vous cherchez une friche pour développer votre projet, consultez plutôt
                                 <a href="https://cartofriches.cerema.fr/cartofriches" target="_blank">Cartofriches.</a>
                             </p>
                         </div>
