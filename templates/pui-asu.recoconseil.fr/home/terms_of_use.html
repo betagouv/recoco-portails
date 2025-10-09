@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+{% load gravatar %}
+{% load sass_tags %}
+{% load static %}
+{% block title %}
+    Conditions générales d'utilisation
+{% endblock title %}
+{% block og_title %}
+    Conditions générales d'utilisation
+{% endblock og_title %}
+{% block css %}
+    <link href="{% sass_src 'home/css/home/home.scss' %}"
+          rel="stylesheet"
+          type="text/css">
+    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
+          rel="stylesheet"
+          type="text/css">
+{% endblock css %}
+{% block content %}
+    <div class="col-8 fr-mt-3w fr-py-2w g-0 fr-mx-auto font-marianne">
+        <h2>Conditions générales d'utilisation Portail Unifié d'Accompagnement ASU</h2>
+        <p class="fr-mt-3w">
+            Les présentes conditions générales d’utilisation (dites « CGU ») 
+            fixent le cadre juridique de “Portail Unifié d'Accompagnement ASU” 
+            et définissent les conditions d’accès et d’utilisation des services par l’Utilisateur.
+        </p>
+        <p class="fr-mt-3w fr-mb-2v">
+            <strong>Article 1 - Champ d’application</strong>
+        </p>
+        <p>
+            L'inscription est gratuite et réservée aux utilisateurs suivants : 
+            chercheurs, enseignants-chercheurs, doctorants, post-doctorants, ingénieurs, 
+            étudiants et personnels de laboratoires de l’Alliance Sorbonne Université 
+            ayant un projet d’innovation, et conseillers qui répondent à leurs demandes d’accompagnement.
+        </p>
+        <p class="fr-mt-3w fr-mb-2v">
+            <strong>Article 2 – Objet</strong>
+        </p>
+        <p>
+            La plateforme est le portail d'accès unifié aux dispositifs d'accompagnement 
+            à l'innovation du Pôle Universitaire d'Innovation de l'Alliance Sorbonne Université. 
+            Elle permet un aiguillage des projets vers le bon interlocuteur 
+            et les meilleurs dispositifs selon le projet et les besoins.
+        </p>
+        <p class="fr-mt-3w fr-mb-2v">
+            <strong>Article 3 – Définitions</strong>
+        </p>
+        <p>
+            « L'Utilisateur » est tout demandeur, porteur de projet 
+            ou collectivité utilisant la plateforme Portail Unifié d'Accompagnement ASU pour obtenir de l’aide.
+            <br />
+            <br />
+            « Les conseillers » désignent toute personne compétente pour guider l’Utilisateur dans sa demande d’aide.
+            <br />
+            <br />
+            « L’Administration » vient désigner toute administration française ;
+            <br />
+            <br />
+            Les « Services » sont les fonctionnalités offertes par la plateforme pour répondre à ses
+            finalités.
+        </p>
+        <p class="fr-mt-3w fr-mb-2v">
+            <strong>Article 4 - Fonctionnalités</strong>
+        </p>
+        <p class="fr-mb-1v">
+            <strong>4.1 Création du compte Portail Unifié d'Accompagnement ASU
+            </strong>
+        </p>
+        <p class="fr-mb-1v">
+            <strong>4.1.1. Avec mot de passe</strong>
+        </p>
+        <p>
+            Chaque utilisateur peut créer un compte Portail Unifié d'Accompagnement ASU « avec mot de passe » en fournissant les informations suivantes :
+            <br />
+            <br />
+            <ul>
+                <li>Prénom</li>
+                <li>Nom</li>
+                <li>Organisation</li>
+                <li>Fonction</li>
+                <li>Adresse e-mail</li>
+                <li>Numéro de téléphone</li>
+                <li>Mot de passe (et confirmation de mot de passe)</li>
+            </ul>
+        </p>
+        <p class="fr-mt-3w fr-mb-2v">
+            <strong>4.1.2. Avec adresse e-mail</strong>
+        </p>
+        <p>
+            Chaque utilisateur peut créer un compte Portail Unifié d'Accompagnement ASU « avec adresse e-mail » grâce à un lien de connexion qui lui sera envoyé sur l’adresse e-mail communiquée.
+        </p>
+        <p class="fr-mt-3w fr-mb-2v">
+            <strong>4.2. Connexion au compte Portail Unifié d'Accompagnement ASU</strong>
+        </p>
+        <p>
+            Chaque utilisateur peut se connecter à son compte Portail Unifié d'Accompagnement ASU soit grâce à son mot de passe soit grâce à son adresse e-mail et le lien de connexion fourni.
+        </p>
+        <p class="fr-mt-3w fr-mb-2v">
+            <strong>4.3. Dépôt de dossier à Portail Unifié d'Accompagnement ASU</strong>
+        </p>
+        <p>
+            Chaque utilisateur peut solliciter l’équipe {{ request.site.name }} lorsqu’il souhaite déposer un dossier.
+            L’utilisateur remplit les informations suivantes :
+            <br />
+            <br />
+            <ul>
+                <li>Prénom</li>
+                <li>Nom</li>
+                <li>Adresse e-mail</li>
+                <li>Numéro de téléphone</li>
+                <li>Fonction</li>
+                <li>Nom de sa structure</li>
+                <li>Nom du dossier</li>
+                <li>Adresse du dossier ou nom de la commune</li>
+                <li>Code postal</li>
+                <li>Résumé de sa demande</li>
+            </ul>
+        </p>
+        <p class="fr-mt-3w fr-mb-2v">
+            <strong>4.4. Demande d’accès par un conseiller </strong>
+        </p>
+        <p>
+            Chaque conseiller disposant d’un accès de type “conseiller” sur la plateforme peut suivre les dossiers de son territoire et orienter les utilisateurs grâce à Portail Unifié d'Accompagnement ASU.
+        </p>
+        <p>
+            Sur la plateforme, les conseillers potentiels peuvent demander un accès de type “conseiller” en précisant leur zone géographique d’intervention et le motif de leur demande. Ces demandes d’accès seront examinées au cas par cas par les administrateurs de Portail Unifié d'Accompagnement ASU.
+        </p>
+        <p class="fr-mt-3w fr-mb-2v">
+            <strong>Article 5 - Responsabilités</strong>
+        </p>
+        <p class="fr-mb-1v">
+            <strong>5.1 L’éditeur de « Portail Unifié d'Accompagnement ASU »</strong>
+        </p>
+        <p>
+            Les sources des informations diffusées sur le site sont réputées fiables mais le site ne garantit
+            pas qu’il soit exempt de défauts, d’erreurs ou d’omissions.
+            <br />
+            <br />
+            L’éditeur s’engage à la sécurisation du site, notamment en prenant toutes les mesures
+            nécessaires permettant de garantir la sécurité et la confidentialité des informations fournies. Il
+            le réalise dans la limite des capacités techniques liées au chiffrement.
+            <br />
+            <br />
+            L’éditeur fournit les moyens nécessaires et raisonnables pour assurer un accès continu au site.
+            Il se réserve la liberté de faire évoluer, de modifier ou de suspendre, sans préavis, le site pour
+            des raisons de maintenance ou pour tout autre motif jugé nécessaire.
+        </p>
+        <p class="fr-mt-3w fr-mb-2v">
+            <strong>5.2 L’Utilisateur</strong>
+        </p>
+        <p>
+            L'Utilisateur s'assure de garder son mot de passe secret. Toute divulgation du mot de passe,
+            quelle que soit sa forme, est interdite. Il assume les risques liés à l'utilisation de son identifiant
+            et mot de passe.
+            <br />
+            <br />
+            Il s’engage à ne pas commercialiser les données reçues et à ne pas les communiquer à des
+            tiers en dehors des cas prévus par la loi.
+            <br />
+            <br />
+            Toute information transmise par l'Utilisateur est de sa seule responsabilité. Il est rappelé que
+            toute personne procédant à une fausse déclaration pour elle-même ou pour autrui s’expose,
+            notamment, aux sanctions prévues à l’article 441-1 du code pénal, prévoyant des peines
+            pouvant aller jusqu’à trois ans d’emprisonnement et 45 000 euros d’amende.
+            <br />
+            <br />
+            L'Utilisateur s'engage à ne pas mettre en ligne de contenus ou informations contraires aux
+            dispositions légales et réglementaires en vigueur.
+        </p>
+        <p class="fr-mt-3w fr-mb-2v">
+            <strong>5.3. Le conseiller</strong>
+        </p>
+        <p>
+            Le conseiller s’engage à ne pas commercialiser les données reçues et à ne pas les
+            communiquer à des tiers en dehors des cas prévus par la loi.
+            <br />
+            Toute information transmise par le conseiller est de sa seule responsabilité. Il est
+            rappelé que toute personne procédant à une fausse déclaration pour elle-même ou pour autrui
+            s’expose, notamment, aux sanctions prévues à l’article 441-1 du code pénal, prévoyant des
+            peines pouvant aller jusqu’à trois ans d’emprisonnement et 45 000 euros d’amende.
+            <br />
+            Le conseiller s'engage à ne pas mettre en ligne de contenus ou informations contraires
+            aux dispositions légales et réglementaires en vigueur.
+        </p>
+        <p class="fr-mt-3w fr-mb-2v">
+            <strong>Article 6 - Mise à jour des conditions d’utilisation</strong>
+        </p>
+        <p>
+            Les termes des présentes conditions d’utilisation peuvent être amendés à tout moment, en
+            fonction des modifications apportées à la plateforme, de l’évolution de la législation ou pour
+            tout autre motif jugé nécessaire. Chaque modification donne lieu à une nouvelle version qui
+            est acceptée par les parties.
+        </p>
+    </div>
+{% endblock content %}
