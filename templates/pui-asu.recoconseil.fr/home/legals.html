@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load gravatar %}
+{% load sass_tags %}
+{% load static %}
+{% block title %}
+    Mentions légales
+{% endblock title %}
+{% block og_title %}
+    Mentions légales
+{% endblock og_title %}
+{% block css %}
+    <link href="{% sass_src 'home/css/home/home.scss' %}"
+          rel="stylesheet"
+          type="text/css">
+    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
+          rel="stylesheet"
+          type="text/css">
+{% endblock css %}
+{% block content %}
+    <div class="col-8 fr-mt-3w fr-py-2w g-0 fr-mx-auto font-marianne">
+        <h2>Mentions légales de la plateforme Portail Unifié d'Accompagnement ASU</h2>
+        <p class="fr-mt-3w fr-mb-2v">
+            <strong>Éditeur de la Plateforme</strong>
+        </p>
+        <p>
+            La Plateforme « Portail Unifié d'Accompagnement ASU » est éditée par : Sorbonne Université :
+            <br />
+            4 place Jussieu, 75005 Paris
+            <br />
+            01 44 27 32 89
+        </p>
+        <p class="fr-mt-3w fr-mb-2v">
+            <strong>Directeur de la publication</strong>
+        </p>
+        <p>Le directeur de la publication est Sorbonne Université représenté par Nathalie Drach-Temam, sa présidente.</p>
+        <p class="fr-mt-3w fr-mb-2v">
+            <strong>Hébergement de la Plateforme</strong>
+        </p>
+        <p>
+            Ce site est hébergé en propre par :
+            <br />
+            Alwaysdata SARL
+            <br />
+            91 Rue du Faubourg Saint-Honoré
+            <br />
+            75008 Paris
+        </p>
+    </div>
+{% endblock content %}
