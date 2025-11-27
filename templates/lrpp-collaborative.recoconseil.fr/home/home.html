@@ -1,0 +1,130 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+{% load sass_tags %}
+{% load static %}
+{% load django_vite %}
+{% load cookie_consent_tags %}
+{% block title %}
+    LRPP Collaborative
+{% endblock title %}
+{% block og_title %}
+    LRPP Collaborative
+{% endblock og_title %}
+{% block js %}
+    {% vite_asset 'js/apps/home.js' %}
+{% endblock js %}
+{% block css %}
+    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
+          rel="stylesheet"
+          type="text/css" />
+    <link href="{% sass_src 'home/css/home/home.scss' %}"
+          rel="stylesheet"
+          type="text/css" />
+    <link href="{% sass_src 'lrpp-collaborative.recoconseil.fr/home/css/home/home-lrpp.scss' %}"
+          rel="stylesheet"
+          type="text/css" />
+{% endblock css %}
+{% block content %}
+    <div>
+        <div class="hero-div">
+            <div class="hero-div__sub-container">
+                <div class="d-flex">
+                    <div class="hero-div__text-part">
+                        <h1 class="fr-h1">
+                            LRPP Collaborative vous accompagne et vous conseille dans votre projet.
+                        </h1>
+                        <p>
+                            <i>
+                                LRPP Collaborative est une solution développée pour permettre le suivi des projets, le partage des informations et le travail de collaboration.
+                            </i>
+                        </p>
+                        <div>
+                            <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Discuter de mon projet</a>
+                        </div>
+                    </div>
+                    <div class="w-50 hero-div__img-div">
+                        <img src="{% static 'lrpp-collaborative.recoconseil.fr/home/img/home/Alain-Vergnaud-43.jpg' %}"
+                             width="100%"
+                             class="center-cropped img-shadow"
+                             alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fr-mx-0 hero-div__dark-section">
+            <h2>LRPP Collaborative</h2>
+            <div id="webinaire-video" class="fr-mt-2v">
+                <p class="fr-text--lg fr-mb-0 fw-light">
+                    LRPP Collaborative est une solution développée pour permettre le suivi des projets, le partage des informations et le travail de collaboration.
+                </p>
+            </div>
+        </div>
+        <div class="fr-py-6w fr-background-alt--grey">
+            <div class="fr-container fr-pt-2w fr-pb-6w">
+                <div class="fr-m-auto">
+                    <h3 class="text-center fr-pb-6w">Comment fonctionne le portail LRPPCollaborative ?</h3>
+                </div>
+                <div class="fr-grid-row fr-grid-row--gutters">
+                    <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
+                        <div class="fr-p-2w fr-background-default--grey h-100">
+                            <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px d-flex">
+                                <img src="{% static 'home/img/home/search.png' %}"
+                                     width="70%"
+                                     height="100%"
+                                     alt="Icone de recherche"
+                                     class="fr-m-auto" />
+                            </div>
+                            <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">1</span>
+                            <h6>Les porteurs décrivent leur dossier et ses besoins</h6>
+                        </div>
+                    </div>
+                    <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
+                        <div class="fr-p-2w fr-background-default--grey h-100">
+                            <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px d-flex">
+                                <img src="{% static 'home/img/home/form.png' %}"
+                                     width="70%"
+                                     height="100%"
+                                     alt="Icone d'un fichier"
+                                     class="fr-m-auto" />
+                            </div>
+                            <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">2</span>
+                            <h6>Les conseillers compétents la guident à chaque étape</h6>
+                        </div>
+                    </div>
+                    <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
+                        <div class="fr-p-2w fr-background-default--grey h-100">
+                            <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px d-flex">
+                                <img src="{% static 'home/img/home/community.png' %}"
+                                     width="70%"
+                                     height="100%"
+                                     alt="Icone de communauté"
+                                     class="fr-m-auto" />
+                            </div>
+                            <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">3</span>
+                            <h6>Les porteurs font avancer leur dossier</h6>
+                        </div>
+                    </div>
+                    <div class="fr-col-12 fr-col-sm-6 fr-col-md-3">
+                        <div class="fr-p-2w fr-background-default--grey h-100">
+                            <div class="w-100 fr-p-2w fr-m-auto specific-maxwidth-160px d-flex">
+                                <img src="{% static 'home/img/home/progress.png' %}"
+                                     width="70%"
+                                     height="100%"
+                                     alt="Icone de progrès"
+                                     class="fr-m-auto" />
+                            </div>
+                            <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">4</span>
+                            <h6>
+                                Tous alimentent l’évolution du dossier et des besoins
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% comment %} <div class="border-bottom"></div> {% endcomment %}
+    </div>
+{% endblock content %}
+{% block footer %}
+    <div class="row justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
+{% endblock footer %}
