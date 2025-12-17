@@ -3,16 +3,17 @@
 {% load sass_tags %}
 {% load cookie_consent_tags %}
 {% load static %}
+{% load django_vite %}
 {% block title %}
     Politique de confidentialité
 {% endblock title %}
 {% block og_title %}
     Politique de confidentialité
 {% endblock og_title %}
+{% block js %}
+    {% vite_asset 'js/apps/home.js' %}
+{% endblock js %}
 {% block css %}
-    <link href="{% sass_src 'home/css/home/home.scss' %}"
-          rel="stylesheet"
-          type="text/css">
     <link href="{% sass_src 'home/css/privacy/privacy.scss' %}"
           rel="stylesheet"
           type="text/css">
