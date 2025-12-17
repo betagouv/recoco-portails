@@ -7,12 +7,14 @@
        class="fr-nav__link"
        {% if url_name == 'methodology' %}aria-current="page"{% endif %}>Méthodologie</a>
 </li>
-<li class="fr-nav__item">
-    <a type="link"
-       href="{% url 'resources-resource-search' %}"
-       class="fr-nav__link"
-       {% if url_name == 'resources-resource-search' %}aria-current="page"{% endif %}>Ressources</a>
-</li>
+{% if user.is_authenticated == False %}
+    <li class="fr-nav__item">
+        <a type="link"
+        href="{% url 'resources-resource-search' %}"
+        class="fr-nav__link"
+        {% if url_name == 'resources-resource-search' %}aria-current="page"{% endif %}>Ressources</a>
+    </li>
+{% endif %}
 {% for menuitem in current_site.root_page.get_children.live.in_menu %}
     <li class="fr-nav__item">
         <a type="link"
