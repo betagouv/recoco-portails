@@ -1,29 +1,6 @@
-.custom-background-home-image {
-  background-image: url('../../img/home/home-background-sosponts.jpeg') !important;
-}
 
 .custom-sosponts-banner {
   background-image: url('../../img/home/home-background-sosponts.jpeg') !important;
-}
-
-@media (max-width: 48em) {
-  .custom-background-home-image {
-    background-position: 0 -119px;
-  }
-
-  .custom-background-home-source {
-    top: 56px !important;
-  }
-}
-
-@media (min-width: 48em) {
-  .home-images {
-    max-height: 200px;
-  }
-}
-
-.specific-backgroundcolor-1b1b35 {
-  background-color: #1b1b35;
 }
 
 .specific-transformations {
@@ -33,9 +10,6 @@
   right: -25px;
 }
 
-.specific-maxwidth-160px {
-  max-width: 160px;
-}
 
 .specific-borderright-1pxsoliddee2e6 {
   border-right: 1px solid #dee2e6;
