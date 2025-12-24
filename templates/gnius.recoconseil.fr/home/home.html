@@ -1,0 +1,124 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+{% load sass_tags %}
+{% load static %}
+{% load django_vite %}
+{% load cookie_consent_tags %}
+{% block title %}
+    Guichet National Innovation et Usage e-santé | G_NIUS
+{% endblock title %}
+{% block og_title %}
+    Guichet National Innovation et Usage e-santé | G_NIUS
+{% endblock og_title %}
+{% block js %}
+    {% vite_asset 'js/apps/home.js' %}
+{% endblock js %}
+{% block css %}
+    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
+          rel="stylesheet"
+          type="text/css" />
+    <link href="{% sass_src 'home/css/home/home.scss' %}"
+          rel="stylesheet"
+          type="text/css" />
+    <link href="{% sass_src 'gnius.recoconseil.fr/home/css/home/home-gnius.scss' %}"
+          rel="stylesheet"
+          type="text/css" />
+{% endblock css %}
+{% block content %}
+    <div>
+        <div class="hero-div">
+            <div class="hero-div__sub-container">
+                <div class="d-flex">
+                    <div class="hero-div__text-part">
+                        <h1 class="fr-h1">
+                            Faciliter le parcours des innovateurs en e-santé
+                        </h1>
+                        <ul>
+                            <li class="fr-text--lg fw-light">
+                                Comprendre l'écosystème de la e-santé 
+                            </li>
+                            <li class="fr-text--lg fw-light">
+                                Identifier les financements dont vous pouvez bénéficier
+                            </li>
+                            <li class="fr-text--lg fw-light">
+                                Décrypter la réglementation
+                            </li>
+                        </ul>
+                        <div>
+                            <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Discuter de mon projet</a>
+                        </div>
+                    </div>
+                    <div class="w-50 hero-div__img-div">
+                        <img src="{% static 'gnius.recoconseil.fr/home/img/home/hero_gnius.jpg' %}"
+                             width="100%"
+                             class="center-cropped img-shadow"
+                             alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fr-container fr-mt-8v">
+            <p class="fr-text--sm fr-mb-1v">Nos partenaires :</p>
+            <div class="fr-mt-2v fr-mb-4w fr-grid-row fr-grid-row--middle justify-content-between">
+                <div class="fr-col-2 fr-col-sm-2 fr-col-md-2 fr-py-4v">
+                    <img src="{% static 'gnius.recoconseil.fr/home/img/home/logo_ans.jpg' %}"
+                         width="100%"
+                         alt="Logo de l'ANS" />
+                </div>
+                <div class="fr-col-2 fr-col-sm-2 fr-col-md-2 fr-py-4v">
+                    <img src="{% static 'gnius.recoconseil.fr/home/img/home/logo_ais.jpg' %}"
+                         width="80%"
+                         class="center-image"
+                         alt="Logo de l'agence de l'innovation en santé" />
+                </div>
+                <div class="fr-col-2 fr-col-sm-2 fr-col-md-2 fr-py-4v">
+                    <img src="{% static 'gnius.recoconseil.fr/home/img/home/logo_ansm.jpg' %}"
+                         width="100%"
+                         alt="Logo de l'ANSM'" />
+                </div>
+                <div class="fr-col-2 fr-col-sm-2 fr-col-md-2 fr-py-4v">
+                    <img src="{% static 'gnius.recoconseil.fr/home/img/home/logo_assurance_maladie.png' %}"
+                         width="100%"
+                         alt="Logo de l'Assurance Maladie" />
+                </div>
+                <div class="fr-col-2 fr-col-sm-2 fr-col-md-2 fr-py-4v">
+                    <img src="{% static 'gnius.recoconseil.fr/home/img/home/logo_bpi_france.jpg' %}"
+                         width="100%"
+                         alt="Logo de BPI France" />
+                </div>
+            </div>
+            <div class="fr-mt-2v fr-mb-4w fr-grid-row fr-grid-row--middle justify-content-between">
+                <div class="fr-col-2 fr-col-sm-2 fr-col-md-2 fr-py-4v">
+                    <img src="{% static 'gnius.recoconseil.fr/home/img/home/logo_cnil.png' %}"
+                         width="100%"
+                         alt="Logo de la CNIL" />
+                </div>
+                <div class="fr-col-2 fr-col-sm-2 fr-col-md-2 fr-py-4v">
+                    <img src="{% static 'gnius.recoconseil.fr/home/img/home/logo_dge.png' %}"
+                         width="80%"
+                         class="center-image"
+                         alt="Logo de la direction générale des entreprises" />
+                </div>
+                <div class="fr-col-2 fr-col-sm-2 fr-col-md-2 fr-py-4v">
+                    <img src="{% static 'gnius.recoconseil.fr/home/img/home/logo_sesame_vitale.jpg' %}"
+                         width="100%"
+                         alt="Logo de Sésame Vitale" />
+                </div>
+                <div class="fr-col-2 fr-col-sm-2 fr-col-md-2 fr-py-4v">
+                    <img src="{% static 'gnius.recoconseil.fr/home/img/home/logo_has.jpg' %}"
+                         width="100%"
+                         alt="Logo de la haute autorité de santé" />
+                </div>
+                <div class="fr-col-2 fr-col-sm-2 fr-col-md-2 fr-py-4v">
+                    <img src="{% static 'gnius.recoconseil.fr/home/img/home/logo_HealthDataHub.jpg' %}"
+                         width="100%"
+                         alt="Logo de Health Data Hub" />
+                </div>
+            </div>
+        </div>
+        <div class="border-bottom"></div>
+    </div>
+{% endblock content %}
+{% block footer %}
+    <div class="row justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
+{% endblock footer %}
