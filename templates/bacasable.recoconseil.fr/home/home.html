@@ -1,6 +1,5 @@
 <!-- prettier-ignore -->
 {% extends "base.html" %}
-{% load sass_tags %}
 {% load static %}
 {% load django_vite %}
 {% load cookie_consent_tags %}
@@ -12,15 +11,8 @@
 {% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
-{% endblock %}
-{% block css %}
-    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-    <link href="{% sass_src 'home/css/home/home.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-{% endblock %}
+    {% vite_asset 'js/styles/home.css.js' %}
+{% endblock js %}
 {% block content %}
     <div>
         <div class="hero-div">

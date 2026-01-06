@@ -2,11 +2,13 @@
 {% extends "base.html" %}
 {% load sass_tags %}
 {% load static %}
-{% block title %}Nous contacter{% endblock %}
+{% block title %}
+    Nous contacter
+{% endblock title %}
+{% block og_title %}
+    Nous contacter
+{% endblock og_title %}
 {% block css %}
-    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
     <link href="{% sass_src 'sosponts.recoconseil.fr/home/css/home/home-sosponts.scss' %}"
           rel="stylesheet"
           type="text/css" />
