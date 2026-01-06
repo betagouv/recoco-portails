@@ -1,40 +1,8 @@
-.custom-background-home-image {
-  background-image: url('../../img/home/home-background-depannemarenov.jpg') !important;
-}
-
-.custom-depannemarenov-banner {
-  background-image: url('../../img/home/home-background-depannemarenov.jpg') !important;
-}
-
-@media (max-width: 48em) {
-  .custom-background-home-image {
-    background-position: 0 -119px;
-  }
-
-  .custom-background-home-source {
-    top: 56px !important;
-  }
-}
-
-@media (min-width: 48em) {
-  .home-images {
-    max-height: 200px;
-  }
-}
-
 .text-center-white {
   color: white;
   width: 80%;
   margin: auto;
   padding-bottom: 2rem;
-}
-
-.specific-maxwidth-160 {
-  max-width: 160px;
-}
-
-.specific-backgroundcolor-1b1b35 {
-  background-color: #1b1b35;
 }
 
 .specific-height-45prct {
@@ -47,8 +15,4 @@
 
 .specific-height-600px {
   height: 600px;
-}
-
-.row>* {
-  padding: 0px !important;
 }
