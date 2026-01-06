@@ -12,12 +12,8 @@
 {% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
+    {% vite_asset 'js/styles/home-privacy.css.js' %}
 {% endblock js %}
-{% block css %}
-    <link href="{% sass_src 'home/css/privacy/privacy.scss' %}"
-          rel="stylesheet"
-          type="text/css">
-{% endblock css %}
 {% block content %}
     <div class="col-8 fr-mt-3w fr-py-2w g-0 fr-mx-auto font-marianne">
         <h2>Politique de confidentialité de Portail Unifié d'Accompagnement ASU</h2>
@@ -109,10 +105,12 @@
             <li>D’un droit de rectification, et le cas échéant de suppression des données ;</li>
             <li>D’un droit à la limitation des données traitées ;</li>
             <li>D’un droit d’opposition.</li>
+            <li>D'un droit à la portabilité, vous permettant de recevoir, dans un format structuré, 
+                les données personnelles vous concernant que vous nous avez fournies.</li>
         </ul>
         <p>
             Pour les exercer, contactez-nous à : <a class="text-decoration-underline"
-    href="mailto:pui-asu@sorbonne-universite.fr">pui-asu@sorbonne-universite.fr</a>
+    href="mailto:DPD@sorbonne-universite.fr">DPD@sorbonne-universite.fr</a>
         </p>
         <p>
             Puisque ce sont des droits personnels, nous ne traiterons votre demande que si nous sommes
@@ -122,11 +120,7 @@
             <br />
             Pour vous aider dans votre démarche, vous trouverez un modèle de courrier élaboré par la
             CNIL <a class="text-decoration-underline"
-    href="https://www.cnil.fr/fr/modele/courrier/exercer-son-droit-dacces">ici</a> :
-            <br />
-            <br />
-            Nous nous engageons à vous répondre dans un délai raisonnable qui ne saurait dépasser 1
-            mois à compter de la réception de votre demande.
+    href="https://www.cnil.fr/fr/modele/courrier/exercer-son-droit-dacces">ici</a>.
         </p>
         <p class="fr-mt-3w fr-mb-2v">
             <strong>VII - Destinataires</strong>
