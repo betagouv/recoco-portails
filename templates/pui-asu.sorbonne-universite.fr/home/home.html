@@ -12,14 +12,9 @@
 {% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
+    {% vite_asset 'js/styles/home.css.js' %}
 {% endblock js %}
 {% block css %}
-    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-    <link href="{% sass_src 'home/css/home/home.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
     <link href="{% sass_src 'pui-asu.sorbonne-universite.fr/home/css/home/home-pui-asu.scss' %}"
           rel="stylesheet"
           type="text/css" />

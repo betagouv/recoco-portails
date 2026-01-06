@@ -2,23 +2,22 @@
 {% extends "base.html" %}
 {% load sass_tags %}
 {% load static %}
+{% load django_vite %}
 {% block title %}
     {{ request.site.configuration.main_topic }}
 {% endblock title %}
 {% block og_title %}
     {{ request.site.configuration.main_topic }}
 {% endblock og_title %}
+{% block js %}
+    {% vite_asset 'js/apps/home.js' %}
+    {% vite_asset 'js/styles/home.css.js' %}
+{% endblock js %}
 {% block css %}
-    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-    <link href="{% sass_src 'home/css/home/home.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
     <link href="{% sass_src 'ecoquartiers.recoconseil.fr/home/css/home/home-ecoquartiers.scss' %}"
           rel="stylesheet"
           type="text/css" />
-{% endblock %}
+{% endblock css %}
 {% block content %}
     <div class="hero-div">
         <div class="hero-div__sub-container">

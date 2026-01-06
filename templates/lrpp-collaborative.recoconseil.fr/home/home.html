@@ -12,14 +12,9 @@
 {% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
+    {% vite_asset 'js/styles/home.css.js' %}
 {% endblock js %}
 {% block css %}
-    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-    <link href="{% sass_src 'home/css/home/home.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
     <link href="{% sass_src 'lrpp-collaborative.recoconseil.fr/home/css/home/home-lrpp.scss' %}"
           rel="stylesheet"
           type="text/css" />
@@ -30,9 +25,7 @@
             <div class="hero-div__sub-container">
                 <div class="d-flex">
                     <div class="hero-div__text-part">
-                        <h1 class="fr-h1">
-                            LRPP Collaborative vous accompagne et vous conseille dans votre projet.
-                        </h1>
+                        <h1 class="fr-h1">LRPP Collaborative vous accompagne et vous conseille dans votre projet.</h1>
                         <p>
                             <i>
                                 LRPP Collaborative est une solution développée pour permettre le suivi des projets, le partage des informations et le travail de collaboration.
@@ -114,9 +107,7 @@
                                      class="fr-m-auto" />
                             </div>
                             <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">4</span>
-                            <h6>
-                                Tous alimentent l’évolution du dossier et des besoins
-                            </h6>
+                            <h6>Tous alimentent l’évolution du dossier et des besoins</h6>
                         </div>
                     </div>
                 </div>
