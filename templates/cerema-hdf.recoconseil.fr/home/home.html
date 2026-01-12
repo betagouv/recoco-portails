@@ -12,18 +12,9 @@
 {% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
+    {% vite_asset 'js/styles/home.css.js' %}
 {% endblock js %}
-{% block css %}
-    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-    <link href="{% sass_src 'home/css/home/home.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-    <link href="{% sass_src 'cerema-hdf.recoconseil.fr/home/css/home/home-cerema-hdf.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-{% endblock css %}
+
 {% block content %}
     <div class="hero-div">
         <div class="hero-div__sub-container">
@@ -44,7 +35,7 @@
                     </div>
                 </div>
                 <div class="w-50 hero-div__img-div">
-                    <img src="{% static 'cerema-hdf.recoconseil.fr/home/img/home/Image_recto_hd_DRIEA_Gobry.jpg' %}"
+                    <img src="{% static 'cerema-hdf.recoconseil.fr/home/img/home/hero_image_recto_hd_DRIEA_Gobry.jpg' %}"
                          width="100%"
                          class="center-cropped img-shadow"
                          alt="" />
@@ -55,5 +46,5 @@
     <div class="border-bottom fr-mt-8w"></div>
 {% endblock content %}
 {% block footer %}
-    <div class="row justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
+    <div class="justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
 {% endblock footer %}

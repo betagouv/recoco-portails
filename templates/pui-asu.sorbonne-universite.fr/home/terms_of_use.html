@@ -1,52 +1,47 @@
 {% extends "base.html" %}
 {% load gravatar %}
-{% load sass_tags %}
 {% load static %}
+{% load django_vite %}
 {% block title %}
     Conditions générales d'utilisation
 {% endblock title %}
 {% block og_title %}
     Conditions générales d'utilisation
 {% endblock og_title %}
-{% block css %}
-    <link href="{% sass_src 'home/css/home/home.scss' %}"
-          rel="stylesheet"
-          type="text/css">
-    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
-          rel="stylesheet"
-          type="text/css">
-{% endblock css %}
+{% block js %}
+    {% vite_asset 'js/apps/home.js' %}
+{% endblock js %}
 {% block content %}
     <div class="col-8 fr-mt-3w fr-py-2w g-0 fr-mx-auto font-marianne">
         <h2>Conditions générales d'utilisation Portail Unifié d'Accompagnement ASU</h2>
         <p class="fr-mt-3w">
-            Les présentes conditions générales d’utilisation (dites « CGU ») 
-            fixent le cadre juridique de “Portail Unifié d'Accompagnement ASU” 
+            Les présentes conditions générales d’utilisation (dites « CGU »)
+            fixent le cadre juridique de “Portail Unifié d'Accompagnement ASU”
             et définissent les conditions d’accès et d’utilisation des services par l’Utilisateur.
         </p>
         <p class="fr-mt-3w fr-mb-2v">
             <strong>Article 1 - Champ d’application</strong>
         </p>
         <p>
-            L'inscription est gratuite et réservée aux utilisateurs suivants : 
-            chercheurs, enseignants-chercheurs, doctorants, post-doctorants, ingénieurs, 
-            étudiants et personnels de laboratoires de l’Alliance Sorbonne Université 
+            L'inscription est gratuite et réservée aux utilisateurs suivants :
+            chercheurs, enseignants-chercheurs, doctorants, post-doctorants, ingénieurs,
+            étudiants et personnels de laboratoires de l’Alliance Sorbonne Université
             ayant un projet d’innovation, et conseillers qui répondent à leurs demandes d’accompagnement.
         </p>
         <p class="fr-mt-3w fr-mb-2v">
             <strong>Article 2 – Objet</strong>
         </p>
         <p>
-            La plateforme est le portail d'accès unifié aux dispositifs d'accompagnement 
-            à l'innovation du Pôle Universitaire d'Innovation de l'Alliance Sorbonne Université. 
-            Elle permet un aiguillage des projets vers le bon interlocuteur 
+            La plateforme est le portail d'accès unifié aux dispositifs d'accompagnement
+            à l'innovation du Pôle Universitaire d'Innovation de l'Alliance Sorbonne Université.
+            Elle permet un aiguillage des projets vers le bon interlocuteur
             et les meilleurs dispositifs selon le projet et les besoins.
         </p>
         <p class="fr-mt-3w fr-mb-2v">
             <strong>Article 3 – Définitions</strong>
         </p>
         <p>
-            « L'Utilisateur » est tout demandeur, porteur de projet 
+            « L'Utilisateur » est tout demandeur, porteur de projet
             ou collectivité utilisant la plateforme Portail Unifié d'Accompagnement ASU pour obtenir de l’aide.
             <br />
             <br />
@@ -63,8 +58,7 @@
             <strong>Article 4 - Fonctionnalités</strong>
         </p>
         <p class="fr-mb-1v">
-            <strong>4.1 Création du compte Portail Unifié d'Accompagnement ASU
-            </strong>
+            <strong>4.1 Création du compte Portail Unifié d'Accompagnement ASU</strong>
         </p>
         <p class="fr-mb-1v">
             <strong>4.1.1. Avec mot de passe</strong>
@@ -117,7 +111,7 @@
             </ul>
         </p>
         <p class="fr-mt-3w fr-mb-2v">
-            <strong>4.4. Demande d’accès par un conseiller </strong>
+            <strong>4.4. Demande d’accès par un conseiller</strong>
         </p>
         <p>
             Chaque conseiller disposant d’un accès de type “conseiller” sur la plateforme peut suivre les dossiers de son territoire et orienter les utilisateurs grâce à Portail Unifié d'Accompagnement ASU.

@@ -11,14 +11,9 @@
 {% load django_vite %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
+    {% vite_asset 'js/styles/home.css.js' %}
 {% endblock js %}
 {% block css %}
-    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
-          rel="stylesheet"
-          type="text/css">
-    <link href="{% sass_src 'home/css/home/home.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
     <link href="{% sass_src 'aiguillage.tiers-lieux.org/home/css/home/home-tiers-lieux.scss' %}"
           rel="stylesheet"
           type="text/css">
@@ -39,7 +34,7 @@
                     </div>
                 </div>
                 <div class="w-50 hero-div__img-div">
-                    <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/background-tiers-lieux.jpeg' %}"
+                    <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/hero_tiers-lieux.jpeg' %}"
                          width="100%"
                          class="center-cropped img-shadow"
                          alt="" />
@@ -111,20 +106,22 @@
         <div class="fr-grid-row fr-grid-row--gutters">
             <div class="fr-col-6">
                 <a href="https://movilab.org/wiki/Accueil" target="_blank">
-                    <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo-movilab.png' %}"
+                    <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_movilab.png' %}"
                          width="100%"
                          height="100%"
                          alt="logo de movilab">
+                    <span class="sr-only">Nouvelle fenêtre</span>
                 </a>
             </div>
             <div class="fr-col-6">
                 <a href="https://videos.lescommuns.org/w/tGRerAcL4tjnXTrZCqmjBZ"
                    target="_blank"
                    class="d-flex">
-                    <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/jouer.png' %}"
+                    <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_jouer.png' %}"
                          width="50%"
                          alt=""
                          class="fr-m-auto">
+                    <span class="sr-only">Nouvelle fenêtre</span>
                 </a>
             </div>
         </div>
@@ -136,18 +133,20 @@
         <div class="fr-grid-row fr-grid-row--gutters">
             <div class="fr-col-6">
                 <a href="https://forum.tiers-lieux.org/" target="_blank">
-                    <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo-forum-tiers-lieux.png' %}"
+                    <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_forum-tiers-lieux.png' %}"
                          width="100%"
                          alt="logo du forum des tiers lieux">
+                        <span class="sr-only">Nouvelle fenêtre</span>
                 </a>
             </div>
             <div class="fr-col-6 d-flex">
                 <a href="https://chat.tiers-lieux.org/#/room/!pDZNjCACkWNclzlQGR:tiers-lieux.org"
                    target="_blank"
                    class="fr-m-auto">
-                    <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo-element.png' %}"
+                    <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_element.png' %}"
                          height="100%"
                          alt="">
+                    <span class="sr-only">Nouvelle fenêtre</span>
                 </a>
             </div>
         </div>
@@ -156,40 +155,40 @@
         <div class="fr-grid-row fr-grid-row--gutters">
             <h3 class="fr-pb-1w">Les réseaux régionaux et l’Association Nationale des Tiers-Lieux</h3>
             <div class="fr-col-10 home__twelve-logo-div">
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/ambition-tiers-lieux.png' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_ambition-tiers-lieux.png' %}"
                      width="12%"
                      alt=""
                      class="home__little-logo">
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/reseau-bretagne.jpg' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_reseau-bretagne.jpg' %}"
                      width="12%"
                      alt="logo du réseau bretagne"
                      class="home__little-logo">
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/reseau-cap.png' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_reseau-cap.png' %}"
                      width="12%"
                      alt="logo du réseau cap"
                      class="home__little-logo">
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/reseau-cress.jpg' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_reseau-cress.jpg' %}"
                      width="12%"
                      alt="logo du réseau cress"
                      class="home__little-logo">
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo-da-locu.jpg' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_da-locu.jpg' %}"
                      width="12%"
                      alt="logo da locu"
                      class="home__little-logo">
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/reseau-idf.png' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_reseau-idf.png' %}"
                      width="12%"
                      alt="logo du réseau idf"
                      class="home__little-logo">
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/reseau-la-compagnie.png' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_reseau-la-compagnie.png' %}"
                      width="12%"
                      alt="logo du réseau la compagnie"
                      class="home__little-logo">
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/reseau-coopp.png' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_reseau-coopp.png' %}"
                      width="12%"
                      alt="logo du réseau coopp"
                      class="home__little-logo">
                      {% comment %} 2ème ligne de logos {% endcomment %}
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/reseau-reunion.png' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_reseau-reunion.png' %}"
                      width="10.5%"
                      alt="logo du réseau réunion"
                      class="home__little-logo">
@@ -197,27 +196,27 @@
                      width="10.5%"
                      alt="logo du réseau la roseģe"
                      class="home__little-logo">
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/reseau-relief.svg' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_reseau-relief.svg' %}"
                      width="10.5%"
                      alt="logo du réseau relief"
                      class="home__little-logo">
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/reseau-martinique.png' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_reseau-martinique.png' %}"
                      width="10.5%"
                      alt="logo du réseau martinique"
                      class="home__little-logo">
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/reseau-sud.jpg' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_reseau-sud.jpg' %}"
                      width="10.5%"
                      alt="logo du réseau sud"
                      class="home__little-logo">
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/reseau-bfc.png' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_reseau-bfc.png' %}"
                      width="10.5%"
                      alt="logo du réseau bfc"
                      class="home__little-logo">
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/reseau-grand-est.jpg' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_reseau-grand-est.jpg' %}"
                      width="10.5%"
                      alt="logo du réseau grand est"
                      class="home__little-logo">
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/reseau-tilino.png' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_reseau-tilino.png' %}"
                      width="10.5%"
                      alt="logo du réseau tilino"
                      class="home__little-logo">
@@ -237,22 +236,22 @@
         <div class="fr-grid-row fr-grid-row--gutters">
             <div class="fr-col-6">
                 <h3 class="fr-pb-1w">Avec le soutien de :</h3>
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo-fondationdefrance.png' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_fondationdefrance.png' %}"
                      width="49%"
                      alt="logo fondation de france">
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo-anct.png' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_logo_anct.png' %}"
                      width="49%"
                      alt="logo de l'anct">
             </div>
             <div class="fr-col-6">
                 <h3 class="fr-pb-1w">En partenariat avec :</h3>
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo-recoco.png' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_recoco.png' %}"
                      width="30%"
                      alt="">
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo-02.png' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_02.png' %}"
                      width="30%"
                      alt="">
-                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo-movilab.png' %}"
+                <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_movilab.png' %}"
                      width="30%"
                      alt="">
             </div>
@@ -261,5 +260,5 @@
     <div class="border-bottom"></div>
 {% endblock content %}
 {% block footer %}
-    <div class="row justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
+    <div class="justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
 {% endblock footer %}

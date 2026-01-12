@@ -12,14 +12,9 @@
 {% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
+    {% vite_asset 'js/styles/home.css.js' %}
 {% endblock js %}
 {% block css %}
-    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-    <link href="{% sass_src 'home/css/home/home.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
     <link href="{% sass_src 'pui-asu.sorbonne-universite.fr/home/css/home/home-pui-asu.scss' %}"
           rel="stylesheet"
           type="text/css" />
@@ -43,7 +38,7 @@
                         </div>
                     </div>
                     <div class="w-50 hero-div__img-div">
-                        <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/Cite_de_linnovation.jpg' %}"
+                        <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/heroCite_de_linnovation.jpg' %}"
                              width="100%"
                              class="center-cropped img-shadow"
                              alt="" />
@@ -135,47 +130,47 @@
             <p class="fr-text--sm fr-mb-1v">Nos membres :</p>
             <div class="fr-mt-2v fr-mb-4w fr-grid-row fr-grid-row--middle justify-content-between">
                 <div class="fr-col-1 fr-col-sm-1 fr-col-md-1 fr-py-4v">
-                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/sorbonne-universite.jpeg' %}"
+                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo_sorbonne-universite.jpeg' %}"
                          width="100%"
                          alt="Logo Sorbonne Université">
                 </div>
                 <div class="fr-col-1 fr-col-sm-1 fr-col-md-1 fr-py-4v">
-                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/Agoranov.png' %}"
+                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo_Agoranov.png' %}"
                          width="90%"
                          alt="Logo d'Agoranov">
                 </div>
                 <div class="fr-col-1 fr-col-sm-1 fr-col-md-1 fr-py-4v">
-                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/CNRS.jfif' %}"
+                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo_CNRS.jfif' %}"
                          width="90%"
                          alt="Logo du CNRS">
                 </div>
                 <div class="fr-col-1 fr-col-sm-1 fr-col-md-1 fr-py-4v">
-                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/ENSCI.jpg' %}"
+                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo_ENSCI.jpg' %}"
                          width="100%"
                          alt="Logo de l'ENSCI" />
                 </div>
                 <div class="fr-col-1 fr-col-sm-1 fr-col-md-1 fr-py-4v">
-                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/Inria.jpg' %}"
+                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo_Inria.jpg' %}"
                          width="100%"
                          alt="Logo de l'Inria" />
                 </div>
                 <div class="fr-col-1 fr-col-sm-1 fr-col-md-1 fr-py-4v">
-                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/INSEAD.jpg' %}"
+                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo_INSEAD.jpg' %}"
                          width="100%"
                          alt="Logo de l'INSEAD" />
                 </div>
                 <div class="fr-col-1 fr-col-sm-1 fr-col-md-1 fr-py-4v">
-                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/inserm.jfif' %}"
+                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo_inserm.jfif' %}"
                          width="100%"
                          alt="Logo de l'INSERM" />
                 </div>
                 <div class="fr-col-1 fr-col-sm-1 fr-col-md-1 fr-py-4v text-center">
-                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo-museum-hist-nat.svg' %}"
+                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo_museum-hist-nat.svg' %}"
                          width="60%"
                          alt="Logo de MNHN" />
                 </div>
                 <div class="fr-col-1 fr-col-sm-1 fr-col-md-1 fr-py-4v">
-                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo-sattlutech.png' %}"
+                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo_sattlutech.png' %}"
                          width="100%"
                          alt="Logo de SATT Lutech" />
                 </div>
@@ -188,28 +183,28 @@
             <p class="fr-text--sm fr-mb-1v">Nos partenaires :</p>
             <div class="fr-mt-2v fr-mb-4w fr-grid-row fr-grid-row--middle justify-content-between">
                 <div class="fr-col-1 fr-col-sm-1 fr-col-md-1 fr-py-4v">
-                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/eit_health_logo.png' %}"
+                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo_eit_health.png' %}"
                          width="100%"
                          alt="Logo de l'EIT Health" />
                 </div>
                 <div class="fr-col-1 fr-col-sm-1 fr-col-md-1 fr-py-4v">
-                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/Paris_horizontal_logo.png' %}"
+                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo_Paris_horizontal_logo.png' %}"
                          width="80%"
                          class="center-image"
                          alt="Logo de la Ville de Paris" />
                 </div>
                 <div class="fr-col-1 fr-col-sm-1 fr-col-md-1 fr-py-4v">
-                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/IDF.png' %}"
+                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo_IDF.png' %}"
                          width="100%"
                          alt="Logo de la Région IDF" />
                 </div>
                 <div class="fr-col-1 fr-col-sm-1 fr-col-md-1 fr-py-4v">
-                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/APHP.png' %}"
+                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo_APHP.png' %}"
                          width="100%"
                          alt="Logo de l'APHP" />
                 </div>
                 <div class="fr-col-1 fr-col-sm-1 fr-col-md-1 fr-py-4v">
-                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/BPI_France.jfif' %}"
+                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo_BPI_France.jfif' %}"
                          width="100%"
                          alt="Logo de BPI France" />
                 </div>
@@ -221,12 +216,12 @@
             </p>
             <div class="fr-mt-2v fr-mb-4w fr-grid-row fr-grid-row--middle">
                 <div class="fr-col-3 fr-col-sm-3 fr-col-md-2 fr-py-4v fr-m-auto">
-                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/France_2030.jfif' %}"
+                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo_France_2030.jfif' %}"
                          width="100%"
                          alt="Logo France 2030">
                 </div>
                 <div class="fr-col-3 fr-col-sm-3 fr-col-md-2 fr-py-4v fr-m-auto">
-                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/Minsitère_de_lenseignement_supérieur_et_de_la_recherche.jfif' %}"
+                    <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/logo_Minsitère_de_lenseignement_supérieur_et_de_la_recherche.jfif' %}"
                          width="100%"
                          alt="Logo du Ministère de l'enseignement supérieur et de la recherche">
                 </div>
@@ -236,5 +231,5 @@
     </div>
 {% endblock content %}
 {% block footer %}
-    <div class="row justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
+    <div class="justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
 {% endblock footer %}

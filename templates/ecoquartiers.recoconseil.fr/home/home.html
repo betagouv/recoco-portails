@@ -2,23 +2,17 @@
 {% extends "base.html" %}
 {% load sass_tags %}
 {% load static %}
+{% load django_vite %}
 {% block title %}
     {{ request.site.configuration.main_topic }}
 {% endblock title %}
 {% block og_title %}
     {{ request.site.configuration.main_topic }}
 {% endblock og_title %}
-{% block css %}
-    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-    <link href="{% sass_src 'home/css/home/home.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-    <link href="{% sass_src 'ecoquartiers.recoconseil.fr/home/css/home/home-ecoquartiers.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-{% endblock %}
+{% block js %}
+    {% vite_asset 'js/apps/home.js' %}
+    {% vite_asset 'js/styles/home.css.js' %}
+{% endblock js %}
 {% block content %}
     <div class="hero-div">
         <div class="hero-div__sub-container">
@@ -33,7 +27,7 @@
                     </div>
                 </div>
                 <div class="w-50 hero-div__img-div">
-                    <img src="{% static 'ecoquartiers.recoconseil.fr/home/img/home/home-background-ecoquartiers.jpeg' %}"
+                    <img src="{% static 'ecoquartiers.recoconseil.fr/home/img/home/hero_home-background-ecoquartiers.jpeg' %}"
                          width="100%"
                          class="center-cropped img-shadow"
                          alt="" />
@@ -59,5 +53,5 @@
     <div class="border-bottom"></div>
 {% endblock content %}
 {% block footer %}
-    <div class="row justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
+    <div class="justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
 {% endblock footer %}

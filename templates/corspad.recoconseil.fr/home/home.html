@@ -11,18 +11,8 @@
 {% load django_vite %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
+    {% vite_asset 'js/styles/home.css.js' %}
 {% endblock js %}
-{% block css %}
-    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
-          rel="stylesheet"
-          type="text/css">
-    <link href="{% sass_src 'home/css/home/home.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-    <link href="{% sass_src 'corspad.recoconseil.fr/home/css/home/home-corspad.scss' %}"
-          rel="stylesheet"
-          type="text/css">
-{% endblock css %}
 {% block content %}
     <div class="hero-div">
         <div class="hero-div__sub-container">
@@ -37,7 +27,7 @@
                     </div>
                 </div>
                 <div class="w-50 hero-div__img-div">
-                    <img src="{% static 'corspad.recoconseil.fr/home/img/home/home-background-corspad.png' %}"
+                    <img src="{% static 'corspad.recoconseil.fr/home/img/home/hero_home-background-corspad.png' %}"
                          width="100%"
                          class="center-cropped img-shadow"
                          alt="" />
@@ -105,22 +95,22 @@
     <div class="fr-container d-flex">
         <div class="fr-mb-4w fr-grid-row fr-grid-row--middle justify-content-center fr-m-auto">
             <div class="fr-col-5 fr-col-sm-4 fr-col-md-3 fr-px-6w fr-p-md-2w">
-                <img src="{% static 'corspad.recoconseil.fr/home/img/home/logo-agri-corse.png' %}"
+                <img src="{% static 'corspad.recoconseil.fr/home/img/home/logo_agri-corse.png' %}"
                      width="100%"
                      alt="Logo de la chambre de l'agriculture corse" />
             </div>
             <div class="fr-col-5 fr-col-sm-4 fr-col-md-3 fr-p-6w fr-p-md-4w">
-                <img src="{% static 'corspad.recoconseil.fr/home/img/home/logo-chambre-des-commerces.png' %}"
+                <img src="{% static 'corspad.recoconseil.fr/home/img/home/logo_chambre-des-commerces.png' %}"
                      width="100%"
                      alt="Logo de la chambre des commerces" />
             </div>
             <div class="fr-col-5 fr-col-sm-4 fr-col-md-3 fr-p-6w fr-p-md-6w">
-                <img src="{% static 'corspad.recoconseil.fr/home/img/home/logo-fr-travail.png' %}"
+                <img src="{% static 'corspad.recoconseil.fr/home/img/home/logo_fr-travail.png' %}"
                      width="100%"
                      alt="Logo de france travail" />
             </div>
             <div class="fr-col-5 fr-col-sm-4 fr-col-md-3 fr-p-6w fr-p-md-4w">
-                <img src="{% static 'corspad.recoconseil.fr/home/img/home/logo-metiers-artisanat-corse.png' %}"
+                <img src="{% static 'corspad.recoconseil.fr/home/img/home/logo_metiers-artisanat-corse.png' %}"
                      width="100%"
                      alt="Logo de la chambre des métiers et de l'artisanat corse" />
             </div>
@@ -129,5 +119,5 @@
     <div class="border-bottom"></div>
 {% endblock content %}
 {% block footer %}
-    <div class="row justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
+    <div class="justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
 {% endblock footer %}

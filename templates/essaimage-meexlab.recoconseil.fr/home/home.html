@@ -12,32 +12,20 @@
 {% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
+    {% vite_asset 'js/styles/home.css.js' %}
 {% endblock js %}
-{% block css %}
-    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-    <link href="{% sass_src 'home/css/home/home.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-    <link href="{% sass_src 'essaimage-meexlab.recoconseil.fr/home/css/home/home-meexlab.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-{% endblock css %}
 {% block content %}
     <div>
         <div class="hero-div">
             <div class="hero-div__sub-container">
                 <div class="d-flex">
                     <div class="hero-div__text-part">
-                        <h1 class="fr-h1">
-                            La Maison des Enfants Extraordinaires LAB vous accompagne et vous conseille dans votre projet.
-                        </h1>
+                        <h1 class="fr-h1">La Maison des Enfants Extraordinaires LAB vous accompagne et vous conseille dans votre projet.</h1>
                         <p>
                             <i>Collectivités, associations, porteurs de projet (parent, professionnel de santé), MeexLab vous accompagne pour :
-                                <br/>
+                                <br />
                                 - essaimer une Maison des enfants Extraordinaires sur votre Territoire pour favoriser à l'accès aux soins et l'implication des familles ;
-                                <br/>
+                                <br />
                                 - développer la capacité de votre territoire à détecter et accompagner précocement les enfants, en lien avec l'ensemble des acteurs concernés.
                             </i>
                         </p>
@@ -46,7 +34,7 @@
                         </div>
                     </div>
                     <div class="w-50 hero-div__img-div">
-                        <img src="{% static 'essaimage-meexlab.recoconseil.fr/home/img/home/MEEX_Balançoire_iB.jpeg' %}"
+                        <img src="{% static 'essaimage-meexlab.recoconseil.fr/home/img/home/hero_MEEX_Balançoire_iB.jpeg' %}"
                              width="100%"
                              class="center-cropped img-shadow"
                              alt="" />
@@ -57,18 +45,20 @@
         <div class="fr-mx-0 hero-div__dark-section">
             <div id="webinaire-video" class="fr-mt-2v">
                 <p class="fr-text--lg fr-mb-0 fw-light">
-                    Notre ambition est d’augmenter l’impact social de la MEEX via une duplication souple, 
+                    Notre ambition est d’augmenter l’impact social de la MEEX via une duplication souple,
                     permettant l’adaptation du modèle aux contextes et enjeux locaux des territoires.
-                    <br/><br/>
-                    Pour cela, nous expérimentons des parcours d’accompagnement incluant des ressources partagées, 
-                    un suivi individuel, ainsi que des séminaires collectifs afin de répondre 
-                    aux besoins spécifiques de votre projet et territoire, tout en bénéficiant 
+                    <br />
+                    <br />
+                    Pour cela, nous expérimentons des parcours d’accompagnement incluant des ressources partagées,
+                    un suivi individuel, ainsi que des séminaires collectifs afin de répondre
+                    aux besoins spécifiques de votre projet et territoire, tout en bénéficiant
                     des retours d’expériences et de l’entraide entre pairs.
-                    <br/><br/>
+                    <br />
+                    <br />
                     Notre objectif est double:
-                    <br/>
+                    <br />
                     - vous transmettre un référentiel éprouvé depuis 10 ans pour la mise en œuvre d’une MEEX sur leur territoire,
-                    <br/>
+                    <br />
                     - vous accompagner dans une démarche de labellisation de détection précoce des TND sur votre territoire.
                 </p>
             </div>
@@ -128,17 +118,14 @@
                                      class="fr-m-auto" />
                             </div>
                             <span class="fr-display--xl fr-text-label--blue-cumulus fr-mb-2w d-block">4</span>
-                            <h6>
-                                Vous mettez à jour l’avancée de votre projet et des besoins
-                            </h6>
+                            <h6>Vous mettez à jour l’avancée de votre projet et des besoins</h6>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        {% comment %} <div class="border-bottom"></div> {% endcomment %}
     </div>
 {% endblock content %}
 {% block footer %}
-    <div class="row justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
+    <div class="justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
 {% endblock footer %}

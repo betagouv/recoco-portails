@@ -1,6 +1,5 @@
 <!-- prettier-ignore -->
 {% extends "base.html" %}
-{% load sass_tags %}
 {% load static %}
 {% load django_vite %}
 {% load cookie_consent_tags %}
@@ -12,15 +11,8 @@
 {% endblock og_title %}
 {% block js %}
     {% vite_asset 'js/apps/home.js' %}
-{% endblock %}
-{% block css %}
-    <link href="{% sass_src 'home/css/dsfr/custom-dsfr.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-    <link href="{% sass_src 'home/css/home/home.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
-{% endblock %}
+    {% vite_asset 'js/styles/home.css.js' %}
+{% endblock js %}
 {% block content %}
     <div>
         <div class="hero-div">
@@ -40,7 +32,7 @@
                         </div>
                     </div>
                     <div class="w-50 hero-div__img-div">
-                        <img src="{% static 'urbanvitaliz.fr/home/img/home/home-background-urbanvitaliz.png' %}"
+                        <img src="{% static 'urbanvitaliz.fr/home/img/home/hero_home-background-urbanvitaliz.png' %}"
                              width="100%"
                              class="center-cropped img-shadow"
                              alt="" />
@@ -135,12 +127,12 @@
                          alt="Logo de beta.gouv" />
                 </div>
                 <div class="fr-col-6 fr-col-sm-3 fr-col-md-2 fr-p-6w fr-p-md-2w">
-                    <img src="{% static 'urbanvitaliz.fr/home/img/home/anct.png' %}"
+                    <img src="{% static 'urbanvitaliz.fr/home/img/home/logo_anct.png' %}"
                          width="100%"
                          alt="Logo de anct" />
                 </div>
                 <div class="fr-col-6 fr-col-sm-3 fr-col-md-2 fr-p-6w fr-p-md-4w">
-                    <img src="{% static 'urbanvitaliz.fr/home/img/home/mte.svg' %}"
+                    <img src="{% static 'urbanvitaliz.fr/home/img/home/logo_mte.svg' %}"
                          width="100%"
                          alt="Logo de mte" />
                 </div>
@@ -160,5 +152,5 @@
     </div>
 {% endblock content %}
 {% block footer %}
-    <div class="row justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
+    <div class="justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
 {% endblock footer %}

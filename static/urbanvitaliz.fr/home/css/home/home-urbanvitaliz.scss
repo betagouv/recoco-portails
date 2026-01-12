@@ -1,13 +1,3 @@
-.custom-background-home-image {
-  background-image: url('../../img/home/home-background-urbanvitaliz.png') !important;
-}
-.specific-backgroundcolor-1b1b35 {
-  background-color: #1b1b35 !important;
-}
-
-.specific-maxwidth-160px {
-  max-width: 160px;
-}
 
 .actu {
   &__title {
@@ -30,19 +20,8 @@
   width: 45%;
 }
 
-.row > * {
-  padding: 0px !important;
-}
-
 .center-verticaly {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.styling-like-a-link {
-  color: #0000ee !important;
-  text-decoration: underline !important;
-  --hover-tint: none !important;
-  padding: 0 !important;
 }
