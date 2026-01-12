@@ -1,14 +1,15 @@
 <!-- prettier-ignore -->
 {% extends "base.html" %}
+{% load django_vite %}
 {% load sass_tags %}
 {% load static %}
 {% block title %}
     Pour les DDT et acteurs locaux
 {% endblock title %}
+{% block js %}
+    {% vite_asset 'js/styles/home-actors.css.js' %}
+{% endblock js %}
 {% block css %}
-    <link href="{% sass_src 'home/css/actors/actors.scss' %}"
-          rel="stylesheet"
-          type="text/css" />
     <link href="{% sass_src 'urbanvitaliz.fr/home/css/home/regional_actors.scss' %}"
           rel="stylesheet"
           type="text/css" />
