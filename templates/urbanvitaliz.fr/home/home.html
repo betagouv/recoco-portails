@@ -104,28 +104,36 @@
             </div>
         </div>
         {% if request|cookie_group_accepted:"tracking_media" %}
-            <div class="d-flex fr-mb-6w">
-                <div class="fr-m-auto w-50">
-                    <div style="position:relative;
-                                padding-bottom:56.25%;
-                                height:0;
-                                overflow:hidden d-flex">
-                        <iframe src="https://geo.dailymotion.com/player.html?video=x8oonj8"
-                                style="width:100%;
-                                       height:100%;
-                                       position:absolute;
-                                       left:0px;
-                                       top:0px;
-                                       overflow:hidden;
-                                       border:none"
-                                allowfullscreen
-                                title="Dailymotion Video Player"
-                                allow="web-share">
-                        </iframe>
-                    </div>
+            <div class="d-flex fr-mb-6w" x-data="{ loaded: false }">
+            <div class="fr-m-auto w-50">
+                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                
+                <!-- Click-to-load placeholder -->
+                <button
+                    type="button"
+                    x-show="!loaded"
+                    @click="loaded = true"
+                    class="fr-btn"
+                    style="position:absolute;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;"
+                >
+                    ▶ Lire la vidéo
+                </button>
+
+                <!-- Iframe is created only after click -->
+                <template x-if="loaded">
+                    <iframe
+                    src="https://www.dailymotion.com/embed/video/x8oonj8"
+                    style="width:100%;height:100%;position:absolute;left:0;top:0;border:none"
+                    allow="fullscreen; picture-in-picture; web-share"
+                    allowfullscreen
+                    title="Dailymotion Video Player"
+                    ></iframe>
+                </template>
+
                 </div>
             </div>
-        {% endif %}
+            </div>
+            {% endif %}
         <div>
             <div class="fr-background-alt--grey fr-py-4w">
                 <div class="fr-container fr-pt-2w">
