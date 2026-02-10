@@ -21,3 +21,9 @@
 .min-width-400px {
   min-width: 400px;
 }
+
+.background-gradient-to-right {
+  border-image: linear-gradient(to right, #FC7051 0%, #4B66B4 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+}
