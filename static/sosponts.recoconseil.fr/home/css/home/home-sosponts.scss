@@ -21,3 +21,48 @@
 .min-width-400px {
   min-width: 400px;
 }
+
+.background-gradient-to-right {
+  border-image: linear-gradient(to right, #FC7051 0%, #4B66B4 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.dedicated-pages-section {
+  .fr-grid-row {
+    align-items: stretch;
+  }
+
+  .dedicated-page-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+
+  .dedicated-page-card__img-wrapper {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+
+      &.dedicated-page-card__img--contain {
+        object-fit: contain;
+        background-color: #fff;
+      }
+    }
+  }
+}
