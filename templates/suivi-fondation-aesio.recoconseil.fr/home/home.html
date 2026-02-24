@@ -1,6 +1,7 @@
 <!-- Page set in multisite -->
 {% extends "base.html" %}
 {% load static %}
+{% load sass_tags %}
 {% block title %}
     Page d'accueil
 {% endblock title %}
@@ -13,7 +14,7 @@
     {% vite_asset 'js/styles/home.css.js' %}
 {% endblock js %}
 {% block css %}
-    <link href="{% sass_src 'urbanvitaliz.fr/home/css/home/home-aesio.scss' %}"
+    <link href="{% sass_src 'suivi-fondation-aesio.recoconseil.fr/home/css/home/home-aesio.scss' %}"
           rel="stylesheet"
           type="text/css" />
 {% endblock css %}
