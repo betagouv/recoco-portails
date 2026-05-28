@@ -24,19 +24,19 @@
             {% comment %} <div class="hero-div__custom-banner z-2">
                 <span class="fr-icon-live-line fr-mr-1v" aria-hidden="true"></span>
                 <p class="fr-m-0 fr-mr-2v">Regardez l’enregistrement du webinaire SOS PONTS destiné aux collectivités.</p>
-                <a class="fw-700"
-                   target="_blank"
-                   href="https://cerema.app.box.com/v/webinairesosponts">Voir le webinaire</a>
+                <a class="fw-700" target="_blank" href="https://cerema.app.box.com/v/webinairesosponts">Voir le webinaire</a>
             </div> {% endcomment %}
             <div class="d-flex">
                 <div class="hero-div__text-part">
-                    <h1 class="fr-h1 h1-dsfr-rework">SOS Ponts vous guide dans l’entretien et la rénovation des ponts et murs communaux.</h1>
+                    <h1 class="fr-h1 h1-dsfr-rework">
+                        SOS Ponts vous guide dans l’entretien et la rénovation des ponts et murs communaux.
+                    </h1>
                     <p>
-                        Nous répondons gracieusement à vos questions, en vous guidant vers : les actions à mettre en place, 
+                        Nous répondons gracieusement à vos questions, en vous guidant vers : les actions à mettre en place,
                         les acteurs à solliciter et les aides financières mobilisables (dont le PNP Travaux).
                     </p>
                     <div>
-                        <a href="{% url 'onboarding-project' %}" class="fr-btn">Posez votre question</a>
+                        {% include "home/fragments/new_project_button_container.html" with label="Posez votre question" class_css="fr-btn" %}
                     </div>
                 </div>
                 <div class="w-50 hero-div__img-div">
@@ -58,11 +58,13 @@
             </div>
             <div class="fr-container fr-p-8w w-50">
                 <div class="fr-m-auto">
-                    <h3 class="fr-text text-center fr-pb-1w">Vous êtes un acteur public local (ATD, DDT...) ? Vous pouvez contribuer aux dossiers de votre territoire.</h3>
+                    <h3 class="fr-text text-center fr-pb-1w">
+                        Vous êtes un acteur public local (ATD, DDT...) ? Vous pouvez contribuer aux dossiers de votre territoire.
+                    </h3>
                 </div>
                 <div class="text-center">
                     <a href="{% url 'advisor-access-request' %}"
-                    class="fr-btn fr-btn--tertiary fr-btn--lg fr-text-inverted--grey">Participez aux dossiers</a>
+                       class="fr-btn fr-btn--tertiary fr-btn--lg fr-text-inverted--grey">Participez aux dossiers</a>
                 </div>
             </div>
         </div>
@@ -81,7 +83,9 @@
                                  class="fr-m-auto"
                                  alt="Icone de recherche" />
                         </div>
-                        <span class="fr-display fr-text-label--blue-cumulus fr-mb-2w d-block" style="font-size: 40px; font-weight: 700;">1</span>
+                        <span class="fr-display fr-text-label--blue-cumulus fr-mb-2w d-block"
+                              style="font-size: 40px;
+                                     font-weight: 700">1</span>
                         <h6 class="fr-m-0"style="font-size: 16px; font-weight: 400">
                             Vous posez vos questions en lien avec un ou plusieurs de vos ponts communaux, grâce à un
                             formulaire court.
@@ -96,7 +100,9 @@
                                  class="fr-m-auto"
                                  alt="Icone d'un fichier" />
                         </div>
-                        <span class="fr-display fr-text-label--blue-cumulus fr-mb-2w d-block" style="font-size: 40px; font-weight: 700;">2</span>
+                        <span class="fr-display fr-text-label--blue-cumulus fr-mb-2w d-block"
+                              style="font-size: 40px;
+                                     font-weight: 700">2</span>
                         <h6 class="fr-m-0"style="font-size: 16px; font-weight: 400">
                             L’équipe SOS Ponts formule des recommandations sur les actions à conduire et les acteurs
                             à contacter.
@@ -111,7 +117,9 @@
                                  class="fr-m-auto"
                                  alt="Icone de communauté" />
                         </div>
-                        <span class="fr-display fr-text-label--blue-cumulus fr-mb-2w d-block" style="font-size: 40px; font-weight: 700;">3</span>
+                        <span class="fr-display fr-text-label--blue-cumulus fr-mb-2w d-block"
+                              style="font-size: 40px;
+                                     font-weight: 700">3</span>
                         <h6 class="fr-m-0"style="font-size: 16px; font-weight: 400">
                             Vous pouvez ensuite suivre votre dossier dans votre espace personnel et échanger avec
                             nous.
@@ -126,7 +134,9 @@
                                  class="fr-m-auto"
                                  alt="Icone de progrès" />
                         </div>
-                        <span class="fr-display fr-text-label--blue-cumulus fr-mb-2w d-block" style="font-size: 40px; font-weight: 700;">4</span>
+                        <span class="fr-display fr-text-label--blue-cumulus fr-mb-2w d-block"
+                              style="font-size: 40px;
+                                     font-weight: 700">4</span>
                         <h6 class="fr-m-0"style="font-size: 16px; font-weight: 400">
                             Nous construisons ensemble un produit pertinent, en réponse à vos attentes et
                             préoccupations.
@@ -196,7 +206,8 @@
                             <h6 class="fr-mb-1v">Rejoignez la communauté Ponts sur la plateforme Expertises Territoires du Cerema</h6>
                             <p class="fr-text--sm fr-mb-1v">
                                 C'est une communauté dédiée aux ponts et murs, disponible sur la plate-forme
-                                collaborative Expertises Territoires. Vous souhaitez : Suivre les acutalités ?<br>
+                                collaborative Expertises Territoires. Vous souhaitez : Suivre les acutalités ?
+                                <br>
                                 Retrouver des documents de référence ? Partager un retour d'expérience ?
                             </p>
                             <p class="fr-text--sm fr-mb-1v">
@@ -214,12 +225,8 @@
                                 <img src="{% static 'sosponts.recoconseil.fr/home/img/home/green_banner.png' %}"
                                      alt="Programme National des ponts" />
                             </div>
-                            <h6 class="fr-mb-1v">
-                                Découvrez la cartographie publique PNP
-                            </h6>
-                            <p class="fr-text--sm fr-mb-1v">
-                                Visualisez les données des ouvrages recensés dans le cadre du PNP
-                            </p>
+                            <h6 class="fr-mb-1v">Découvrez la cartographie publique PNP</h6>
+                            <p class="fr-text--sm fr-mb-1v">Visualisez les données des ouvrages recensés dans le cadre du PNP</p>
                             <p class="fr-text--sm fr-mb-1v">
                                 <strong>Accédez à la cartographie</strong>
                             </p>
@@ -236,8 +243,7 @@
                 <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Besoin d'un accompagnement ? Faites appel à SOS PONTS</h3>
             </div>
             <div class="text-center">
-                <a href="{% url 'onboarding-project' %}"
-                   class="fr-btn fr-btn--tertiary fr-btn--lg fr-text-inverted--grey">Nous poser une question</a>
+                {% include "home/fragments/new_project_button_container.html" with label="Nous poser une question" class_css="fr-btn fr-btn--tertiary fr-btn--lg fr-text-inverted--grey" %}
             </div>
         </div>
     </div>

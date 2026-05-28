@@ -28,9 +28,7 @@
                         Les réseaux régionaux et l'Association Nationale des Tiers-Lieux vous aiguillent dans vos différentes problématiques
                     </p>
                     <div>
-                        <a href="{% url 'onboarding-project' %}"
-                           class="fr-btn fr-text--xl"
-                           data-test-id="button-need-help">Solliciter l'aiguillage des Tiers-Lieux</a>
+                        {% include "home/fragments/new_project_button_container.html" with label="Solliciter l'aiguillage des Tiers-Lieux" %}
                     </div>
                 </div>
                 <div class="w-50 hero-div__img-div">
@@ -136,7 +134,7 @@
                     <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_forum-tiers-lieux.png' %}"
                          width="100%"
                          alt="logo du forum des tiers lieux">
-                        <span class="visually-hidden">Nouvelle fenêtre</span>
+                    <span class="visually-hidden">Nouvelle fenêtre</span>
                 </a>
             </div>
             <div class="fr-col-6 d-flex">
@@ -187,7 +185,7 @@
                      width="12%"
                      alt="logo du réseau coopp"
                      class="home__little-logo">
-                     {% comment %} 2ème ligne de logos {% endcomment %}
+                {% comment %} 2ème ligne de logos {% endcomment %}
                 <img src="{% static 'aiguillage.tiers-lieux.org/home/img/home/logo_reseau-reunion.png' %}"
                      width="10.5%"
                      alt="logo du réseau réunion"

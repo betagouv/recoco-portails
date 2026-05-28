@@ -22,9 +22,7 @@
                         SOS Mobilités Hauts-de-France vous guide dans l'élaboration de vos dossiers de mobilités en zones peu denses.
                     </h1>
                     <p>{{ request.site.configuration.description }}</p>
-                    <div>
-                        <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Solliciter SOS Mobilités HDF</a>
-                    </div>
+                    <div>{% include "home/fragments/new_project_button_container.html" with label="Solliciter SOS Mobilités HDF" %}</div>
                 </div>
                 <div class="w-50 hero-div__img-div">
                     <img src="{% static 'sos-mobilites-hdf.recoconseil.fr/home/img/home/hero_home-background-sos-mobilites-hdf.jpg' %}"
@@ -147,8 +145,9 @@
                         <!-- <h6 class="fr-mb-13v fr-text-inverted--grey">
                         Faites-vous accompagner
 </h6> -->
-                        <a href="{% url 'onboarding-project' %}"
-                           class="fr-btn fr-btn--tertiary fr-text-inverted--grey">Nous poser une question</a>
+                        <div>
+                            {% include "home/fragments/new_project_button_container.html" with label="Nous poser une question" class_css="fr-btn fr-btn--tertiary fr-text-inverted--grey" %}
+                        </div>
                     </div>
                 </div>
             </div>
