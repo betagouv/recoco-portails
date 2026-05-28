@@ -23,7 +23,9 @@
             {% endwith %}
             {% flag "enable_submit_new_project" %}
                 <br>
-                Pour toute demande d'aide sur une friche, contactez l'équipe d'experts métier via <a href="{% url 'onboarding-project' %}" class="">ce formulaire</a>.
+                {% if request.site.configuration.stopped_at == None %}
+                    Pour toute demande d'aide sur une friche, contactez l'équipe d'experts métier via <a href="{% url 'onboarding-project' %}">ce formulaire</a>.
+                {% endif %}
             {% endflag %}
         </p>
 
