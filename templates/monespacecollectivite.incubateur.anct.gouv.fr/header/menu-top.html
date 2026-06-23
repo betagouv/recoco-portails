@@ -2,31 +2,33 @@
 {% load static %}
 {% block menu_top %}
     {% if is_embedded %}
-        <header role="banner" class="fr-header sticky-top navigation">
-            <div class="fr-header__body">
-                <div class="fr-container--small navigation__menu-top-secondary-container">
-                    <div class="fr-header__body-row">
-                        <div class="fr-header__brand fr-enlarge-link">
-                            {% include "header/fragments/offline_menu_marianne.html" %}
-                            <img src="{% static 'monespacecollectivite.incubateur.anct.gouv.fr/home/img/home/large-mec-logo-full.png' %}"
-                                 height="64px"
-                                 class="fr-p-2w order-1"
-                                 alt="Logo Mon Espace Collectivité">
-                        </div>
-                        <div class="fr-header__separator">
-                            <span class="project-name__label">
-                                {{ project.name }}
-                            </span>
-                        </div>
-                        <div class="fr-header__tools">
-                            <div class="fr-header__tools-links">
-                                <a href="{% url 'account_login' %}" class="fr-link text-underline"> <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span> Retour vers la fiche projet</a>
+        {% if user.is_authenticated %}
+            <header role="banner" class="fr-header sticky-top navigation">
+                <div class="fr-header__body">
+                    <div class="fr-container--small navigation__menu-top-secondary-container">
+                        <div class="fr-header__body-row">
+                            <div class="fr-header__brand fr-enlarge-link">
+                                {% include "header/fragments/offline_menu_marianne.html" %}
+                                <img src="{% static 'monespacecollectivite.incubateur.anct.gouv.fr/home/img/home/large-mec-logo-full.png' %}"
+                                    height="64px"
+                                    class="fr-p-2w order-1"
+                                    alt="Logo Mon Espace Collectivité">
+                            </div>
+                            <div class="fr-header__separator">
+                                <span class="project-name__label">
+                                    {{ project.name }}
+                                </span>
+                            </div>
+                            <div class="fr-header__tools">
+                                <div class="fr-header__tools-links">
+                                    <a href="{% url 'account_login' %}" class="fr-link text-underline"> <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span> Retour vers la fiche projet</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
+            </header>
+        {% endif %}
     {% else %}
         {{ block.super }}
     {% endif %}
