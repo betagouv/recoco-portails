@@ -26,9 +26,7 @@
                                 LRPP Collaborative est une solution développée pour permettre le suivi des projets, le partage des informations et le travail de collaboration.
                             </i>
                         </p>
-                        <div>
-                            <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Discuter de mon projet</a>
-                        </div>
+                        <div>{% include "home/fragments/new_project_button_container.html" with label="Discuter de mon projet" %}</div>
                     </div>
                     <div class="w-50 hero-div__img-div">
                         <img src="{% static 'lrpp-collaborative.recoconseil.fr/home/img/home/hero_Alain-Vergnaud-43.jpg' %}"

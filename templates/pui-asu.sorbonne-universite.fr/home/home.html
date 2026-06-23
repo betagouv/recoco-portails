@@ -33,9 +33,7 @@
                                 nous vous accompagnons et vous orientons vers les bons interlocuteurs et les bons dispositifs.
                             </i>
                         </p>
-                        <div>
-                            <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Discuter de mon projet</a>
-                        </div>
+                        <div>{% include "home/fragments/new_project_button_container.html" with label="Discuter de mon projet" %}</div>
                     </div>
                     <div class="w-50 hero-div__img-div">
                         <img src="{% static 'pui-asu.sorbonne-universite.fr/home/img/home/heroCite_de_linnovation.jpg' %}"

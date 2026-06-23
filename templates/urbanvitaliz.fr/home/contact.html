@@ -21,7 +21,9 @@
                 <a class="fw-bold" href="mailto:{{ email }}">{{ email }}</a>
             {% endwith %}
             <br>
-            Pour toute demande d'aide sur une friche, contactez l'équipe d'experts métier via <a href="{% url 'onboarding-project' %}" class="">ce formulaire</a>.
+            {% if request.site.configuration.stopped_at == None %}
+                Pour toute demande d'aide sur une friche, contactez l'équipe d'experts métier via <a href="{% url 'onboarding-project' %}" class="">ce formulaire</a>.
+            {% endif %}
         </p>
 
         {% if user.is_authenticated %} {# condition is quick fix to unlock brevo #}
