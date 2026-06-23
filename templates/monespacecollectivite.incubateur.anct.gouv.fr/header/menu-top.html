@@ -7,10 +7,10 @@
                 <div class="fr-container--small navigation__menu-top-secondary-container">
                     <div class="fr-header__body-row">
                         <div class="fr-header__brand fr-enlarge-link">
-                            <img src="{% static 'svg/marianne.svg' %}" class="fr-pl-3v fr-py-3v" height="64px"  alt="Logo Marianne">
+                            {% include "header/fragments/offline_menu_marianne.html" %}
                             <img src="{% static 'monespacecollectivite.incubateur.anct.gouv.fr/home/img/home/large-mec-logo-full.png' %}"
                                  height="64px"
-                                 class="fr-p-2w"
+                                 class="fr-p-2w order-1"
                                  alt="Logo Mon Espace Collectivité">
                         </div>
                         <div class="fr-header__separator">
