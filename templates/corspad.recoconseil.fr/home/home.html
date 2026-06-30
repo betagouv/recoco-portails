@@ -2,6 +2,7 @@
 {% extends "base.html" %}
 {% load sass_tags %}
 {% load static %}
+{% load waffle_tags %}
 {% block title %}
     {{ request.site.configuration.main_topic }}
 {% endblock title %}
@@ -20,11 +21,13 @@
                 <div class="hero-div__text-part">
                     <h1 class="fr-h1">CORSPAD plateforme d'accélération de projets</h1>
                     <p>{{ request.site.configuration.description }}</p>
-                    <div>
-                        <a href="{% url 'onboarding-project' %}"
-                           class="fr-btn fr-text--xl"
-                           data-test-id="button-need-help">Solliciter {{ request.site.name }}</a>
-                    </div>
+                    {% flag "enable_submit_new_project" %}
+                        <div>
+                            <a href="{% url 'onboarding-project' %}"
+                            class="fr-btn fr-text--xl"
+                            data-test-id="button-need-help">Solliciter {{ request.site.name }}</a>
+                        </div>
+                    {% endflag %}
                 </div>
                 <div class="w-50 hero-div__img-div">
                     <img src="{% static 'corspad.recoconseil.fr/home/img/home/hero_home-background-corspad.png' %}"
