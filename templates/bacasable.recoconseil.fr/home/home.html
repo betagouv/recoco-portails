@@ -1,6 +1,7 @@
 <!-- prettier-ignore -->
 {% extends "base.html" %}
 {% load static %}
+{% load waffle_tags %}
 {% load django_vite %}
 {% load cookie_consent_tags %}
 {% block title %}
@@ -26,7 +27,9 @@
                             </i>
                         </p>
                         <div>
-                            <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Créer un dossier</a>
+                            {% flag "enable_submit_new_project" %}
+                                <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Créer un dossier</a>
+                            {% endflag %}
                             <a href="{% url 'advisor-access-request' %}"
                                class="fr-btn fr-btn--secondary fr-text--xl fr-mt-3w">Demander un accès conseiller</a>
                         </div>

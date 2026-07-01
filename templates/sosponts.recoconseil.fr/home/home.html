@@ -2,6 +2,7 @@
 {% extends "base.html" %}
 {% load sass_tags %}
 {% load static %}
+{% load waffle_tags %}
 {% load django_vite %}
 {% block title %}
     Entretien des ponts communaux
@@ -35,9 +36,11 @@
                         Nous répondons gracieusement à vos questions, en vous guidant vers : les actions à mettre en place, 
                         les acteurs à solliciter et les aides financières mobilisables (dont le PNP Travaux).
                     </p>
-                    <div>
-                        <a href="{% url 'onboarding-project' %}" class="fr-btn">Posez votre question</a>
-                    </div>
+                    {% flag "enable_submit_new_project" %}
+                        <div>
+                            <a href="{% url 'onboarding-project' %}" class="fr-btn">Posez votre question</a>
+                        </div>
+                    {% endflag %}
                 </div>
                 <div class="w-50 hero-div__img-div">
                     <img src="{% static 'sosponts.recoconseil.fr/home/img/home/hero_home-background-sosponts.jpeg' %}"
@@ -230,17 +233,19 @@
             </div>
         </div>
     </div>
-    <div class="fr-py-6w specific-backgroundcolor-1b1b35">
-        <div class="fr-container fr-pt-2w fr-pb-2w">
-            <div class="fr-m-auto">
-                <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Besoin d'un accompagnement ? Faites appel à SOS PONTS</h3>
-            </div>
-            <div class="text-center">
-                <a href="{% url 'onboarding-project' %}"
-                   class="fr-btn fr-btn--tertiary fr-btn--lg fr-text-inverted--grey">Nous poser une question</a>
+    {% flag "enable_submit_new_project" %}
+        <div class="fr-py-6w specific-backgroundcolor-1b1b35">
+            <div class="fr-container fr-pt-2w fr-pb-2w">
+                <div class="fr-m-auto">
+                    <h3 class="fr-text-inverted--grey text-center fr-pb-6w">Besoin d'un accompagnement ? Faites appel à SOS PONTS</h3>
+                </div>
+                <div class="text-center">
+                    <a href="{% url 'onboarding-project' %}"
+                    class="fr-btn fr-btn--tertiary fr-btn--lg fr-text-inverted--grey">Nous poser une question</a>
+                </div>
             </div>
         </div>
-    </div>
+    {% endflag %}
     <div class="border-bottom"></div>
 {% endblock content %}
 {% block footer %}

@@ -2,6 +2,7 @@
 {% extends "base.html" %}
 {% load sass_tags %}
 {% load static %}
+{% load waffle_tags %}
 {% load django_vite %}
 {% load cookie_consent_tags %}
 {% block title %}
@@ -29,9 +30,11 @@
                                 - développer la capacité de votre territoire à détecter et accompagner précocement les enfants, en lien avec l'ensemble des acteurs concernés.
                             </i>
                         </p>
-                        <div>
-                            <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Discuter de mon projet</a>
-                        </div>
+                        {% flag "enable_submit_new_project" %}
+                            <div>
+                                <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Discuter de mon projet</a>
+                            </div>
+                        {% endflag %}
                     </div>
                     <div class="w-50 hero-div__img-div">
                         <img src="{% static 'essaimage-meexlab.recoconseil.fr/home/img/home/hero_MEEX_Balançoire_iB.jpeg' %}"

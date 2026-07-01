@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load waffle_tags %}
 {% block title %}
     Nous contacter
 {% endblock title %}
@@ -20,8 +21,10 @@
             {% with request.site.configuration.contact_form_recipient as email %}
                 <a class="fw-bold" href="mailto:{{ email }}">{{ email }}</a>
             {% endwith %}
-            <br>
-            Pour toute demande d'aide sur une friche, contactez l'équipe d'experts métier via <a href="{% url 'onboarding-project' %}" class="">ce formulaire</a>.
+            {% flag "enable_submit_new_project" %}
+                <br>
+                Pour toute demande d'aide sur une friche, contactez l'équipe d'experts métier via <a href="{% url 'onboarding-project' %}" class="">ce formulaire</a>.
+            {% endflag %}
         </p>
 
         {% if user.is_authenticated %} {# condition is quick fix to unlock brevo #}
