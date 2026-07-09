@@ -2,6 +2,7 @@
 {% extends "base.html" %}
 {% load sass_tags %}
 {% load static %}
+{% load waffle_tags %}
 {% load django_vite %}
 {% block title %}
     {{ request.site.configuration.main_topic }}
@@ -22,9 +23,11 @@
                         SOS Mobilités Hauts-de-France vous guide dans l'élaboration de vos dossiers de mobilités en zones peu denses.
                     </h1>
                     <p>{{ request.site.configuration.description }}</p>
-                    <div>
-                        <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Solliciter SOS Mobilités HDF</a>
-                    </div>
+                    {% flag "enable_submit_new_project" %}
+                        <div>
+                            <a href="{% url 'onboarding-project' %}" class="fr-btn fr-text--xl">Solliciter SOS Mobilités HDF</a>
+                        </div>
+                    {% endflag %}
                 </div>
                 <div class="w-50 hero-div__img-div">
                     <img src="{% static 'sos-mobilites-hdf.recoconseil.fr/home/img/home/hero_home-background-sos-mobilites-hdf.jpg' %}"
@@ -142,15 +145,17 @@
                         </a>
                     </div>
                 </div>
-                <div class="fr-col-12 fr-col-md-6">
-                    <div class="fr-border-default-grey border fr-p-2w fr-text-inverted--grey specific-backgroundcolor-1b1b35 h-100">
-                        <!-- <h6 class="fr-mb-13v fr-text-inverted--grey">
-                        Faites-vous accompagner
-</h6> -->
-                        <a href="{% url 'onboarding-project' %}"
-                           class="fr-btn fr-btn--tertiary fr-text-inverted--grey">Nous poser une question</a>
+                {% flag "enable_submit_new_project" %}
+                    <div class="fr-col-12 fr-col-md-6">
+                        <div class="fr-border-default-grey border fr-p-2w fr-text-inverted--grey specific-backgroundcolor-1b1b35 h-100">
+                            <!-- <h6 class="fr-mb-13v fr-text-inverted--grey">
+                            Faites-vous accompagner
+                            </h6> -->
+                                <a href="{% url 'onboarding-project' %}"
+                                class="fr-btn fr-btn--tertiary fr-text-inverted--grey">Nous poser une question</a>
+                            </div>
                     </div>
-                </div>
+                {% endflag %}
             </div>
         </div>
     </div>
