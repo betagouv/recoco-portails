@@ -1,0 +1,37 @@
+{% extends "header/menu-top_full.html" %}
+{% load static %}
+{% block menu_top %}
+    {% if is_embedded %}
+        {% if user.is_authenticated %}
+            <header role="banner" class="fr-header sticky-top navigation">
+                <div class="fr-header__body">
+                    <div class="fr-container--small navigation__menu-top-secondary-container">
+                        <div class="fr-header__body-row">
+                            <div class="fr-header__brand fr-enlarge-link">
+                                {% include "header/fragments/offline_menu_marianne.html" with home_url="https://monespacecollectivite.anct.gouv.fr" %}
+                                <img src="{% static 'monespacecollectivite.incubateur.anct.gouv.fr/home/img/home/large-mec-logo-full.png' %}"
+                                    height="64px"
+                                    class="fr-p-2w order-1"
+                                    alt="Logo Mon Espace Collectivité">
+                            </div>
+                            {% if project %}
+                                <div class="fr-header__separator">
+                                    <span class="project-name__label">
+                                        {{ project.name }}
+                                    </span>
+                                </div>
+                                <div class="fr-header__tools">
+                                    <div class="fr-header__tools-links">
+                                        <a href="https://monespacecollectivite.anct.gouv.fr/projets/{{ project.pk }}" class="fr-link text-underline"> <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span> Retour vers la fiche projet</a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </header>
+        {% endif %}
+    {% else %}
+        {{ block.super }}
+    {% endif %}
+{% endblock menu_top %}
