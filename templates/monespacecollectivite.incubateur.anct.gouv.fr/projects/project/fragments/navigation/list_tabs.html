@@ -1,0 +1,10 @@
+{% extends "projects/project/fragments/navigation/list_tabs_full.html" %}
+
+{% block list_tabs %}
+    {% if is_embedded %}
+        {% include "projects/project/fragments/navigation/tabs/conversation.html" %}
+        {% include "projects/project/fragments/navigation/tabs/private_conversation.html" with label="Échanges services de l'État" %}
+    {% else %}
+        {{ block.super }}
+    {% endif %}
+{% endblock list_tabs %}
