@@ -4,6 +4,11 @@
     width: 100%;
     height: auto;
   }
+
+  &__block-icon::before {
+    --icon-size: 6rem !important;
+    background-color: var(--background-action-high-blue-france) !important;
+  }
 }
 
 .hero-div {
