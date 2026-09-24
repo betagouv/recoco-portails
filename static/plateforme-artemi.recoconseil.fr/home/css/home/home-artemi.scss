@@ -15,3 +15,37 @@
   margin: 0 auto !important;
   padding: 0 !important;
 }
+
+.dedicated-pages-section {
+  .fr-grid-row {
+    align-items: stretch;
+  }
+
+  .dedicated-page-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+
+  .dedicated-page-card__img-wrapper {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
