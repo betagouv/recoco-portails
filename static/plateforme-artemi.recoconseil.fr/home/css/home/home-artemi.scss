@@ -5,6 +5,12 @@
     height: auto;
   }
 
+  &__caption {
+    color: var(--text-mention-grey);
+    text-align: center;
+    font-style: italic;
+  }
+
   &__block-icon::before {
     --icon-size: 6rem !important;
     background-color: var(--background-action-high-blue-france) !important;

@@ -22,11 +22,16 @@
     <div class="hero-div">
         <div class="hero-div__sub-container">
             {% if user.is_authenticated %}
-                <img src="{% static 'plateforme-artemi.recoconseil.fr/home/img/home/VF_photo_d_equipe_MMDD.png' %}"
-                     class="hero-artemi__img fr-mt-4w"
-                     width="1280"
-                     height="625"
-                     alt="" />
+                <figure class="hero-artemi__figure fr-m-0" role="group">
+                    <img src="{% static 'plateforme-artemi.recoconseil.fr/home/img/home/Photo_de_groupe_referents_TE.jpg' %}"
+                         class="hero-artemi__img fr-mt-4w"
+                         width="1280"
+                         height="625"
+                         alt="" />
+                    <figcaption class="hero-artemi__caption fr-text--sm fr-mt-1w fr-mb-0">
+                        Rencontres Nationales 2026 des référents transition écologique du ministère de l’Intérieur
+                    </figcaption>
+                </figure>
             {% else %}
                 <img src="{% static 'plateforme-artemi.recoconseil.fr/home/img/home/Photo_concours_nature.jpg' %}"
                      class="hero-artemi__img"
