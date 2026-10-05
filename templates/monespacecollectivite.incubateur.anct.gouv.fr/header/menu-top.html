@@ -1,9 +1,0 @@
-{% extends "header/menu-top_full.html" %}
-{% load static %}
-{% block menu_top %}
-    {% if is_embedded %}
-        <!-- Remove header when is_embedded is activated -->
-    {% else %}
-        {{ block.super }}
-    {% endif %}
-{% endblock menu_top %}
