@@ -17,7 +17,7 @@
   }
 }
 
-.hero-div {
+.hero-div-not-logged {
   margin: 0 auto !important;
   padding: 0 !important;
 }
@@ -60,4 +60,8 @@
       width: 100%;
     }
   }
+}
+
+.object-fit-contain {
+  object-fit: contain;
 }
