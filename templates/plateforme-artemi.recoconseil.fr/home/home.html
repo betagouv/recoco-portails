@@ -17,6 +17,10 @@
           rel="stylesheet"
           type="text/css" />
 {% endblock css %}
+{% if user.is_authenticated %}
+    {% block hidden_site_title %}
+    {% endblock hidden_site_title %}
+{% endif %}
 {% block content %}
     {% if user.is_authenticated %}
         {% include "home/home-logged.html" %}
