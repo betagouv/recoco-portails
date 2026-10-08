@@ -1,0 +1,33 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+{% load django_vite %}
+{% load sass_tags %}
+{% block title %}
+    Plateforme ARTEMI
+{% endblock title %}
+{% block og_title %}
+    Plateforme ARTEMI
+{% endblock og_title %}
+{% block js %}
+    {% vite_asset 'js/apps/home.js' %}
+    {% vite_asset 'js/styles/home.css.js' %}
+{% endblock js %}
+{% block css %}
+    <link href="{% sass_src 'plateforme-artemi.recoconseil.fr/home/css/home/home-artemi.scss' %}"
+          rel="stylesheet"
+          type="text/css" />
+{% endblock css %}
+{% if user.is_authenticated %}
+    {% block hidden_site_title %}
+    {% endblock hidden_site_title %}
+{% endif %}
+{% block content %}
+    {% if user.is_authenticated %}
+        {% include "home/home-logged.html" %}
+    {% else %}
+        {% include "home/home-not-logged.html" %}
+    {% endif %}
+{% endblock content %}
+{% block footer %}
+    <div class="row justify-content-center" id="footer">{% include "footer/footer.html" %}</div>
+{% endblock footer %}

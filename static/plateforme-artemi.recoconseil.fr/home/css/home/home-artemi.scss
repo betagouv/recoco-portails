@@ -1,0 +1,67 @@
+.hero-artemi {
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__caption {
+    color: var(--text-mention-grey);
+    text-align: center;
+    font-style: italic;
+  }
+
+  &__block-icon::before {
+    --icon-size: 6rem !important;
+    background-color: var(--background-action-high-blue-france) !important;
+  }
+}
+
+.hero-div-not-logged {
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+.mmdd-section {
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.dedicated-pages-section {
+  .fr-grid-row {
+    align-items: stretch;
+  }
+
+  .dedicated-page-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+
+  .dedicated-page-card__img-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.object-fit-contain {
+  object-fit: contain;
+}
