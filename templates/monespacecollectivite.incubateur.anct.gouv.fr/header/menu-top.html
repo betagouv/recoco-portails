@@ -9,7 +9,7 @@
                         <div class="fr-header__body-row">
                             <div class="fr-header__brand fr-enlarge-link">
                                 {% include "header/fragments/offline_menu_marianne.html" with home_url="https://monespacecollectivite.anct.gouv.fr" %}
-                                <img src="{% static 'monespacecollectivite.incubateur.anct.gouv.fr/home/img/home/large-mec-logo-full.png' %}"
+                                <img src="{{ request.site.configuration.logo_large.url }}"
                                     height="64px"
                                     class="fr-p-2w order-1"
                                     alt="Logo Mon Espace Collectivité">
